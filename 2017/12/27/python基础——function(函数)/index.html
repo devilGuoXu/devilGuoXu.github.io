@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>python基础——function(函数) | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="一、函数1.函数的概念函数是实现某一特定功能的代码段的封装 2.函数的声明/定义def 函数名(形参列表):     函数体     return 语句 形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部函数体: 函数说明文档, 实现函数功能的代码段 (重点!)声明函数的时候不会执行函数体 3.函数的调用函数名(实参列表)   (重点!)函数调用过程: 回到函数声明的位置">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——function(函数)">
+<meta property="og:url" content="http://yoursite.com/2017/12/27/python基础——function(函数)/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="一、函数1.函数的概念函数是实现某一特定功能的代码段的封装 2.函数的声明/定义def 函数名(形参列表):     函数体     return 语句 形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部函数体: 函数说明文档, 实现函数功能的代码段 (重点!)声明函数的时候不会执行函数体 3.函数的调用函数名(实参列表)   (重点!)函数调用过程: 回到函数声明的位置">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-19T11:35:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础——function(函数)">
+<meta name="twitter:description" content="一、函数1.函数的概念函数是实现某一特定功能的代码段的封装 2.函数的声明/定义def 函数名(形参列表):     函数体     return 语句 形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部函数体: 函数说明文档, 实现函数功能的代码段 (重点!)声明函数的时候不会执行函数体 3.函数的调用函数名(实参列表)   (重点!)函数调用过程: 回到函数声明的位置">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-python基础——function(函数)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      python基础——function(函数)
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Python/">Python</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-12-27
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、函数"><a href="#一、函数" class="headerlink" title="一、函数"></a>一、函数</h1><h4 id="1-函数的概念"><a href="#1-函数的概念" class="headerlink" title="1.函数的概念"></a>1.函数的概念</h4><p>函数是实现某一特定功能的代码段的封装</p>
+<h4 id="2-函数的声明-定义"><a href="#2-函数的声明-定义" class="headerlink" title="2.函数的声明/定义"></a>2.函数的声明/定义</h4><pre><code>def 函数名(形参列表):
+    函数体
+    return 语句
+</code></pre><p>形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部<br>函数体: 函数说明文档, 实现函数功能的代码段</p>
+<p>(重点!)声明函数的时候不会执行函数体</p>
+<h4 id="3-函数的调用"><a href="#3-函数的调用" class="headerlink" title="3.函数的调用"></a>3.函数的调用</h4><pre><code>函数名(实参列表)  
+</code></pre><p>(重点!)函数调用过程:</p>
+<p>回到函数声明的位置<br>传参(用实参给形参赋值) —— 保证每个参数都值<br>执行函数体<br>结束后，确定返回值 —— 自然死亡/遇到return<br>返回函数调用的位置 —— 这个时候函数调用表达式的值才是之前确定返回值  </p>
+<h4 id="4-函数的参数"><a href="#4-函数的参数" class="headerlink" title="4.函数的参数"></a>4.函数的参数</h4><p>位置参数和关键字参数<br>参数默认值<br>参数类型说明<br>不定长参数: 形参前加* -&gt; 将形参变成元组, 形参前加** -&gt; 将形参变成字典  </p>
+<h4 id="5-函数的返回值"><a href="#5-函数的返回值" class="headerlink" title="5.函数的返回值"></a>5.函数的返回值</h4><p>将函数内部传递到函数的外面</p>
+<p>a.怎么确定函数的返回值：<br>看执行函数的时候会不会遇到return, 遇到了return 后面的值就是返回值。没有遇到返回值就是None</p>
+<p>b.怎么获取函数的返回值：<br>通过获取函数调用表达式的值来获取返回值<br>普通数据能做的事情返回值都可以做</p>
+<p>注意：每次调用函数，都会重新获取返回值</p>
+<hr>
+<h1 id="二、匿名函数"><a href="#二、匿名函数" class="headerlink" title="二、匿名函数"></a>二、匿名函数</h1><h4 id="1-什么是匿名函数"><a href="#1-什么是匿名函数" class="headerlink" title="1.什么是匿名函数"></a>1.什么是匿名函数</h4><p>匿名函数还是函数，只是声明的格式和普通函数不一样。只适用于函数功能比较简单的函数</p>
+<h4 id="2-匿名函数的声明"><a href="#2-匿名函数的声明" class="headerlink" title="2.匿名函数的声明"></a>2.匿名函数的声明</h4><p>a.语法<br>变量名 = lambda 形参列表:返回值</p>
+<p>b.说明<br>变量名 - 相当于函数名<br>lambda - 声明匿名函数的关键字<br>形参列表 - 和普通函数的形参列表一样<br>: - 固定写法<br>返回值 - 就相当于普通函数中只有一条return语句的函数体</p>
+<h4 id="3-匿名函数的调用"><a href="#3-匿名函数的调用" class="headerlink" title="3. 匿名函数的调用"></a>3. 匿名函数的调用</h4><p>和普通函数一样</p>
+<hr>
+<h1 id="三、变量作用域"><a href="#三、变量作用域" class="headerlink" title="三、变量作用域"></a>三、变量作用域</h1><h4 id="1-什么是变量的作用域"><a href="#1-什么是变量的作用域" class="headerlink" title="1.什么是变量的作用域"></a>1.什么是变量的作用域</h4><p>就是变量能够使用的范围  </p>
+<h4 id="2-全局变量和局部变量"><a href="#2-全局变量和局部变量" class="headerlink" title="2.全局变量和局部变量"></a>2.全局变量和局部变量</h4><p>a. 全局变量 - 没有声明在函数或者类中的变量都是全局变量<br>全局变量的作用域是从声明开始，到整个文件结束</p>
+<p>b. 局部变量 - 声明在函数或者类中的变量就是局部变量<br>局部变量的作用域是从声明开始，到函数结束</p>
+<p>c. global - 在函数中声明一个全局变量(只能在函数中使用)<br>global 变量名<br>变量名 = 值</p>
+<p>d. nonlocal - 想要在局部的局部中去修改布局变量的值，就使用nonlocal对变量进行说明<br>nonlocal 局部变量<br>局部变量 = 值</p>
+<p>总结：当我们调用函数的时候，系统会自动在栈区间专门为这个函数开辟一块独立的内容空间，用来保存在函数中声明的变量(形参也是属于声明在函数中的变量)。当函数调用结束后，这个函数对应的栈区间会自动销毁   — (函数调用过程是一个压栈的过程)</p>
+<hr>
+<h1 id="四、函数的使用"><a href="#四、函数的使用" class="headerlink" title="四、函数的使用"></a>四、函数的使用</h1><p>python中声明函数其实就是声明一个类型是function的变量, 函数名就是变量名</p>
+<p>函数名  –  类型是function的变量<br>函数名() – 调用函数并且获取函数的返回值</p>
+<p>普通变量能做的事情函数变量都能做!</p>
+<h4 id="1-给别的变量赋值"><a href="#1-给别的变量赋值" class="headerlink" title="1.给别的变量赋值"></a>1.给别的变量赋值</h4><h4 id="2-变量作为容器类数据的元素"><a href="#2-变量作为容器类数据的元素" class="headerlink" title="2.变量作为容器类数据的元素"></a>2.变量作为容器类数据的元素</h4><h4 id="3-变量作为函数的实参"><a href="#3-变量作为函数的实参" class="headerlink" title="3.变量作为函数的实参"></a>3.变量作为函数的实参</h4><p>函数1作为函数2的实参  – 函数2就是一个高阶函数<br>函数作为参数的应用: sort函数</p>
+<p>列表.sort(key=None, reverse=False)<br>参数key —— 要求是一个带有一个参数，并且返回值是布尔的函数。这儿的参数指向的是列表中元素。确定按照元素的什么值进行排序</p>
+<p>示例：</p>
+<pre><code>all_student = [
+    {&apos;name&apos;: &apos;张三&apos;, &apos;age&apos;: 19, &apos;score&apos;: 90},
+    {&apos;name&apos;: &apos;stu1&apos;, &apos;age&apos;: 30, &apos;score&apos;: 79},
+    {&apos;name&apos;: &apos;xiaoming&apos;, &apos;age&apos;: 12, &apos;score&apos;: 87},
+    {&apos;name&apos;: &apos;stu22&apos;, &apos;age&apos;: 29, &apos;score&apos;: 99}
+]
+
+# 这儿的item是需要排序的列表的元素
+# def func(item):
+#     return item[&apos;score&apos;]
+# all_student.sort(key=func, reverse=True)
+
+all_student.sort(key=lambda item: item[&apos;score&apos;])  # 按成绩从小到大排序
+all_student.sort(key=lambda item: item[&apos;age&apos;], reverse=True)  # 按年龄从大到小排序
+print(all_student)
+</code></pre><p>补充：排序原理</p>
+<pre><code>#  ===============排序原理================
+def yt_sorted(iterable, key=None, reverse=False):
+    list1 = list(iterable)
+    if key:
+        for x in range(len(iterable) - 1):
+            for y in range(x + 1, len(iterable)):
+                item1 = list1[x]
+                item2 = list1[y]
+                if key(item1) &gt; key(item2):
+                    list1[x], list1[y] = list1[y], list1[x]
+    else:
+        # 快速排序
+        for x in range(len(iterable) - 1):
+            for y in range(x + 1, len(iterable)):
+                if list1[y] &lt; list1[x]:
+                    list1[x], list1[y] = list1[y], list1[x]
+    if not reverse:
+        # 从小到大
+        return list1
+    else:
+        # 从大到小
+        return list1[::-1]
+
+print(yt_sorted([1, 20, 9, 10]))
+# print(sorted(all_student, key=lambda x: x[&apos;age&apos;]))
+print(yt_sorted(all_student, key=lambda x: x[&apos;age&apos;], reverse=True))
+</code></pre><h4 id="4-变量作为函数的返回值"><a href="#4-变量作为函数的返回值" class="headerlink" title="4.变量作为函数的返回值"></a>4.变量作为函数的返回值</h4><p>函数1作为函数2的返回值  -  函数2是返回值高阶函数<br>示例：</p>
+<pre><code>def operation(char):
+    # char = &apos;-&apos;
+    if char == &apos;+&apos;:
+        def func1(*nums):
+            return sum(nums)
+        # 将函数作为函数的返回值
+        return func1
+    elif char == &apos;-&apos;:
+        def func2(*nums):
+            # (10, 3, 4)
+            # 如果没有传参
+            if not nums:
+                return 0
+            sum1 = nums[0]
+            for index in range(1, len(nums)):
+                sum1 -= nums[index]
+            return sum1
+        return func2
+
+print(operation(&apos;+&apos;)(1, 2, 3, 4))
+print(operation(&apos;-&apos;)(10, 3, 4))
+</code></pre>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年03月19日 19:35</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/27/python基础——function(函数)/" title="python基础——function(函数)">http://yoursite.com/2017/12/27/python基础——function(函数)/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="GuoXu">
+                GuoXu
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/27/python基础——function(函数)/&title=《python基础——function(函数)》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/27/python基础——function(函数)/&title=《python基础——function(函数)》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/27/python基础——function(函数)/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python基础——function(函数)》 — GuoXu's Blog&url=http://yoursite.com/2017/12/27/python基础——function(函数)/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/27/python基础——function(函数)/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/12/27/python基础——function(函数)/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、函数"><span class="post-toc-text">一、函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-函数的概念"><span class="post-toc-text">1.函数的概念</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-函数的声明-定义"><span class="post-toc-text">2.函数的声明/定义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-函数的调用"><span class="post-toc-text">3.函数的调用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-函数的参数"><span class="post-toc-text">4.函数的参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-函数的返回值"><span class="post-toc-text">5.函数的返回值</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、匿名函数"><span class="post-toc-text">二、匿名函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-什么是匿名函数"><span class="post-toc-text">1.什么是匿名函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-匿名函数的声明"><span class="post-toc-text">2.匿名函数的声明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-匿名函数的调用"><span class="post-toc-text">3. 匿名函数的调用</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、变量作用域"><span class="post-toc-text">三、变量作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-什么是变量的作用域"><span class="post-toc-text">1.什么是变量的作用域</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-全局变量和局部变量"><span class="post-toc-text">2.全局变量和局部变量</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、函数的使用"><span class="post-toc-text">四、函数的使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-给别的变量赋值"><span class="post-toc-text">1.给别的变量赋值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-变量作为容器类数据的元素"><span class="post-toc-text">2.变量作为容器类数据的元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-变量作为函数的实参"><span class="post-toc-text">3.变量作为函数的实参</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-变量作为函数的返回值"><span class="post-toc-text">4.变量作为函数的返回值</span></a></li></ol></li>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/12/27/python基础——json/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          python基础——json
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/12/27/python基础——file(文件操作)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——file(文件操作)</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 GuoXu<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

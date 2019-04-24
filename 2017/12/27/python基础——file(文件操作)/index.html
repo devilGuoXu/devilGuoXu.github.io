@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>python基础——file(文件操作) | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="一、打开文件格式：   open(file, mode, endcoding) 打开并返回被打开的文件对象         说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层目录">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——file(文件操作)">
+<meta property="og:url" content="http://yoursite.com/2017/12/27/python基础——file(文件操作)/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="一、打开文件格式：   open(file, mode, endcoding) 打开并返回被打开的文件对象         说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层目录">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-19T11:50:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础——file(文件操作)">
+<meta name="twitter:description" content="一、打开文件格式：   open(file, mode, endcoding) 打开并返回被打开的文件对象         说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层目录">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-python基础——file(文件操作)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      python基础——file(文件操作)
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Python/">Python</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-12-27
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、打开文件"><a href="#一、打开文件" class="headerlink" title="一、打开文件"></a>一、打开文件</h1><h4 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h4><table>
+<thead>
+<tr>
+<th>open(file, mode, endcoding)</th>
+<th>打开并返回被打开的文件对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h4><ul>
+<li>file —— 字符串, 需要打开的文件的路径</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>格式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>绝对路径</td>
+<td>全部</td>
+<td>文件在电脑上全路径(了解)</td>
+</tr>
+<tr>
+<td>相对路径</td>
+<td>./</td>
+<td>当前py文件所在的目录， 可以省略</td>
+</tr>
+<tr>
+<td></td>
+<td>../</td>
+<td>代表当前目录的上层目录</td>
+</tr>
+<tr>
+<td></td>
+<td>…/</td>
+<td>代表当前目录的上层目录的上层目录</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>mode —— 字符串,文件的打开方式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>可做操作</th>
+<th>若文件不存在</th>
+<th>是否覆盖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>只能读</td>
+<td>报错</td>
+<td>-</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>可读可写</td>
+<td>报错</td>
+<td>是</td>
+</tr>
+<tr>
+<td>w</td>
+<td>只能写</td>
+<td>创建</td>
+<td>是</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>可读可写</td>
+<td>创建</td>
+<td>是</td>
+</tr>
+<tr>
+<td>a</td>
+<td>只能写</td>
+<td>创建</td>
+<td>否，追加写</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>可读可写</td>
+<td>创建</td>
+<td>否，追加写</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rb/br</td>
+<td>二进制格式的r</td>
+</tr>
+<tr>
+<td> wb/bw</td>
+<td>二进制格式的w</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>encoding —— 字符串，文字编码方式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>utf-8</td>
+<td>支持所有的语言</td>
+</tr>
+<tr>
+<td>gbk</td>
+<td>只支持英文</td>
+</tr>
+</tbody>
+</table>
+<p>注意：<br>a.读和写对应的编码要保持一致<br>b.非文本文件不能设置编码方式, 例如：图片,视频,可执行文件等…<br>c.以二进制的形式打开文件，不能设置encoding<br>d.给它传值的时候要使用关键字参数</p>
+<hr>
+<h1 id="二、操作文件"><a href="#二、操作文件" class="headerlink" title="二、操作文件"></a>二、操作文件</h1><h4 id="读操作："><a href="#读操作：" class="headerlink" title="读操作："></a>读操作：</h4><table>
+<thead>
+<tr>
+<th>格式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件对象.read()</td>
+<td>获取指定文件中的所有内容</td>
+</tr>
+<tr>
+<td>文件对象.readline()</td>
+<td>获取指定文件中的一行内容</td>
+</tr>
+</tbody>
+</table>
+<h4 id="写操作："><a href="#写操作：" class="headerlink" title="写操作："></a>写操作：</h4><table>
+<thead>
+<tr>
+<th>格式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件对象.write(‘写入内容’)</td>
+<td>以指定方式添加文件内容</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="三、关闭文件"><a href="#三、关闭文件" class="headerlink" title="三、关闭文件"></a>三、关闭文件</h1><p>文件对象.close()</p>
+<hr>
+<h1 id="四、文件操作（简写）"><a href="#四、文件操作（简写）" class="headerlink" title="四、文件操作（简写）"></a>四、文件操作（简写）</h1><p>打开文件，操作完成后会自动关闭文件</p>
+<h4 id="格式：-1"><a href="#格式：-1" class="headerlink" title="格式："></a>格式：</h4><pre><code>with open(file, mode, endcoding) as 文件对象:
+        文件操作代码
+</code></pre><h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>用一个变量来保存当前文件执行的次数: 第一次执行py文件的时候打印1，第二次执行打印2….</p>
+<pre><code># 将数据从文件中读出来
+with open(&apos;files/data.txt&apos;, encoding=&apos;utf-8&apos;) as f:
+    num = int(f.read())
+
+# 修改数据
+num += 1
+
+# 将新的数据再写入文件中
+with open(&apos;files/data.txt&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as f:
+    f.write(str(num))
+
+# 显示数据
+print(num)
+</code></pre>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年03月19日 19:50</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/27/python基础——file(文件操作)/" title="python基础——file(文件操作)">http://yoursite.com/2017/12/27/python基础——file(文件操作)/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="GuoXu">
+                GuoXu
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/27/python基础——file(文件操作)/&title=《python基础——file(文件操作)》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/27/python基础——file(文件操作)/&title=《python基础——file(文件操作)》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/27/python基础——file(文件操作)/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python基础——file(文件操作)》 — GuoXu's Blog&url=http://yoursite.com/2017/12/27/python基础——file(文件操作)/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/27/python基础——file(文件操作)/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/12/27/python基础——file(文件操作)/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、打开文件"><span class="post-toc-text">一、打开文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#格式："><span class="post-toc-text">格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#说明："><span class="post-toc-text">说明：</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、操作文件"><span class="post-toc-text">二、操作文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#读操作："><span class="post-toc-text">读操作：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#写操作："><span class="post-toc-text">写操作：</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、关闭文件"><span class="post-toc-text">三、关闭文件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、文件操作（简写）"><span class="post-toc-text">四、文件操作（简写）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#格式：-1"><span class="post-toc-text">格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#示例："><span class="post-toc-text">示例：</span></a></li></ol></li>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/12/27/python基础——function(函数)/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          python基础——function(函数)
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/12/27/python基础——pygame/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——pygame</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 GuoXu<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>python基础——正则表达式 | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="一、常用字符   表达式  功能     普通字符  匹配字符本身   .  配任意除换行符”\n”外的字符   \w  匹配字母、数字、下划线、中文   \W  匹配非字母、数字、下划线、中文   \s  匹配空白字符   \S  匹配非空白字符   \d  匹配数字字符   \D  匹配非数字字符   \b  检测(当前所在位置是否是)单词边界   \B  检测非单词边界   ^  检测字符串">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——正则表达式">
+<meta property="og:url" content="http://yoursite.com/2017/12/27/python基础——正则表达式/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="一、常用字符   表达式  功能     普通字符  匹配字符本身   .  配任意除换行符”\n”外的字符   \w  匹配字母、数字、下划线、中文   \W  匹配非字母、数字、下划线、中文   \s  匹配空白字符   \S  匹配非空白字符   \d  匹配数字字符   \D  匹配非数字字符   \b  检测(当前所在位置是否是)单词边界   \B  检测非单词边界   ^  检测字符串">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-19T11:49:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础——正则表达式">
+<meta name="twitter:description" content="一、常用字符   表达式  功能     普通字符  匹配字符本身   .  配任意除换行符”\n”外的字符   \w  匹配字母、数字、下划线、中文   \W  匹配非字母、数字、下划线、中文   \s  匹配空白字符   \S  匹配非空白字符   \d  匹配数字字符   \D  匹配非数字字符   \b  检测(当前所在位置是否是)单词边界   \B  检测非单词边界   ^  检测字符串">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-python基础——正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      python基础——正则表达式
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Python/">Python</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-12-27
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、常用字符"><a href="#一、常用字符" class="headerlink" title="一、常用字符"></a>一、常用字符</h1><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th></th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通字符</td>
+<td></td>
+<td>匹配字符本身</td>
+</tr>
+<tr>
+<td>.</td>
+<td></td>
+<td>配任意除换行符”\n”外的字符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td></td>
+<td>匹配字母、数字、下划线、中文</td>
+</tr>
+<tr>
+<td>\W</td>
+<td></td>
+<td>匹配非字母、数字、下划线、中文</td>
+</tr>
+<tr>
+<td>\s</td>
+<td></td>
+<td>匹配空白字符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td></td>
+<td>匹配非空白字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td></td>
+<td>匹配数字字符</td>
+</tr>
+<tr>
+<td>\D</td>
+<td></td>
+<td>匹配非数字字符</td>
+</tr>
+<tr>
+<td>\b</td>
+<td></td>
+<td>检测(当前所在位置是否是)单词边界</td>
+</tr>
+<tr>
+<td>\B</td>
+<td></td>
+<td>检测非单词边界</td>
+</tr>
+<tr>
+<td>^</td>
+<td></td>
+<td>检测字符串开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td></td>
+<td>检测字符串结尾</td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td>[字符集]</td>
+<td>匹配字符集中的任意一个字符</td>
+</tr>
+<tr>
+<td></td>
+<td>[字符1-字符2]</td>
+<td>匹配字符1到字符2中所有的字符</td>
+</tr>
+<tr>
+<td>例：</td>
+<td>[a-zA-Z\d_]</td>
+<td>数字字母下划线</td>
+</tr>
+<tr>
+<td></td>
+<td>[^字符集]</td>
+<td>匹配没有在字符集中的其他任意字符</td>
+</tr>
+<tr>
+<td>\</td>
+<td></td>
+<td>转义符号，使后一个字符改变原来的意思</td>
+</tr>
+<tr>
+<td>*</td>
+<td>(贪婪)</td>
+<td>匹配前一个字符0次或多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>(贪婪)</td>
+<td>匹配前一个字符1次或多次</td>
+</tr>
+<tr>
+<td>?</td>
+<td>(贪婪)</td>
+<td>匹配前一个字符0次或1次</td>
+</tr>
+<tr>
+<td>{ }</td>
+<td>{M,N}(贪婪)</td>
+<td>匹配前一个字符至少M次到最多N次</td>
+</tr>
+<tr>
+<td></td>
+<td>{M,}(贪婪)</td>
+<td>匹配前一个字符至少M次</td>
+</tr>
+<tr>
+<td></td>
+<td>{,N}(贪婪)</td>
+<td>匹配前一个字符最多N次</td>
+</tr>
+<tr>
+<td></td>
+<td>{N}</td>
+<td>匹配前一个字符N次</td>
+</tr>
+<tr>
+<td>&#124; (分之)</td>
+<td>表达式1&#124;表达式2&#124;…</td>
+<td>依次将表达式匹配，直到成功，否则失败</td>
+</tr>
+<tr>
+<td>( ) (分组)</td>
+<td></td>
+<td>将括号中的内容看成一个整体</td>
+</tr>
+<tr>
+<td></td>
+<td>分组重复</td>
+<td>‘\数字’重复前面第几个分组匹配到的内容</td>
+</tr>
+<tr>
+<td>贪婪?</td>
+<td>惰性</td>
+<td>尽可能少的匹配</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="二、内置函数"><a href="#二、内置函数" class="headerlink" title="二、内置函数"></a>二、内置函数</h1><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>功能</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>compile(pattern,flags=0)</td>
+<td>将正则转换成正则对象</td>
+<td>正则对象</td>
+</tr>
+<tr>
+<td>fullmatch(pattern, string, flags=0)</td>
+<td>string与pattern完全匹配</td>
+<td>匹配对象\None</td>
+</tr>
+<tr>
+<td>match(pattern, string, flags=0)</td>
+<td>string的开头与pattern进行匹配</td>
+<td>匹配对象\None</td>
+</tr>
+<tr>
+<td>search(pattern, string, flags=0)</td>
+<td>在string中去匹配出第一个符合pattern的子串</td>
+<td>匹配对象\None</td>
+</tr>
+<tr>
+<td>split(pattern, string, maxsplit=0, flags=0)</td>
+<td>将string按照满足pattern要求的子串进行切割</td>
+<td>列表</td>
+</tr>
+<tr>
+<td>sub(pattern, repl, string, count=0, flags=0)</td>
+<td>将string中能够和pattern匹配的子串替换成repl</td>
+<td>新字符串</td>
+</tr>
+<tr>
+<td>findall(pattern, string, flags=0)</td>
+<td>在string中获取满足pattern的所有子串(如有分组,只获取分组中内容; 如有多个分组,列表中的元素是元组)</td>
+<td>列表</td>
+</tr>
+<tr>
+<td>finditer(pattern, string, flags=0)</td>
+<td>在string中获取满足pattern的所有子串</td>
+<td>迭代器</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注：</strong><br>pattern：正则表达式<br>string、repl：字符串<br>maxsplit：最大分割次数（下标），默认0：全部分割<br>count：替换的个数（前count个），默认0：全部替换<br>flags：编译标志位</p>
+<table>
+<thead>
+<tr>
+<th>标志（flags）</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>re.I（IGNORECASE）</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>re.S(DOTALL)</td>
+<td>使.匹配包括换行在内的所有字符</td>
+</tr>
+<tr>
+<td>re.M(MULTILINE)</td>
+<td>多行匹配，影响^和$</td>
+</tr>
+<tr>
+<td>re.U</td>
+<td>根据Unicode字符集解析字符，这个标志影响\w,\W,\b,\B</td>
+</tr>
+</tbody>
+</table>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年03月19日 19:49</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/27/python基础——正则表达式/" title="python基础——正则表达式">http://yoursite.com/2017/12/27/python基础——正则表达式/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="GuoXu">
+                GuoXu
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/27/python基础——正则表达式/&title=《python基础——正则表达式》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/python_%E6%AD%A3%E5%88%99.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/27/python基础——正则表达式/&title=《python基础——正则表达式》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/27/python基础——正则表达式/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python基础——正则表达式》 — GuoXu's Blog&url=http://yoursite.com/2017/12/27/python基础——正则表达式/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/27/python基础——正则表达式/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/12/27/python基础——正则表达式/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、常用字符"><span class="post-toc-text">一、常用字符</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、内置函数"><span class="post-toc-text">二、内置函数</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/12/27/python基础——ClassObject(类)/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          python基础——ClassObject(类)
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/12/26/Pycharm——快捷键(windows)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Pycharm——快捷键(windows)</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 GuoXu<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

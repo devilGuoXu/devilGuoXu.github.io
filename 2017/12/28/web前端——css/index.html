@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>web前端——css | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="一、语法选择器 { 属性名1 : 属性值1 ; 属性名2 : 属性值2 ... }  二、样式内联样式表：将样式表写在标签的style中。 注意，这种样式表不需要写”选择器{}”，直接给属性赋值内部样式表:：将样式表写在style标签中(这个标签可以放在head中，也可以放在body中)外部样式表：将样式表写在一个css文件中，然后在head中通过link导入link标签 - 导入外部文件rel属">
+<meta name="keywords" content="web前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端——css">
+<meta property="og:url" content="http://yoursite.com/2017/12/28/web前端——css/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="一、语法选择器 { 属性名1 : 属性值1 ; 属性名2 : 属性值2 ... }  二、样式内联样式表：将样式表写在标签的style中。 注意，这种样式表不需要写”选择器{}”，直接给属性赋值内部样式表:：将样式表写在style标签中(这个标签可以放在head中，也可以放在body中)外部样式表：将样式表写在一个css文件中，然后在head中通过link导入link标签 - 导入外部文件rel属">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/15578524-8c6c4e9f02d58fcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-03-19T11:17:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web前端——css">
+<meta name="twitter:description" content="一、语法选择器 { 属性名1 : 属性值1 ; 属性名2 : 属性值2 ... }  二、样式内联样式表：将样式表写在标签的style中。 注意，这种样式表不需要写”选择器{}”，直接给属性赋值内部样式表:：将样式表写在style标签中(这个标签可以放在head中，也可以放在body中)外部样式表：将样式表写在一个css文件中，然后在head中通过link导入link标签 - 导入外部文件rel属">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/15578524-8c6c4e9f02d58fcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-web前端——css" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      web前端——css
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/web前端/">web前端</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-12-28
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、语法"><a href="#一、语法" class="headerlink" title="一、语法"></a>一、语法</h1><pre><code>选择器 { 属性名1 : 属性值1 ; 属性名2 : 属性值2 ... }
+</code></pre><hr>
+<h1 id="二、样式"><a href="#二、样式" class="headerlink" title="二、样式"></a>二、样式</h1><p><strong>内联样式表</strong>：将样式表写在标签的style中。 注意，这种样式表不需要写”选择器{}”，直接给属性赋值<br><strong>内部样式表</strong>:：将样式表写在style标签中(这个标签可以放在head中，也可以放在body中)<br><strong>外部样式表</strong>：将样式表写在一个css文件中，然后在head中通过link导入<br>link标签 - 导入外部文件<br>rel属性 - 导入的文件的作用, stylesheet-&gt;样式表, icon-&gt;网页图标<br>type属性 - 导入的文件的类型说明, 类型/文件后缀<br>href属性 - 文件路径</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/CSS基础.css&quot;/&gt;
+</code></pre><hr>
+<h1 id="三、选择器"><a href="#三、选择器" class="headerlink" title="三、选择器"></a>三、选择器</h1><p>1.元素选择器<br>直接将标签名作为选择器。例如: div{}, p{}, a{}<br>2.id选择器<br>将标签的id属性值前面加#作为选择器，一个页面中id值要唯一，例如: #p2{}<br>3.class选择器(类选择器)<br>将标签的class属性值前面加.作为选择器，例如: .c1{}<br>4.<em>(通配符)<br>直接将</em>作为选择器，选中当前页面中所有的标签，例如: *{}<br>5.群组选择器<br>将多个选择器用逗号隔开作为一个选择器，例如: a,p{}<br>6.层级选择器(后代选择器)<br>将多个选择器用空格隔开作为一个选择器，按层级选中最后一个选择器选中的标签，例如: div .c1{}</p>
+<h5 id="选择器优先级："><a href="#选择器优先级：" class="headerlink" title="选择器优先级："></a>选择器优先级：</h5><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内联样式</td>
+<td>最高</td>
+</tr>
+<tr>
+<td>通配符</td>
+<td>0001(1)</td>
+</tr>
+<tr>
+<td>元素选择器</td>
+<td>0001(1)</td>
+</tr>
+<tr>
+<td>class选择器</td>
+<td>0010(2)</td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>0100(4)</td>
+</tr>
+<tr>
+<td>群组选择器</td>
+<td>分开看每个选择器的权重</td>
+</tr>
+<tr>
+<td>后代选择器</td>
+<td>用空格分开的所有选择器权重之和</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="四、伪类选择器"><a href="#四、伪类选择器" class="headerlink" title="四、伪类选择器"></a>四、伪类选择器</h1><p>语法：</p>
+<pre><code>普通选择器 : 状态 {}
+</code></pre><table>
+<thead>
+<tr>
+<th>状态</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>link</td>
+<td>初始状态(a标签，指标签对应的地址没有成功访问过的时候)</td>
+</tr>
+<tr>
+<td>visited</td>
+<td>访问后的状态(一般针对a标签有效)</td>
+</tr>
+<tr>
+<td>hover</td>
+<td>鼠标悬停在标签上的时候对应的状态</td>
+</tr>
+<tr>
+<td>active</td>
+<td>鼠标按住标签不放的时候对应的状态</td>
+</tr>
+</tbody>
+</table>
+<p>注：需要遵守‘爱恨’原则,’LoVeHAte’</p>
+<hr>
+<h1 id="五、布局"><a href="#五、布局" class="headerlink" title="五、布局"></a>五、布局</h1><table>
+<thead>
+<tr>
+<th>标准流</th>
+<th>功能</th>
+<th>标签</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>块级</td>
+<td>一个占一行，默认父标签宽度和内容高度，设置宽高有效</td>
+<td>p</td>
+</tr>
+<tr>
+<td>行内</td>
+<td>一行显示多个，默认为内容大小，设置宽高无效</td>
+<td>span、a</td>
+</tr>
+<tr>
+<td>行内块</td>
+<td>一行显示多个，默认为内容大小，设置宽高有效</td>
+<td>img、input</td>
+</tr>
+</tbody>
+</table>
+<p><strong>设置布局：</strong><br>1.左右结构：</p>
+<table>
+<thead>
+<tr>
+<th>display属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block</td>
+<td>块</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>行内</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>行内块</td>
+<td>默认左右间隙，可通过设置父标签字体大小为0来去掉</td>
+</tr>
+<tr>
+<td>none</td>
+<td>隐藏</td>
+</tr>
+</tbody>
+</table>
+<p>2.脱流：<br>①浮动（float）<br>②定位（left、right、top、bottom、position）<br>脱流后，都按一行显示多个，默认为内容大小，设置宽高有效</p>
+<ul>
+<li>①浮动</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>float属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>上左对齐</td>
+</tr>
+<tr>
+<td>right</td>
+<td>上右对齐</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>文字环绕：</strong>被环绕的标签浮动，文字标签不浮动</p>
+</li>
+<li><p><strong>清除浮动：</strong>清除因为浮动产生的高度塌陷<br>高度塌陷： 当父标签不浮动，子标签浮动的时候，父标签就会产生高度塌陷</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>步骤</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>添加空盒子</td>
+<td>在高度会塌陷的父标签的最后添加一个空的div；然后给空的div添加样式设置clear属性的值为both</td>
+</tr>
+<tr>
+<td>overflow</td>
+<td>给高度会塌陷的那个父标签，添加样式设置overflow属性值为hidden</td>
+</tr>
+<tr>
+<td>万能清除法</td>
+<td>选中高度会塌陷的那个父标签；给after状态添加样式：display:block;clear:both;content:””;visibility:hidden;height:0; 然后再给这个父标签添加样式：zoom:1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>②定位</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>position属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initial</td>
+<td>定位无效（默认）</td>
+</tr>
+<tr>
+<td>static</td>
+<td>定位无效（默认）</td>
+</tr>
+<tr>
+<td>absolute</td>
+<td>绝对定位</td>
+<td>以第一个position的值不是默认值的父标签进行定位。（注意：body标签的position不是initial和static）</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>相对定位</td>
+<td>相对本身在标准流中的位置进行定位</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>相对浏览器定位</td>
+</tr>
+<tr>
+<td>sticky</td>
+<td>粘性定位</td>
+<td>当浏览器内容没有超过一屏的时候，显示在内容的最下面；当浏览器内容超过一屏bottom有效，并且显示在浏览器的底部（top和bottom有效，left和right无效）</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>定位属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top属性</td>
+<td>顶部的距离</td>
+</tr>
+<tr>
+<td>bottom属性</td>
+<td>底部的距离</td>
+</tr>
+<tr>
+<td>left属性</td>
+<td>左边的距离</td>
+</tr>
+<tr>
+<td>right属性</td>
+<td>右边的距离</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="六、盒子模型"><a href="#六、盒子模型" class="headerlink" title="六、盒子模型"></a>六、盒子模型</h1><table>
+<thead>
+<tr>
+<th>组成</th>
+<th>名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td>内容</td>
+<td>可见，标签宽高的作用域，显示文本、图像、子标签</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>内边距</td>
+<td>可见，默认为0，背景色同content，有四个方向</td>
+</tr>
+<tr>
+<td>border</td>
+<td>边框</td>
+<td>可见，默认为0，颜色和大小都可以单独设置，有四个方向</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>外边距</td>
+<td>不可见，占位</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://upload-images.jianshu.io/upload_images/15578524-8c6c4e9f02d58fcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>border属性：<br>语法：</p>
+<pre><code>border-方向：边框宽度 边框风格 边框颜色
+</code></pre><p>边框风格: solid(实线), dashed(虚线), dotted（点划线）</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年03月19日 19:17</p>
+        <p>原始链接： <a class="post-url" href="/2017/12/28/web前端——css/" title="web前端——css">http://yoursite.com/2017/12/28/web前端——css/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="GuoXu">
+                GuoXu
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/28/web前端——css/&title=《web前端——css》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/css.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/28/web前端——css/&title=《web前端——css》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/28/web前端——css/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《web前端——css》 — GuoXu's Blog&url=http://yoursite.com/2017/12/28/web前端——css/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/28/web前端——css/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/12/28/web前端——css/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/web前端/" class="color1">web前端</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、语法"><span class="post-toc-text">一、语法</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、样式"><span class="post-toc-text">二、样式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、选择器"><span class="post-toc-text">三、选择器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#选择器优先级："><span class="post-toc-text">选择器优先级：</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、伪类选择器"><span class="post-toc-text">四、伪类选择器</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、布局"><span class="post-toc-text">五、布局</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、盒子模型"><span class="post-toc-text">六、盒子模型</span></a></li>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2017/12/28/web前端——ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          web前端——ajax
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/12/28/web前端——jQuery/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">web前端——jQuery</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 GuoXu<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 13.33px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16.67px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 13.33px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16.67px;">web前端</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
