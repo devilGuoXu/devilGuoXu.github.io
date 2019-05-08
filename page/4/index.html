@@ -107,14 +107,14 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
-    <article id="post-python基础——运算符" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——生成器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——运算符/">python基础——运算符</a>
+      <a class="article-title" href="/2015/11/27/python基础——生成器/">python基础——生成器</a>
     </h1>
   
 
@@ -131,102 +131,19 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——运算符/">
+            <a href="/2015/11/27/python基础——生成器/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——运算符" title="python基础——运算符">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——生成器" title="python基础——生成器">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                一、数学运算符
-
-
-名称
-含义
-
-
-
-
-+
-加
-
-
--
-减
-
-
-*
-乘
-
-
-/
-除
-
-
-//
-取整
-
-
-%
-取余
-
-
-**
-求幂
-
-
-
-
-二、比较运算符
-
-
-名称
-含义
-
-
-
-
-&gt;
-大于
-
-
-&lt;
-小于
-
-
-==
-等于（值）
-
-
-!=
-不等
-
-
-&gt;=
-大于等于
-
-
-&lt;=
-小于等于
-
-
-
-
-身份运算符
-
-
-
-名称
-含义
-
-
-
-
-is
-等于（地址）
-
-
+                生成器就是迭代器, 迭代器不一定是生成器
+调用一个带有yield关键字的函数就能得到一个生成器，调用的时候不会执行函数体，也不会获取返回值，而是产生一个生成器(函数调用表达式就是一个生成器)， 这个生成器中的元素就是yield关键字后面的值
+生成式：格式：
+生成器 = (表达式 for 变量 in 序列)
+生成器 = (表达式 for 变量 in 序列 if 条件语句)
 ...
             </p>
         </div>
@@ -249,7 +166,75 @@ is
 
         </ul>
         
-            <a href="/2015/11/27/python基础——运算符/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——生成器/#more" class="article-more-link">more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-python基础——递归函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/27/python基础——递归函数/">python基础——递归函数</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/Python/">Python</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2015/11/27/python基础——递归函数/">
+                
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——递归函数" title="python基础——递归函数">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                第一步：确定临界值 - 循环结束的条件,在临界值的地方要让函数结束！第二步：找关系 - 找当次循环和上次循环的关系;找f(n)和f(n-1)的关系第三步: 假设函数f的功能已经实现，通过f(n-1)来实现f(n)的功能
+实现：1+2+3+…+ndef gx_sum(n):
+    # 1.找临界值
+    if n == 1:
+        return 1
+
+    ...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2015-11-27</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2015/11/27/python基础——递归函数/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -433,14 +418,14 @@ hex(十进制数)
 
 
   
-    <article id="post-python基础——递归函数" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——tuple(元组)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——递归函数/">python基础——递归函数</a>
+      <a class="article-title" href="/2015/11/27/python基础——tuple(元组)/">python基础——tuple(元组)</a>
     </h1>
   
 
@@ -457,21 +442,22 @@ hex(十进制数)
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——递归函数/">
+            <a href="/2015/11/27/python基础——tuple(元组)/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——递归函数" title="python基础——递归函数">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——tuple(元组)" title="python基础——tuple(元组)">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                第一步：确定临界值 - 循环结束的条件,在临界值的地方要让函数结束！第二步：找关系 - 找当次循环和上次循环的关系;找f(n)和f(n-1)的关系第三步: 假设函数f的功能已经实现，通过f(n-1)来实现f(n)的功能
-实现：1+2+3+…+ndef gx_sum(n):
-    # 1.找临界值
-    if n == 1:
-        return 1
-
-    ...
+                特征：有序且不可变（元组就是不可变的列表）有序：每个元素对应一个下标不可变：不支持增删改，只支持查
+特殊：只有一个元素的元组
+tuple1 = (100,)       #(100,)
+不加小括号表示也是一个元组
+tuple2 = 1, 2, 3      #(1, 2, 3)
+特殊获取
+x, y = (100, 200)
+print(x, y)            #...
             </p>
         </div>
       
@@ -493,7 +479,7 @@ hex(十进制数)
 
         </ul>
         
-            <a href="/2015/11/27/python基础——递归函数/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——tuple(元组)/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -561,6 +547,160 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
         </ul>
         
             <a href="/2015/11/27/python基础——pymysql/#more" class="article-more-link">more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-python基础——list(列表)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/27/python基础——list(列表)/">python基础——list(列表)</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/Python/">Python</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2015/11/27/python基础——list(列表)/">
+                
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_list.jpg?raw=true" alt="python基础——list(列表)" title="python基础——list(列表)">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                一、创建列表list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True]
+注：列表的数据项不需要具有相同的类型
+
+二、列表操作符
+
+
+表达式
+结果
+描述
+
+
+
+
+[1, 2, 3] + [4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+组合
+
+
+[“ab!”]*3
+[“ab!”, “ab!”, “ab!”]
+重复
+
+
+3 in [...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2015-11-27</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2015/11/27/python基础——list(列表)/#more" class="article-more-link">more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-python基础——function(函数)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/27/python基础——function(函数)/">python基础——function(函数)</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/Python/">Python</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2015/11/27/python基础——function(函数)/">
+                
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——function(函数)" title="python基础——function(函数)">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                一、函数1.函数的概念函数是实现某一特定功能的代码段的封装
+2.函数的声明/定义def 函数名(形参列表):
+    函数体
+    return 语句
+形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部函数体: 函数说明文档, 实现函数功能的代码段
+(重点!)声明函数的时候不会执行函数体
+3.函数的调用函数名(实参列表)  
+(重点!)函数调用...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2015-11-27</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2015/11/27/python基础——function(函数)/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -669,91 +809,6 @@ Json...
 
 
   
-    <article id="post-python基础——list(列表)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——list(列表)/">python基础——list(列表)</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/Python/">Python</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2015/11/27/python基础——list(列表)/">
-                
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_list.jpg?raw=true" alt="python基础——list(列表)" title="python基础——list(列表)">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                一、创建列表list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True]
-注：列表的数据项不需要具有相同的类型
-
-二、列表操作符
-
-
-表达式
-结果
-描述
-
-
-
-
-[1, 2, 3] + [4, 5, 6]
-[1, 2, 3, 4, 5, 6]
-组合
-
-
-[“ab!”]*3
-[“ab!”, “ab!”, “ab!”]
-重复
-
-
-3 in [...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2015-11-27</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Python/" class="color2">Python</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2015/11/27/python基础——list(列表)/#more" class="article-more-link">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
     <article id="post-python基础——set(集合)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -842,143 +897,6 @@ set.remove(element)
         </ul>
         
             <a href="/2015/11/27/python基础——set(集合)/#more" class="article-more-link">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-python基础——threading(线程)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——threading(线程)/">python基础——threading(线程)</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/Python/">Python</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2015/11/27/python基础——threading(线程)/">
-                
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——threading(线程)" title="python基础——threading(线程)">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                一、导入线程库import threading
-/或
-from threading import Thread
-
-二、创建子线程函数创建线程Thread(target,args)   -  创建子线程对象说明:target —— Function，需要传一个函数(这个函数中的内容会在子线程中执行)args —— 元祖，target对应的函数的参数
-# 创建
-t1 = th...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2015-11-27</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Python/" class="color2">Python</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2015/11/27/python基础——threading(线程)/#more" class="article-more-link">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-python基础——function(函数)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——function(函数)/">python基础——function(函数)</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/Python/">Python</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2015/11/27/python基础——function(函数)/">
-                
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——function(函数)" title="python基础——function(函数)">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                一、函数1.函数的概念函数是实现某一特定功能的代码段的封装
-2.函数的声明/定义def 函数名(形参列表):
-    函数体
-    return 语句
-形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部函数体: 函数说明文档, 实现函数功能的代码段
-(重点!)声明函数的时候不会执行函数体
-3.函数的调用函数名(实参列表)  
-(重点!)函数调用...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2015-11-27</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Python/" class="color2">Python</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2015/11/27/python基础——function(函数)/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>

@@ -107,14 +107,14 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
-    <article id="post-web前端——css" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-web前端——jQuery" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/web前端——css/">web前端——css</a>
+      <a class="article-title" href="/2015/11/28/web前端——jQuery/">web前端——jQuery</a>
     </h1>
   
 
@@ -131,17 +131,37 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/28/web前端——css/">
+            <a href="/2015/11/28/web前端——jQuery/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/css.jpg?raw=true" alt="web前端——css" title="web前端——css">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/jquery.jpg?raw=true" alt="web前端——jQuery" title="web前端——jQuery">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                一、语法选择器 { 属性名1 : 属性值1 ; 属性名2 : 属性值2 ... }
+                一、导入jQuery在script标签的src中导入
+js/jquery.min.js
+# 或
+https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js
 
-二、样式内联样式表：将样式表写在标签的style中。 注意，这种样式表不需要写”选择器{}”，直接给属性赋值内部样式表:：将样式表写在style标签中(这个标签可以放在head中，也可以放在body中)外部样式表：将样式表写在一个css文件中，然后在head中通过link导入link标签...
+二、节点操作1. 获取节点
+
+
+语法
+返回值
+
+
+
+
+$(‘选择器’)
+jQuery的节点对象
+
+
+$(‘选择器:first’)
+当前页面中第一个选择器对应的标签
+
+
+$(‘...
             </p>
         </div>
       
@@ -163,7 +183,7 @@
 
         </ul>
         
-            <a href="/2015/11/28/web前端——css/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/28/web前端——jQuery/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -649,14 +669,14 @@ params
 
 
   
-    <article id="post-python基础——继承衍生功能" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——运算符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——继承衍生功能/">python基础——继承衍生功能</a>
+      <a class="article-title" href="/2015/11/27/python基础——运算符/">python基础——运算符</a>
     </h1>
   
 
@@ -673,81 +693,102 @@ params
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——继承衍生功能/">
+            <a href="/2015/11/27/python基础——运算符/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——继承衍生功能" title="python基础——继承衍生功能">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                一、__slots__1._ _slots _ _的值继承后没有效果2.在类中给 _ _slots _ _赋值后，当前类的对象不能使用 _ _dict _ _ ；但是这个类的子类对象可以使用_ _dict _ _ ，只是_ _dict _ _中没有从父类继承下来的对象属性，只有在子类中添加的对象属性3.如果父类没有给 _ _slots _ _ 赋值，直接给子类的_ _sl...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2015-11-27</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Python/" class="color2">Python</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2015/11/27/python基础——继承衍生功能/#more" class="article-more-link">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-python基础——生成器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——生成器/">python基础——生成器</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/Python/">Python</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2015/11/27/python基础——生成器/">
-                
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——生成器" title="python基础——生成器">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——运算符" title="python基础——运算符">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                生成器就是迭代器, 迭代器不一定是生成器
-调用一个带有yield关键字的函数就能得到一个生成器，调用的时候不会执行函数体，也不会获取返回值，而是产生一个生成器(函数调用表达式就是一个生成器)， 这个生成器中的元素就是yield关键字后面的值
-生成式：格式：
-生成器 = (表达式 for 变量 in 序列)
-生成器 = (表达式 for 变量 in 序列 if 条件语句)
+                一、数学运算符
+
+
+名称
+含义
+
+
+
+
++
+加
+
+
+-
+减
+
+
+*
+乘
+
+
+/
+除
+
+
+//
+取整
+
+
+%
+取余
+
+
+**
+求幂
+
+
+
+
+二、比较运算符
+
+
+名称
+含义
+
+
+
+
+&gt;
+大于
+
+
+&lt;
+小于
+
+
+==
+等于（值）
+
+
+!=
+不等
+
+
+&gt;=
+大于等于
+
+
+&lt;=
+小于等于
+
+
+
+
+身份运算符
+
+
+
+名称
+含义
+
+
+
+
+is
+等于（地址）
+
+
 ...
             </p>
         </div>
@@ -770,7 +811,74 @@ params
 
         </ul>
         
-            <a href="/2015/11/27/python基础——生成器/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——运算符/#more" class="article-more-link">more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-python基础——自定义print" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/27/python基础——自定义print/">python基础——自定义print</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/Python/">Python</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2015/11/27/python基础——自定义print/">
+                
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——自定义print" title="python基础——自定义print">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                print自定义结尾（默认是换行）和多个内容之间的间隔（默认是空格）
+语法：
+print(&quot;内容&quot;,end=&quot;间隔样式&quot;)
+print(&quot;内容1&quot;,&quot;内容2&quot;,&quot;内容3&quot;,sep=&quot;间隔样式&quot;)
+示例：
+print(&quot;第一行内容&quot;,e...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2015-11-27</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2015/11/27/python基础——自定义print/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
