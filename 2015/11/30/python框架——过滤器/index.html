@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Python框架——过滤器 | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="过滤器 功能 案例     add 将value的值增加N { { value &amp;#124; add: “N” } }   addslashes 在value中的引号前增加反斜线 { { value &amp;#124; addslashes } }   capfirst value的第一个字符转化成大写形式 { { value &amp;#124; capfirst } }   cut 从给定value中">
+<meta name="keywords" content="Python,Python框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python框架——过滤器">
+<meta property="og:url" content="http://yoursite.com/2015/11/30/python框架——过滤器/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="过滤器 功能 案例     add 将value的值增加N { { value &amp;#124; add: “N” } }   addslashes 在value中的引号前增加反斜线 { { value &amp;#124; addslashes } }   capfirst value的第一个字符转化成大写形式 { { value &amp;#124; capfirst } }   cut 从给定value中">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-24T11:33:32.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python框架——过滤器">
+<meta name="twitter:description" content="过滤器 功能 案例     add 将value的值增加N { { value &amp;#124; add: “N” } }   addslashes 在value中的引号前增加反斜线 { { value &amp;#124; addslashes } }   capfirst value的第一个字符转化成大写形式 { { value &amp;#124; capfirst } }   cut 从给定value中">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-python框架——过滤器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Python框架——过滤器
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Python框架/">Python框架</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2015-11-30
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <table>
+<thead>
+<tr>
+<th>过滤器</th>
+<th>功能</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add</td>
+<td>将value的值增加N</td>
+<td>{ { value &#124; add: “N” } }</td>
+</tr>
+<tr>
+<td>addslashes</td>
+<td>在value中的引号前增加反斜线</td>
+<td>{ { value &#124; addslashes } }</td>
+</tr>
+<tr>
+<td>capfirst</td>
+<td>value的第一个字符转化成大写形式</td>
+<td>{ { value &#124; capfirst } }</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>从给定value中删除所有arg的值</td>
+<td>{ { value &#124; cut:arg } }</td>
+</tr>
+<tr>
+<td>date</td>
+<td>格式化时间格式</td>
+<td>{ { value &#124; date:”Y-m-d H:i:s” } }</td>
+</tr>
+<tr>
+<td>default</td>
+<td>如果value是False，输出为缺省值，如value是“”，输出nothing</td>
+<td>{ { value &#124; default: “nothing” } }</td>
+</tr>
+<tr>
+<td>default_if_none</td>
+<td>如果value是None，输出为缺省值，如value是None，输出nothing</td>
+<td>{ { value &#124; default_if_none:”nothing” } }</td>
+</tr>
+<tr>
+<td>dictsort</td>
+<td>如果value是字典，那返回值是按照关键字排序的结果</td>
+<td>{ { value &#124; dictsort:”name”} }</td>
+</tr>
+<tr>
+<td>dictsortreversed</td>
+<td>如果value是字典，那返回值是按照关键字排序的结果的反序</td>
+<td>{ { value &#124; dictsortreversed:”name” } }</td>
+</tr>
+<tr>
+<td>divisibleby</td>
+<td>如果value能够被arg整除，那么返回值将是True</td>
+<td>{ { value &#124; divisibleby:arg } }</td>
+</tr>
+<tr>
+<td>escape</td>
+<td>替换value中的某些字符，以适应HTML格式</td>
+<td>{ { value &#124; escape } }</td>
+</tr>
+<tr>
+<td>filesizeformat</td>
+<td>格式化value，使其成为易读的文件大小</td>
+<td>{ { value &#124; filesizeformat } }</td>
+</tr>
+<tr>
+<td>first</td>
+<td>返回列表/字符串中的第一个元素</td>
+<td>{ { value &#124; first } }</td>
+</tr>
+<tr>
+<td>iriencode</td>
+<td>将value中非ASCII字符转化成URL中编码，已URLENCODE，则无效</td>
+<td>{ { value &#124; iriencode } }</td>
+</tr>
+<tr>
+<td>join</td>
+<td>使用指定字符串连接一个list，作用同python的str.join(list)</td>
+<td>{ { value &#124; join:”arg” } }</td>
+</tr>
+<tr>
+<td>last</td>
+<td>返回列表/字符串中的最后一个元素</td>
+<td>{ { value &#124; last } }</td>
+</tr>
+<tr>
+<td>length</td>
+<td>返回value的长度</td>
+<td>{ { value &#124; length } }</td>
+</tr>
+<tr>
+<td>length_is</td>
+<td>如果value的长度等于arg的时候返回True</td>
+<td>{ { value &#124; length_is:”arg” } }</td>
+</tr>
+<tr>
+<td>linebreaks</td>
+<td>value中”\n”将被&lt; br/ &gt;替代，并且整个value使用&lt; /p &gt;包围起来</td>
+<td>{ { value &#124; linebreaks } }</td>
+</tr>
+<tr>
+<td>linebreaksbr</td>
+<td>value中的”\n”将被&lt; br/ &gt;替代</td>
+<td>{ { value &#124; linebreaksbr } }</td>
+</tr>
+<tr>
+<td>linenumbers</td>
+<td>显示的文本，带有行数</td>
+<td>{ { value &#124; linenumbers } }</td>
+</tr>
+<tr>
+<td>ljust</td>
+<td>在一个给定宽度的字段中，左对齐显示value</td>
+<td>{ { value &#124; ljust } }</td>
+</tr>
+<tr>
+<td>center</td>
+<td>在一个给定宽度的字段中，中心对齐显示value</td>
+<td>{ { value &#124; center } }</td>
+</tr>
+<tr>
+<td>rjust</td>
+<td>在一个给定宽度的字段中，右对齐显示value</td>
+<td>{ { value &#124; rjust } }</td>
+</tr>
+<tr>
+<td>lower</td>
+<td>将一个字符串转换成小写形式</td>
+<td>{ { value &#124; lower } }</td>
+</tr>
+<tr>
+<td>random</td>
+<td>从给定的list中返回一个任意的Item</td>
+<td>{ { value &#124; random } }</td>
+</tr>
+<tr>
+<td>removetags</td>
+<td>删除value中tag1,tag2…的标签</td>
+<td>{ { value &#124; removetags:”tag1 tag2…” } }</td>
+</tr>
+<tr>
+<td>safe</td>
+<td>系统设置autoescaping打开的时候，输出不进行escape转换</td>
+<td>{ { value &#124; safe } }</td>
+</tr>
+<tr>
+<td>safeseq</td>
+<td>同safe，safe针对字符串，而safeseq针对多个字符串组成的sequence</td>
+<td>{ { value &#124; safeseq } }</td>
+</tr>
+<tr>
+<td>slice</td>
+<td>与python语法中的slice(切片)相同</td>
+<td>{ { some_list &#124; slice:”N” } }</td>
+</tr>
+<tr>
+<td>striptags</td>
+<td>删除value中的所有HTML标签</td>
+<td>{ { value &#124; striptags } }</td>
+</tr>
+<tr>
+<td>time</td>
+<td>格式化时间输出</td>
+<td>{ { value &#124; time[:”H:i”] } }</td>
+</tr>
+<tr>
+<td>title</td>
+<td>转换一个字符串成为title格式</td>
+<td>{ { value &#124; title } }</td>
+</tr>
+<tr>
+<td>truncatewords</td>
+<td>将value切成truncatewords指定的单词数目</td>
+<td>{ { value &#124; truncatewords:N } }</td>
+</tr>
+<tr>
+<td>upper</td>
+<td>转换一个字符串为大写形式</td>
+<td>{ { value &#124; upper } }</td>
+</tr>
+<tr>
+<td>urlencode</td>
+<td>将一个字符串进行URLEncode</td>
+<td>{ { value &#124; urlencode } }</td>
+</tr>
+<tr>
+<td>wordcount</td>
+<td>返回字符串中单词的数目</td>
+<td>{ { value &#124; wordcount } }</td>
+</tr>
+</tbody>
+</table>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年04月24日 19:33</p>
+        <p>原始链接： <a class="post-url" href="/2015/11/30/python框架——过滤器/" title="Python框架——过滤器">http://yoursite.com/2015/11/30/python框架——过滤器/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="Allen">
+                Allen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2015/11/30/python框架——过滤器/&title=《Python框架——过滤器》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/leach.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2015/11/30/python框架——过滤器/&title=《Python框架——过滤器》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/30/python框架——过滤器/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Python框架——过滤器》 — GuoXu's Blog&url=http://yoursite.com/2015/11/30/python框架——过滤器/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/30/python框架——过滤器/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2015/11/30/python框架——过滤器/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+    <a href="/tags/Python框架/" class="color4">Python框架</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2015/11/30/MySQL——终端命令集/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          MySQL——终端命令集
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2015/11/30/python框架——django/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Python框架——django</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 Allen<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

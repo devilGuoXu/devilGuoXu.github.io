@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>MySQL——语法 | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="数据库排名：Oracle(关系型)MySQL(关系型)SQLServer(关系型)PostgreSQL(关系型)MongoDB(非关系数据库)DB2(关系型)Redis(非关系数据库)ElasticSearch(非关系数据库) SQL语句(结构化查询语言)DDL(数据定义语言)：create / drop / alterDML(数据操作语言)：insert / delete / update /">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL——语法">
+<meta property="og:url" content="http://yoursite.com/2015/11/30/MySQL——语法/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="数据库排名：Oracle(关系型)MySQL(关系型)SQLServer(关系型)PostgreSQL(关系型)MongoDB(非关系数据库)DB2(关系型)Redis(非关系数据库)ElasticSearch(非关系数据库) SQL语句(结构化查询语言)DDL(数据定义语言)：create / drop / alterDML(数据操作语言)：insert / delete / update /">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-08T01:46:02.629Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL——语法">
+<meta name="twitter:description" content="数据库排名：Oracle(关系型)MySQL(关系型)SQLServer(关系型)PostgreSQL(关系型)MongoDB(非关系数据库)DB2(关系型)Redis(非关系数据库)ElasticSearch(非关系数据库) SQL语句(结构化查询语言)DDL(数据定义语言)：create / drop / alterDML(数据操作语言)：insert / delete / update /">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-MySQL——语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      MySQL——语法
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/MySQL/">MySQL</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2015-11-30
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>数据库排名：<br>Oracle(关系型)<br>MySQL(关系型)<br>SQLServer(关系型)<br>PostgreSQL(关系型)<br>MongoDB(非关系数据库)<br>DB2(关系型)<br>Redis(非关系数据库)<br>ElasticSearch(非关系数据库)</p>
+<h2 id="SQL语句-结构化查询语言"><a href="#SQL语句-结构化查询语言" class="headerlink" title="SQL语句(结构化查询语言)"></a>SQL语句(结构化查询语言)</h2><p>DDL(数据定义语言)：create / drop / alter<br>DML(数据操作语言)：insert / delete / update / select<br>DCL(数据控制语言)：grant / revoke</p>
+<font size="4">前言：SQL中大小写不敏感（大写和小写是一样的）; 每条SQL语句必须以分号结束</font>
+
+<hr>
+<h1 id="一、DDL-数据定义语言"><a href="#一、DDL-数据定义语言" class="headerlink" title="一、DDL(数据定义语言)"></a>一、DDL(数据定义语言)</h1><p>主要提供数据库和表的创建、删除和修改<br><br><font size="5"><strong>1. 创建数据库</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create database 数据库名;</td>
+<td>直接创建指定数据库</td>
+</tr>
+<tr>
+<td>create database if not exists 数据库;</td>
+<td>当指定数据库不存在的时候才创建数据库</td>
+</tr>
+<tr>
+<td>create database if not exists 数据库 default charset utf8;</td>
+<td>创建数据库时设置字符集编码方式为utf8,让数据库支持中文数据存储</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>2.删除数据库</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drop database 数据库;</td>
+<td>直接删除指定数据库</td>
+</tr>
+<tr>
+<td>drop database if exists 数据库;</td>
+<td>如果指定的数据库存在就删除数据库</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>3. 使用/切换数据库</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use 数据库;</td>
+<td>使用/切换指定数据库</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>4. 新建表</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create table if not exists 表(字段1 类型1, 字段2 类型2,…);</td>
+<td>新建表，表名一般加前缀’t’或’tb’，字段名不能是关键字</td>
+</tr>
+<tr>
+<td>create table if not exists 表(字段1 类型1 约束1, 字段2 类型2 约束2,…);</td>
+<td>新建表并且添加约束</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>5. 删除表</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drop table if exists 表;</td>
+<td>删除指定表</td>
+</tr>
+<tr>
+<td>truncate table 表;</td>
+<td>清空指定表</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>6. 修改表</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alter table 表 add column 字段 类型 约束;</td>
+<td>添加列</td>
+</tr>
+<tr>
+<td>alter table 表 drop column 字段;</td>
+<td>删除列</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="二、DML-数据操作语言"><a href="#二、DML-数据操作语言" class="headerlink" title="二、DML(数据操作语言)"></a>二、DML(数据操作语言)</h1><p>主要针对数据库中数据的增、删、改、查<br><br><font size="5"><strong>1. 增</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insert into 表 values(值1, 值2, 值3,…);</td>
+<td>插入数据，依次给指定表中的字段赋值</td>
+</tr>
+<tr>
+<td>insert into 表(字段1, 字段2,…) values(值1, 值2,…);</td>
+<td>插入数据，以指定顺序给指定字段赋值，可一次插入多条数据，用逗号分开</td>
+</tr>
+</tbody>
+</table>
+<p>（注）时间函数：now() - 当前时间；date(now()) - 当前日期；year(now()) - 当前年；month(now()) - 当前月<br><br><font size="5"><strong>2. 删</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delete from 表;</td>
+<td>删除指定表中所有记录</td>
+</tr>
+<tr>
+<td>delete from 表 where 条件语句;</td>
+<td>删除满足条件的记录</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>3. 改</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>update 表 set 字段1=新值1, 字段2=新值2,…;</td>
+<td>将指定表中所有行的指定列/字段的值赋值为新值</td>
+</tr>
+<tr>
+<td>update 表 set 字段1=新值1, 字段2=新值2,… where 条件语句;</td>
+<td>将表中满足条件的行中指定列/字段的值赋值为新值</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>4. 查</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select * from 表;</td>
+<td>获取指定表中所有行和所有的列(所有数据)</td>
+</tr>
+<tr>
+<td>select 字段1,字段2,… from 表;</td>
+<td>获取指定表中所有行指定的列</td>
+</tr>
+<tr>
+<td>select * from 表 where 条件;</td>
+<td>获取指定表中所有满足条件的行所有列的数据</td>
+</tr>
+<tr>
+<td>select 字段1 as 新字段1, 字段2 as 新字段2,… from 表;</td>
+<td>列重命名（as可以省略）</td>
+</tr>
+<tr>
+<td>select if(字段,值1,值2) from 表;</td>
+<td>（MySQL写法）查询指定字段，字段真则结果为值1，假则结果为值2</td>
+</tr>
+<tr>
+<td>select case 字段 when 值 then 新值1 else 新值2 end;</td>
+<td>（通用写法）查询指定字段并将结果重新赋值</td>
+</tr>
+<tr>
+<td>select concat(字段1,字段2,…) from 表;</td>
+<td>对列进行合并，数字和字符串数据可合并，bit类型数据不可合并</td>
+</tr>
+<tr>
+<td><strong>排序：</strong>（先按之前的任何语法进行查询再排序）</td>
+<td></td>
+</tr>
+<tr>
+<td>select * from 表 order by 字段;</td>
+<td>对查询结果按照指定字段的值进行升序排序</td>
+</tr>
+<tr>
+<td>select * from 表 order by 字段 asc;</td>
+<td>对查询结果按照指定字段的值进行升序排序</td>
+</tr>
+<tr>
+<td>select * from 表 order by 字段 desc;</td>
+<td>对查询结果按照指定字段的值进行降序排序</td>
+</tr>
+<tr>
+<td>注：多个字段排序，写在前面的优先级高</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>限制：</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>select * from 表 limit N;</td>
+<td>获取查询结果的前N条记录</td>
+</tr>
+<tr>
+<td>select * from 表 limit M offset N;</td>
+<td>对查询结果跳过前N条数据，取M条数据出来</td>
+</tr>
+<tr>
+<td><strong>去重：</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>select distinct 字段 from 表;</td>
+<td>查询结果去重</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>5. 条件语句</strong></font></p>
+<p>在SQL中可以通过 <code>where 条件语句</code>，来对操作对象进行筛选</p>
+<p>条件语句：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>is/is not</td>
+<td>判断是否等于null空时使用</td>
+</tr>
+<tr>
+<td>and</td>
+<td>逻辑与运算</td>
+</tr>
+<tr>
+<td>or</td>
+<td>逻辑或运算</td>
+</tr>
+<tr>
+<td>not</td>
+<td>逻辑非</td>
+</tr>
+<tr>
+<td>in</td>
+<td>集合中是否包含</td>
+</tr>
+<tr>
+<td>like</td>
+<td>模糊查询</td>
+</tr>
+<tr>
+<td>%</td>
+<td>表示0个或多个的任意字符</td>
+</tr>
+<tr>
+<td>_</td>
+<td>表示一个任意字符</td>
+</tr>
+<tr>
+<td>between 值1 and 值2</td>
+<td>筛选指定字段的值在值1和值2之间</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>6. 数据类型</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int/tinyint(-128~127)</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>float(size,d)/double(size,d)</td>
+<td>浮点数，这儿的size和d的值都有约束效果</td>
+</tr>
+<tr>
+<td>char(size)</td>
+<td>定长字符</td>
+</tr>
+<tr>
+<td>varchar(size)</td>
+<td>不定长字符串，size决定的是最大长度</td>
+</tr>
+<tr>
+<td>text</td>
+<td>不限长度(最大是255个字符)</td>
+</tr>
+<tr>
+<td>bit</td>
+<td>布尔，只有0和1两个值</td>
+</tr>
+<tr>
+<td>date/datetime/time</td>
+<td>值可以是时间函数的结果，也可以是时间字符串；计算或者是比较的时候内部是按时间处理的</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>7. 约束</strong></font></p>
+<p>创建表的时候可以添加约束</p>
+<p>约束索引：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alter table 表 add constraint 索引 约束(字段);</td>
+<td>添加约束，索引(自己命名)，约束(支持唯一约束、主键约束和外键约束)</td>
+</tr>
+<tr>
+<td>alter table 表 drop index 约束索引;</td>
+<td>删除约束</td>
+</tr>
+</tbody>
+</table>
+<p>常见约束：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>not null</td>
+<td>不为空</td>
+</tr>
+<tr>
+<td>default 值</td>
+<td>设置默认值</td>
+</tr>
+<tr>
+<td>unique</td>
+<td>值唯一</td>
+</tr>
+<tr>
+<td>primary key(字段)</td>
+<td>主键约束(唯一记录)</td>
+</tr>
+<tr>
+<td>auto_increment</td>
+<td>主键自动增长</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>8. 外键</strong></font></p>
+<p>添加外键：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alter table 表1 add constraint 索引 foreign key (字段1) references 表2 (字段2);</td>
+<td>将表1中字段1设为外键，让其参照表2中字段2</td>
+</tr>
+</tbody>
+</table>
+<p>删除外键：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alter table 表 drop foreign key 外键索引;</td>
+<td>先，删除外键约束</td>
+</tr>
+<tr>
+<td>alter table 表 drop index 外键索引;</td>
+<td>后，删除约束的索引</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>9. 聚合</strong></font></p>
+<p>max() min() sum() avg() count()</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select 聚合函数(字段) from 表 [where 条件];</td>
+<td>[按条件]查询后将结果做相应的聚合运算</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>10. 分组</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select 字段操作 from 表 [where 条件] group by(字段);</td>
+<td>先筛选在分组</td>
+</tr>
+<tr>
+<td>select 字段操作 from 表 group by(字段) [having 条件];</td>
+<td>先分组在筛选</td>
+</tr>
+</tbody>
+</table>
+<p>where和having可同时使用<br>功能：将表中[满足条件]的记录按照字段分组, 再将每个分组作为整体做聚合操作，字段操作的位置除了分组字段不用聚合，其他字段都必须聚合<br><br><font size="5"><strong>11. 子查询</strong></font></p>
+<p>将一个查询操作的结果作为另外一个查询的数据源<br><br><font size="5"><strong>12. 连接查询</strong></font></p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select * from 表1，表2,…where 表1表2连接条件…;</td>
+<td>普通连接</td>
+</tr>
+<tr>
+<td>select * from 表1 inner join 表2 on 表1表2连接条件 inner join 表3 on 表1表3连接条件…;</td>
+<td>内连接</td>
+</tr>
+<tr>
+<td>select * from 表1 left join 表2 on 表1表2连接条件…[where 条件];</td>
+<td>左外连接，右表值不存在则为null</td>
+</tr>
+<tr>
+<td>select * from 表1 right join 表2 on 表1表2连接条件…[where 条件];</td>
+<td>右外连接，左表值不存在则为null</td>
+</tr>
+</tbody>
+</table>
+<p><br><font size="5"><strong>13. 字段索引</strong></font></p>
+<p>字段索引相当于目录，作用为快速对此字段进行查找<br>只针对某个查询很频繁的字段，建议添加对应索引</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create index 索引 on 表 (字段);</td>
+<td>添加索引</td>
+</tr>
+<tr>
+<td>alter table 表 drop index 索引;</td>
+<td>删除索引</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<font size="5"><strong>14. 拼接字段</strong></font>
+
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select concat(各种拼接字段) from 表;</td>
+<td>拼接字段</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="三、DCL-数据控制语言"><a href="#三、DCL-数据控制语言" class="headerlink" title="三、DCL(数据控制语言)"></a>三、DCL(数据控制语言)</h1><h4 id="1-创建用户"><a href="#1-创建用户" class="headerlink" title="1. 创建用户"></a>1. 创建用户</h4><p><code>create user &#39;用户名&#39;@&#39;登录地址&#39; identified by &#39;密码&#39;;</code></p>
+<table>
+<thead>
+<tr>
+<th>登录地址</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localhost</td>
+<td>数据库本机</td>
+</tr>
+<tr>
+<td>ip地址</td>
+<td>指定地址</td>
+</tr>
+<tr>
+<td>%</td>
+<td>任何位置</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-删除用户"><a href="#2-删除用户" class="headerlink" title="2. 删除用户"></a>2. 删除用户</h4><p><code>drop user 用户名;</code></p>
+<h4 id="3-授权"><a href="#3-授权" class="headerlink" title="3. 授权"></a>3. 授权</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grant 权限类型 on 数据库.对象 to ‘用户’;</td>
+<td>为指定用户添加指定数据库指定对象的指定权限</td>
+</tr>
+<tr>
+<td>grant 权限类型 on 数据库.对象 to ‘用户’ with grant option;</td>
+<td>添加权限，并且可以将自己的权限再授权给别人</td>
+</tr>
+<tr>
+<td>revoke 权限类型 on 数据库.对象 from 用户名;</td>
+<td>撤销/召回权限</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>权限类型</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select</td>
+<td>查看</td>
+</tr>
+<tr>
+<td>insert</td>
+<td>添加</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>update</td>
+<td>更新</td>
+</tr>
+<tr>
+<td>create</td>
+<td>创建</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>删除</td>
+</tr>
+<tr>
+<td>alter</td>
+<td>更改</td>
+</tr>
+<tr>
+<td>all privileges</td>
+<td>所有权限</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-事务"><a href="#4-事务" class="headerlink" title="4. 事务"></a>4. 事务</h4><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>begin;</td>
+<td>开启事务环境</td>
+</tr>
+<tr>
+<td>commit;</td>
+<td>事务提交</td>
+</tr>
+<tr>
+<td>rollback;</td>
+<td>事务回滚</td>
+</tr>
+</tbody>
+</table>
+<p>只有<code>begin;</code>到<code>commit;</code>之间的所有的sql都执行成功，才会执行<code>commit;</code>否则执行<code>rollback;</code></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年05月08日 09:46</p>
+        <p>原始链接： <a class="post-url" href="/2015/11/30/MySQL——语法/" title="MySQL——语法">http://yoursite.com/2015/11/30/MySQL——语法/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="Allen">
+                Allen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2015/11/30/MySQL——语法/&title=《MySQL——语法》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/mysql.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2015/11/30/MySQL——语法/&title=《MySQL——语法》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/30/MySQL——语法/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MySQL——语法》 — GuoXu's Blog&url=http://yoursite.com/2015/11/30/MySQL——语法/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/30/MySQL——语法/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2015/11/30/MySQL——语法/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/MySQL/" class="color1">MySQL</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SQL语句-结构化查询语言"><span class="post-toc-text">SQL语句(结构化查询语言)</span></a></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、DDL-数据定义语言"><span class="post-toc-text">一、DDL(数据定义语言)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、DML-数据操作语言"><span class="post-toc-text">二、DML(数据操作语言)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、DCL-数据控制语言"><span class="post-toc-text">三、DCL(数据控制语言)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-创建用户"><span class="post-toc-text">1. 创建用户</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-删除用户"><span class="post-toc-text">2. 删除用户</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-授权"><span class="post-toc-text">3. 授权</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-事务"><span class="post-toc-text">4. 事务</span></a></li></ol></li>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2015/11/30/python框架——使用centos部署django项目/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Python框架——使用centos部署django项目
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2015/11/29/Linux——Hexo博客搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Linux——Hexo博客搭建</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 Allen<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

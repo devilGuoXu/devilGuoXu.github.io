@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>python基础——pygame | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="一、程序中导入pygame库import pygame  二、初始化pygamepygame.init()  三、创建游戏窗口set_mode(窗口大小) ——&amp;gt; 返回一个surface类型的对象窗口大小对应的值是一个元组，窗口大小 == ((宽, 高)) window = pygame.display.set_mode((400, 600))  四、设置窗口标题pygame.display">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础——pygame">
+<meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——pygame/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="一、程序中导入pygame库import pygame  二、初始化pygamepygame.init()  三、创建游戏窗口set_mode(窗口大小) ——&amp;gt; 返回一个surface类型的对象窗口大小对应的值是一个元组，窗口大小 == ((宽, 高)) window = pygame.display.set_mode((400, 600))  四、设置窗口标题pygame.display">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/pic_proxy_meitu_1.jpg?raw=true">
+<meta property="og:updated_time" content="2019-04-24T11:32:14.981Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础——pygame">
+<meta name="twitter:description" content="一、程序中导入pygame库import pygame  二、初始化pygamepygame.init()  三、创建游戏窗口set_mode(窗口大小) ——&amp;gt; 返回一个surface类型的对象窗口大小对应的值是一个元组，窗口大小 == ((宽, 高)) window = pygame.display.set_mode((400, 600))  四、设置窗口标题pygame.display">
+<meta name="twitter:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/pic_proxy_meitu_1.jpg?raw=true">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-python基础——pygame" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      python基础——pygame
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Python/">Python</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2015-11-27
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、程序中导入pygame库"><a href="#一、程序中导入pygame库" class="headerlink" title="一、程序中导入pygame库"></a>一、程序中导入pygame库</h1><pre><code>import pygame
+</code></pre><hr>
+<h1 id="二、初始化pygame"><a href="#二、初始化pygame" class="headerlink" title="二、初始化pygame"></a>二、初始化pygame</h1><pre><code>pygame.init()
+</code></pre><hr>
+<h1 id="三、创建游戏窗口"><a href="#三、创建游戏窗口" class="headerlink" title="三、创建游戏窗口"></a>三、创建游戏窗口</h1><p>set_mode(窗口大小) ——&gt; 返回一个surface类型的对象<br>窗口大小对应的值是一个元组，窗口大小 == ((宽, 高))</p>
+<pre><code>window = pygame.display.set_mode((400, 600))
+</code></pre><hr>
+<h1 id="四、设置窗口标题"><a href="#四、设置窗口标题" class="headerlink" title="四、设置窗口标题"></a>四、设置窗口标题</h1><pre><code>pygame.display.set_caption(&apos;游戏&apos;)
+</code></pre><hr>
+<h1 id="五、设置窗口背景颜色"><a href="#五、设置窗口背景颜色" class="headerlink" title="五、设置窗口背景颜色"></a>五、设置窗口背景颜色</h1><p>fill(颜色) </p>
+<p>颜色是一个元组，元组有三个int类型的元素，返回是0~255；分别代表R,G,B<br>计算机三原色: 红、绿、蓝<br>红色 (255, 0, 0)<br>绿色 (0, 255, 0)<br>蓝色 (0, 0, 255)<br>白色 (255, 255, 255)<br>黑色 (0, 0, 0)</p>
+<pre><code>window.fill((255, 255, 255))
+</code></pre><hr>
+<h1 id="六、显示图片"><a href="#六、显示图片" class="headerlink" title="六、显示图片"></a>六、显示图片</h1><p><font size="5"><strong>1. 加载图片</strong></font><br><br>image.load(图片地址) ——&gt; 返回图片对象(surface)</p>
+<pre><code>image = pygame.image.load(&apos;图片地址&apos;)
+</code></pre><p><br><font size="5"><strong>2. 将图片添加(渲染)到窗口上</strong></font><br><br>blit(渲染对象，坐标)<br>坐标：一个元组，两个元素，分别是x坐标和y坐标</p>
+<pre><code>window.blit(image, (0, 0))
+</code></pre><p><br><font size="5"><strong>3. 获取图片对象大小</strong></font><br><br>surface类型有个对象方法: get_size() ——&gt; 返回的是元组</p>
+<pre><code># 获取窗口大小
+window_width, window_height = window.get_size()
+# 获取图片大小
+image_width, image_height = image.get_size()
+# 添加渲染
+window.blit(image, (window_width - image_width, window_height - image_height))
+</code></pre><p><br><font size="5"><strong>4. 图片缩放和旋转(形变)</strong></font><br><br>transform.scale(缩放对象, 目标大小)  ——&gt; 返回缩放后的新对象<br>transform.rotozoom(旋转缩放对象, 旋转角度, 缩放比例)</p>
+<pre><code># 缩放
+new_image = pygame.transform.scale(image, (50, 50))
+# 旋转、缩放
+new_image = pygame.transform.rotozoom(image, 45, 0.8)
+# 添加渲染
+window.blit(new_image, (10, 250))
+</code></pre><hr>
+<h1 id="七、显示文字"><a href="#七、显示文字" class="headerlink" title="七、显示文字"></a>七、显示文字</h1><p><font size="5"><strong>1. 创建字体对象</strong></font><br><br>a.系统字体<br>font.SysFont(字体名, 字体大小) ——&gt; 返回一个字体对象</p>
+<pre><code>font = pygame.font.SysFont(&apos;Times&apos;, 40)
+</code></pre><p>b.自定义字体<br>font.Font(字体文件路径, 字体大小)</p>
+<pre><code>font = pygame.font.Font(&apos;字体文件路径&apos;, 40)
+</code></pre><p><br><font size="5"><strong>2. 根据字体创建文字对象</strong></font><br><br>render(文字, True, 文字颜色)  ——&gt; 返回一个文字对象(Surface)</p>
+<pre><code>text = font.render(&apos;hello世界!&apos;, True, (255, 0, 0))
+</code></pre><p><br><font size="5"><strong>3. 获取字体对象大小</strong></font><br><br>同图片</p>
+<pre><code>width, height = text.get_size()
+</code></pre><p><br><font size="5"><strong>4. 显示文字</strong></font><br><br>blit(渲染对象, 坐标)<br>同图片</p>
+<pre><code>window.blit(text, (400 - width, 600 - height))
+</code></pre><hr>
+<h1 id="八、画图形"><a href="#八、画图形" class="headerlink" title="八、画图形"></a>八、画图形</h1><h5 id="1-画线"><a href="#1-画线" class="headerlink" title="1.画线"></a>1.画线</h5><p>line(画的地方, 线的颜色, 起点, 终点, 线宽=1)</p>
+<pre><code>pygame.draw.line(window, (0, 255, 0), (10, 10), (100, 100), 4)
+</code></pre><h5 id="2-连线"><a href="#2-连线" class="headerlink" title="2.连线"></a>2.连线</h5><p>lines(画的地方, 线的颜色, 是否关闭, 点列表, 线宽=1)</p>
+<pre><code>point_list = [(200, 200), (250, 10), (300, 200), (150, 100), (350, 100)]
+pygame.draw.lines(window, (255, 0, 0), True, point_list)
+</code></pre><h5 id="3-画圆"><a href="#3-画圆" class="headerlink" title="3.画圆"></a>3.画圆</h5><p>circle(画的地方, 线的颜色,圆心,半径, 线宽=0)</p>
+<pre><code>pygame.draw.circle(window, (0, 0, 0), (200, 300), 100, 0)
+</code></pre><h5 id="4-画多边形"><a href="#4-画多边形" class="headerlink" title="4.画多边形"></a>4.画多边形</h5><p>polygon(画的地方,线的颜色, 点列表,线宽)</p>
+<pre><code>pygame.draw.polygon(window, (255, 0, 0), point_list, 0)
+</code></pre><h5 id="5-画矩形"><a href="#5-画矩形" class="headerlink" title="5.画矩形"></a>5.画矩形</h5><p>rect(画的地方,线的颜色, 矩形, 线宽)<br>矩形(left, top, width, height) ——&gt; 如图<br><img src="https://github.com/devilGuoXu/picture_bed/blob/master/pic_proxy_meitu_1.jpg?raw=true" alt></p>
+<pre><code>pygame.draw.rect(window, (100, 20, 50), (200, 470, 100, 50), 2)
+</code></pre><h5 id="6-画弧线"><a href="#6-画弧线" class="headerlink" title="6.画弧线"></a>6.画弧线</h5><p>arc(画的地方,线的颜色, 矩形, 起始弧度, 终止弧度, 线宽)</p>
+<pre><code>import math
+
+pygame.draw.arc(window, (0, 255, 255), (10, 470, 150, 200), math.pi / 4, math.pi / 4 * 3, 5)
+</code></pre><hr>
+<h1 id="九、保存修改的窗口"><a href="#九、保存修改的窗口" class="headerlink" title="九、保存修改的窗口"></a>九、保存修改的窗口</h1><p>想要对窗口内容进行的修改有效，必须执行以下操作</p>
+<pre><code>pygame.display.flip()
+</code></pre><hr>
+<h1 id="十、游戏循环"><a href="#十、游戏循环" class="headerlink" title="十、游戏循环"></a>十、游戏循环</h1><p>让游戏保持运行状态</p>
+<pre><code>while True:
+    # 不断检测游戏过程中是否有事件的产生
+    for event in pygame.event.get():
+        # 只有当事件产生后才会进入for循环
+        if event.type == pygame.QUIT:    # 退出
+            exit()  # 或 return
+</code></pre><hr>
+<h1 id="十一、事件"><a href="#十一、事件" class="headerlink" title="十一、事件"></a>十一、事件</h1><h5 id="1-鼠标事件"><a href="#1-鼠标事件" class="headerlink" title="1.鼠标事件"></a>1.鼠标事件</h5><p>MOUSEBUTTONDOWN —— 鼠标按下<br>MOUSEBUTTONUP —— 鼠标弹起<br>MOUSEMOTION —— 鼠标移动<br>鼠标事件要关注事件发生的位置: event.pos —— 鼠标的坐标，元组</p>
+<h5 id="2-键盘事件"><a href="#2-键盘事件" class="headerlink" title="2.键盘事件"></a>2.键盘事件</h5><p>KEYDOWN —— 键盘按下<br>KEYUP —— 键盘弹起<br>键盘事件要关注哪个键被按了：event.key —— 按键对应的字符的编码，数字</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年04月24日 19:32</p>
+        <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——pygame/" title="python基础——pygame">http://yoursite.com/2015/11/27/python基础——pygame/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="Allen">
+                Allen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2015/11/27/python基础——pygame/&title=《python基础——pygame》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/pygame.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2015/11/27/python基础——pygame/&title=《python基础——pygame》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/27/python基础——pygame/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python基础——pygame》 — GuoXu's Blog&url=http://yoursite.com/2015/11/27/python基础——pygame/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/27/python基础——pygame/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2015/11/27/python基础——pygame/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、程序中导入pygame库"><span class="post-toc-text">一、程序中导入pygame库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、初始化pygame"><span class="post-toc-text">二、初始化pygame</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、创建游戏窗口"><span class="post-toc-text">三、创建游戏窗口</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、设置窗口标题"><span class="post-toc-text">四、设置窗口标题</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、设置窗口背景颜色"><span class="post-toc-text">五、设置窗口背景颜色</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、显示图片"><span class="post-toc-text">六、显示图片</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、显示文字"><span class="post-toc-text">七、显示文字</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、画图形"><span class="post-toc-text">八、画图形</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-画线"><span class="post-toc-text">1.画线</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-连线"><span class="post-toc-text">2.连线</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-画圆"><span class="post-toc-text">3.画圆</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-画多边形"><span class="post-toc-text">4.画多边形</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#5-画矩形"><span class="post-toc-text">5.画矩形</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#6-画弧线"><span class="post-toc-text">6.画弧线</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、保存修改的窗口"><span class="post-toc-text">九、保存修改的窗口</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十、游戏循环"><span class="post-toc-text">十、游戏循环</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十一、事件"><span class="post-toc-text">十一、事件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-鼠标事件"><span class="post-toc-text">1.鼠标事件</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-键盘事件"><span class="post-toc-text">2.键盘事件</span></a></li></ol></li>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2015/11/28/web前端——html/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          web前端——html
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2015/11/27/python基础——内存管理/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——内存管理</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 Allen<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

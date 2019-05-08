@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>spider爬虫——xpath | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="一、安装lxml库pip install lxml 二、选取节点   表达式 功能     / 匹配元素子节点   // 匹配元素子孙节点   . 获取当前节点   .. 获取当前节点的父节点   @ 获取属性   * 匹配任何元素节点   @* 匹配任何属性节点     三、谓语   表达式 功能     /bookstore/book[1] 选取 bookstore 子元素中第一个 book">
+<meta name="keywords" content="spider爬虫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spider爬虫——xpath">
+<meta property="og:url" content="http://yoursite.com/2016/01/01/spider爬虫——xpath/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="一、安装lxml库pip install lxml 二、选取节点   表达式 功能     / 匹配元素子节点   // 匹配元素子孙节点   . 获取当前节点   .. 获取当前节点的父节点   @ 获取属性   * 匹配任何元素节点   @* 匹配任何属性节点     三、谓语   表达式 功能     /bookstore/book[1] 选取 bookstore 子元素中第一个 book">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-25T17:00:27.961Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="spider爬虫——xpath">
+<meta name="twitter:description" content="一、安装lxml库pip install lxml 二、选取节点   表达式 功能     / 匹配元素子节点   // 匹配元素子孙节点   . 获取当前节点   .. 获取当前节点的父节点   @ 获取属性   * 匹配任何元素节点   @* 匹配任何属性节点     三、谓语   表达式 功能     /bookstore/book[1] 选取 bookstore 子元素中第一个 book">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-spider爬虫——xpath" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      spider爬虫——xpath
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/spider爬虫/">spider爬虫</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2016-01-01
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、安装lxml库"><a href="#一、安装lxml库" class="headerlink" title="一、安装lxml库"></a>一、安装lxml库</h1><p><code>pip install lxml</code></p>
+<h1 id="二、选取节点"><a href="#二、选取节点" class="headerlink" title="二、选取节点"></a>二、选取节点</h1><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/</td>
+<td>匹配元素子节点</td>
+</tr>
+<tr>
+<td>//</td>
+<td>匹配元素子孙节点</td>
+</tr>
+<tr>
+<td>.</td>
+<td>获取当前节点</td>
+</tr>
+<tr>
+<td>..</td>
+<td>获取当前节点的父节点</td>
+</tr>
+<tr>
+<td>@</td>
+<td>获取属性</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配任何元素节点</td>
+</tr>
+<tr>
+<td>@*</td>
+<td>匹配任何属性节点</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="三、谓语"><a href="#三、谓语" class="headerlink" title="三、谓语"></a>三、谓语</h1><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/bookstore/book[1]</td>
+<td>选取 bookstore 子元素中第一个 book 元素。</td>
+</tr>
+<tr>
+<td>/bookstore/book[last()]</td>
+<td>选取 bookstore 子元素中最后一个 book 元素。</td>
+</tr>
+<tr>
+<td>/bookstore/book[last()-1]</td>
+<td>选取 bookstore 子元素中倒数第二个 book 元素。</td>
+</tr>
+<tr>
+<td>/bookstore/book[position()&lt;3]</td>
+<td>选取 bookstore 子元素中最前面的两个 book 元素。</td>
+</tr>
+<tr>
+<td>//title[@lang]</td>
+<td>选取拥有 lang 属性的所有 title 元素。</td>
+</tr>
+<tr>
+<td>//title[@lang=’eng’]</td>
+<td>选取拥有值为 eng 的 lang 属性的所有 title 元素</td>
+</tr>
+<tr>
+<td>/bookstore/book[price&gt;35.00]</td>
+<td>选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。</td>
+</tr>
+<tr>
+<td>/bookstore/book[price&gt;35.00]/title</td>
+<td>选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="四、轴"><a href="#四、轴" class="headerlink" title="四、轴"></a>四、轴</h1><table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ancestor</td>
+<td>选取当前节点的所有先辈（父、祖父等）。</td>
+</tr>
+<tr>
+<td>ancestor-or-self</td>
+<td>选取当前节点的所有先辈（父、祖父等）以及当前节点本身。</td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>选取当前节点的所有属性。</td>
+</tr>
+<tr>
+<td>child</td>
+<td>选取当前节点的所有子元素。</td>
+</tr>
+<tr>
+<td>descendant</td>
+<td>选取当前节点的所有后代元素（子、孙等）。</td>
+</tr>
+<tr>
+<td>descendant-or-self</td>
+<td>选取当前节点的所有后代元素（子、孙等）以及当前节点本身。</td>
+</tr>
+<tr>
+<td>following</td>
+<td>选取文档中当前节点的结束标签之后的所有节点。</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>选取当前节点的所有命名空间节点。</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>preceding</td>
+<td>选取文档中当前节点的开始标签之前的所有节点。</td>
+</tr>
+<tr>
+<td>preceding-sibling</td>
+<td>选取当前节点之前的所有同级节点。</td>
+</tr>
+<tr>
+<td>self</td>
+<td>选取当前节点。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="五、步（step）"><a href="#五、步（step）" class="headerlink" title="五、步（step）"></a>五、步（step）</h1><p>语法：<code>轴名称::节点测试[谓语]</code></p>
+<p>轴（axis）：定义所选节点与当前节点之间的树关系<br>节点测试（node-test）：识别某个轴内部的节点<br>零个或者更多谓语（predicate）：更深入地提炼所选的节点集</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年04月26日 01:00</p>
+        <p>原始链接： <a class="post-url" href="/2016/01/01/spider爬虫——xpath/" title="spider爬虫——xpath">http://yoursite.com/2016/01/01/spider爬虫——xpath/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="Allen">
+                Allen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/01/01/spider爬虫——xpath/&title=《spider爬虫——xpath》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/spider.jpg?raw=true" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/01/01/spider爬虫——xpath/&title=《spider爬虫——xpath》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/01/01/spider爬虫——xpath/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《spider爬虫——xpath》 — GuoXu's Blog&url=http://yoursite.com/2016/01/01/spider爬虫——xpath/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/01/01/spider爬虫——xpath/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2016/01/01/spider爬虫——xpath/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/spider爬虫/" class="color4">spider爬虫</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、安装lxml库"><span class="post-toc-text">一、安装lxml库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、选取节点"><span class="post-toc-text">二、选取节点</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、谓语"><span class="post-toc-text">三、谓语</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、轴"><span class="post-toc-text">四、轴</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、步（step）"><span class="post-toc-text">五、步（step）</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2016/01/01/spider爬虫——selenium/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          spider爬虫——selenium
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2015/11/30/MySQL——终端命令集/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">MySQL——终端命令集</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 Allen<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

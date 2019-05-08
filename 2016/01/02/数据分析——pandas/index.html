@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>数据分析——pandas | GuoXu&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="GuoXu,GuoXu's Blog">
+  
+  <meta name="description" content="准备： 123456Import pandas as pd# df为测试对象# 如：df=pd.read_csv(filename)df=pd.Series(my_list) 一、导入数据   语法 功能     pd.read_csv(filename) 从CSV文件导入数据   pd.read_table(filename) 从限定分隔符的文本文件导入数据   pd.read_excel(f">
+<meta name="keywords" content="数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分析——pandas">
+<meta property="og:url" content="http://yoursite.com/2016/01/02/数据分析——pandas/index.html">
+<meta property="og:site_name" content="GuoXu&#39;s Blog">
+<meta property="og:description" content="准备： 123456Import pandas as pd# df为测试对象# 如：df=pd.read_csv(filename)df=pd.Series(my_list) 一、导入数据   语法 功能     pd.read_csv(filename) 从CSV文件导入数据   pd.read_table(filename) 从限定分隔符的文本文件导入数据   pd.read_excel(f">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/pandas.png?raw=true">
+<meta property="og:updated_time" content="2019-05-02T14:51:36.084Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据分析——pandas">
+<meta name="twitter:description" content="准备： 123456Import pandas as pd# df为测试对象# 如：df=pd.read_csv(filename)df=pd.Series(my_list) 一、导入数据   语法 功能     pd.read_csv(filename) 从CSV文件导入数据   pd.read_table(filename) 从限定分隔符的文本文件导入数据   pd.read_excel(f">
+<meta name="twitter:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/pandas.png?raw=true">
+  
+  
+    <link rel="icon" href="/images/logo.png">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">GuoXu&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        GuoXu&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        越努力，越幸运
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="GuoXu" target="_blank" href="//devilguoxu.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/devilGuoXu">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/u/1945712603?is_all=1">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Snapchat" target="_blank" href="//www.snapchat.com">
+                            <i class="fa fa-snapchat fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-数据分析——pandas" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      数据分析——pandas
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/数据分析/">数据分析</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2016-01-02
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><img src="https://github.com/devilGuoXu/picture_bed/blob/master/pandas.png?raw=true" alt></p>
+<p>准备：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Import pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># df为测试对象</span></span><br><span class="line"><span class="comment"># 如：</span></span><br><span class="line">df=pd.read_csv(filename)</span><br><span class="line">df=pd.Series(my_list)</span><br></pre></td></tr></table></figure>
+<h1 id="一、导入数据"><a href="#一、导入数据" class="headerlink" title="一、导入数据"></a>一、导入数据</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pd.read_csv(filename)</td>
+<td>从CSV文件导入数据</td>
+</tr>
+<tr>
+<td>pd.read_table(filename)</td>
+<td>从限定分隔符的文本文件导入数据</td>
+</tr>
+<tr>
+<td>pd.read_excel(filename)</td>
+<td>从Excel文件导入数据</td>
+</tr>
+<tr>
+<td>pd.read_sql(query, connection_object)</td>
+<td>从SQL表/库导入数据</td>
+</tr>
+<tr>
+<td>pd.read_json(json_string)</td>
+<td>从JSON格式的字符串导入数据</td>
+</tr>
+<tr>
+<td>pd.read_html(url)</td>
+<td>解析URL、字符串或者HTML文件，抽取其中的tables表格</td>
+</tr>
+<tr>
+<td>pd.read_clipboard()</td>
+<td>从你的粘贴板获取内容，并传给read_table()</td>
+</tr>
+<tr>
+<td>pd.DataFrame(dict)</td>
+<td>从字典对象导入数据，Key是列名，Value是数据</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="二、导出数据"><a href="#二、导出数据" class="headerlink" title="二、导出数据"></a>二、导出数据</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>df.to_csv(filename)</td>
+<td>导出数据到CSV文件</td>
+</tr>
+<tr>
+<td>df.to_excel(filename)</td>
+<td>导出数据到Excel文件</td>
+</tr>
+<tr>
+<td>df.to_sql(table_name, connection_object)</td>
+<td>导出数据到SQL表</td>
+</tr>
+<tr>
+<td>df.to_json(filename)</td>
+<td>以Json格式导出数据到文本文件</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="三、创建测试对象"><a href="#三、创建测试对象" class="headerlink" title="三、创建测试对象"></a>三、创建测试对象</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pd.Series(my_list)</td>
+<td>从可迭代对象my_list创建一个Series对象</td>
+</tr>
+<tr>
+<td>pd.DataFrame(np.random.rand(3,5))</td>
+<td>创建3行5列的随机数组成的DataFrame对象</td>
+</tr>
+<tr>
+<td>df.index = pd.date_range(‘1900/1/30’, periods=df.shape[0])</td>
+<td>增加一个日期索引</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="四、查看、检查数据"><a href="#四、查看、检查数据" class="headerlink" title="四、查看、检查数据"></a>四、查看、检查数据</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>df.head(n)</td>
+<td>查看DataFrame对象的前n行</td>
+</tr>
+<tr>
+<td>df.tail(n)</td>
+<td>查看DataFrame对象的最后n行</td>
+</tr>
+<tr>
+<td>df.shape()</td>
+<td>查看行数和列数</td>
+</tr>
+<tr>
+<td>http:// df.info()</td>
+<td>查看索引、数据类型和内存信息</td>
+</tr>
+<tr>
+<td>df.describe()</td>
+<td>查看数值型列的汇总统计</td>
+</tr>
+<tr>
+<td>s.value_counts(dropna=False)</td>
+<td>查看Series对象的唯一值和计数</td>
+</tr>
+<tr>
+<td>df.apply(pd.Series.value_counts)</td>
+<td>查看DataFrame对象中每一列的唯一值和计数</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="五、数据选取"><a href="#五、数据选取" class="headerlink" title="五、数据选取"></a>五、数据选取</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>df[col]</td>
+<td>根据列名，并以Series的形式返回列</td>
+</tr>
+<tr>
+<td>df[[col1, col2]]</td>
+<td>以DataFrame形式返回多列</td>
+</tr>
+<tr>
+<td>s.iloc[0]</td>
+<td>按位置选取行</td>
+</tr>
+<tr>
+<td>s.loc[‘index_one’]</td>
+<td>按索引选取行</td>
+</tr>
+<tr>
+<td>df.iloc[0,:]</td>
+<td>返回第一行</td>
+</tr>
+<tr>
+<td>df.iloc[0,0]</td>
+<td>返回第一列的第一个元素</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="六、数据统计"><a href="#六、数据统计" class="headerlink" title="六、数据统计"></a>六、数据统计</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>df.describe()</td>
+<td>查看数据值列的汇总统计</td>
+</tr>
+<tr>
+<td>df.mean()</td>
+<td>返回所有列的均值</td>
+</tr>
+<tr>
+<td>df.corr()</td>
+<td>返回列与列之间的相关系数</td>
+</tr>
+<tr>
+<td>df.count()</td>
+<td>返回每一列中的非空值的个数</td>
+</tr>
+<tr>
+<td>df.max()</td>
+<td>返回每一列的最大值</td>
+</tr>
+<tr>
+<td>df.min()</td>
+<td>返回每一列的最小值</td>
+</tr>
+<tr>
+<td>df.median()</td>
+<td>返回每一列的中位数</td>
+</tr>
+<tr>
+<td>df.std()</td>
+<td>返回每一列的标准差</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="七、数据合并"><a href="#七、数据合并" class="headerlink" title="七、数据合并"></a>七、数据合并</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>df1.append(df2)</td>
+<td>将df2中的行添加到df1的尾部</td>
+</tr>
+<tr>
+<td>df.concat([df1, df2],axis=1)</td>
+<td>将df2中的列添加到df1的尾部</td>
+</tr>
+<tr>
+<td>df1.join(df2,on=col1,how=’inner’)</td>
+<td>对df1的列和df2的列执行SQL形式的join</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="八、数据处理"><a href="#八、数据处理" class="headerlink" title="八、数据处理"></a>八、数据处理</h1><table>
+<thead>
+<tr>
+<th>语法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>df[df[col] &gt; 0.5]</td>
+<td>选择col列的值大于0.5的行</td>
+</tr>
+<tr>
+<td>df.sort_values(col1)</td>
+<td>按照列col1排序数据，默认升序排列</td>
+</tr>
+<tr>
+<td>df.sort_values(col2, ascending=False)</td>
+<td>按照列col1降序排列数据</td>
+</tr>
+<tr>
+<td>df.sort_values([col1,col2], ascending=[True,False])</td>
+<td>先按列col1升序排列，后按col2降序排列数据</td>
+</tr>
+<tr>
+<td>df.groupby(col)</td>
+<td>返回一个按列col进行分组的Groupby对象</td>
+</tr>
+<tr>
+<td>df.groupby([col1,col2])</td>
+<td>返回一个按多列进行分组的Groupby对象</td>
+</tr>
+<tr>
+<td>df.groupby(col1)[col2]</td>
+<td>返回按列col1进行分组后，列col2的均值</td>
+</tr>
+<tr>
+<td>df.pivot_table(index=col1, values=[col2,col3], aggfunc=max)</td>
+<td>创建一个按列col1进行分组，并计算col2和col3的最大值的数据透视表</td>
+</tr>
+<tr>
+<td>df.groupby(col1).agg(np.mean)</td>
+<td>返回按列col1分组的所有列的均值</td>
+</tr>
+<tr>
+<td>data.apply(np.mean)</td>
+<td>对DataFrame中的每一列应用函数np.mean</td>
+</tr>
+<tr>
+<td>data.apply(np.max,axis=1)</td>
+<td>对DataFrame中的每一行应用函数np.max</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="九、数据清理"><a href="#九、数据清理" class="headerlink" title="九、数据清理"></a>九、数据清理</h1>
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年05月02日 22:51</p>
+        <p>原始链接： <a class="post-url" href="/2016/01/02/数据分析——pandas/" title="数据分析——pandas">http://yoursite.com/2016/01/02/数据分析——pandas/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="Allen">
+                Allen
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/01/02/数据分析——pandas/&title=《数据分析——pandas》 — GuoXu's Blog&pic=https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=956402351,824261234&fm=26&gp=0.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/01/02/数据分析——pandas/&title=《数据分析——pandas》 — GuoXu's Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/01/02/数据分析——pandas/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《数据分析——pandas》 — GuoXu's Blog&url=http://yoursite.com/2016/01/02/数据分析——pandas/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/01/02/数据分析——pandas/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2016/01/02/数据分析——pandas/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/数据分析/" class="color5">数据分析</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、导入数据"><span class="post-toc-text">一、导入数据</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、导出数据"><span class="post-toc-text">二、导出数据</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、创建测试对象"><span class="post-toc-text">三、创建测试对象</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、查看、检查数据"><span class="post-toc-text">四、查看、检查数据</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、数据选取"><span class="post-toc-text">五、数据选取</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、数据统计"><span class="post-toc-text">六、数据统计</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、数据合并"><span class="post-toc-text">七、数据合并</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、数据处理"><span class="post-toc-text">八、数据处理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、数据清理"><span class="post-toc-text">九、数据清理</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/02/数据分析——NumPy/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">数据分析——NumPy</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/devilGuoXu/devilGuoXu.github.io" target="_blank">GX</a>
+      &copy; 2019 Allen<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
