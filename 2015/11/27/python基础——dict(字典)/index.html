@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
 <meta property="og:description" content="特征：无序且可变（没有下标，支持增删改查）键key——唯一且不可变，一般将字符串作为键   一、增   语法 功能     字典[key]=值 添加键值对（key在字典中不存在时）    二、删   语法 功能     del 字典[key] 删除字典中指定的key对应的键值对   字典.pop(key) 取出字典中key对应的值，删除对应键值对    三、改   语法 功能     字典[key">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:31:25.654Z">
+<meta property="og:updated_time" content="2019-05-11T06:14:04.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——dict(字典)">
 <meta name="twitter:description" content="特征：无序且可变（没有下标，支持增删改查）键key——唯一且不可变，一般将字符串作为键   一、增   语法 功能     字典[key]=值 添加键值对（key在字典中不存在时）    二、删   语法 功能     del 字典[key] 删除字典中指定的key对应的键值对   字典.pop(key) 取出字典中key对应的值，删除对应键值对    三、改   语法 功能     字典[key">
@@ -211,157 +211,122 @@
 </tr>
 </tbody>
 </table>
-<h1 id="五、遍历"><a href="#五、遍历" class="headerlink" title="五、遍历"></a>五、遍历</h1><pre><code>dict1 = {&quot;a&quot;: 100, &quot;b&quot;: 200, &quot;c&quot;: 300}
-
-# 遍历字典取到的是key
-for key in dict1:
-    # key
-    print(key, end=&quot; &quot;)
-    # value
-    print(dict1[key])
-
-# 遍历字典的value()，获取所有的value值
-for value in dict1.values():
-    print(value)
-
-# 遍历字典的items(),直接获取key和value（不建议使用）
-for key, value in dict1.items():
-    print(key, value)
-</code></pre><h1 id="六、运算"><a href="#六、运算" class="headerlink" title="六、运算"></a>六、运算</h1><ol>
-<li>== / !=<pre><code>print({&quot;a&quot;: 11, &quot;b&quot;: 22} == {&quot;b&quot;: 22, &quot;a&quot;: 11})  #True
+<h1 id="五、遍历"><a href="#五、遍历" class="headerlink" title="五、遍历"></a>五、遍历</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">"a"</span>: <span class="number">100</span>, <span class="string">"b"</span>: <span class="number">200</span>, <span class="string">"c"</span>: <span class="number">300</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历字典取到的是key</span></span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dict1:</span><br><span class="line">    <span class="comment"># key</span></span><br><span class="line">    print(key, end=<span class="string">" "</span>)</span><br><span class="line">    <span class="comment"># value</span></span><br><span class="line">    print(dict1[key])</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 遍历字典的value()，获取所有的value值</span></span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> dict1.values():</span><br><span class="line">    print(value)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 遍历字典的items(),直接获取key和value（不建议使用）</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> dict1.items():</span><br><span class="line">    print(key, value)</span><br></pre></td></tr></table></figure>
+<h1 id="六、运算"><a href="#六、运算" class="headerlink" title="六、运算"></a>六、运算</h1><ol>
+<li><p>== / !=</p>
+<pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&#123;<span class="string">"a"</span>: <span class="number">11</span>, <span class="string">"b"</span>: <span class="number">22</span>&#125; == &#123;<span class="string">"b"</span>: <span class="number">22</span>, <span class="string">"a"</span>: <span class="number">11</span>&#125;)  <span class="comment">#True</span></span><br></pre></td></tr></table></figure>
 </code></pre></li>
-<li>in / not in —— 判断字典中指定的key是否存在<pre><code>dict1 = {&quot;a&quot;: 1, &quot;b&quot;: 2}
-print(&quot;a&quot; in dict1)        #True
-print(1 not in dict1)      #True
-</code></pre></li>
+</ol>
+<ol start="2">
+<li><p>in / not in —— 判断字典中指定的key是否存在</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">"a"</span>: <span class="number">1</span>, <span class="string">"b"</span>: <span class="number">2</span>&#125;</span><br><span class="line">print(<span class="string">"a"</span> <span class="keyword">in</span> dict1)    	<span class="comment">#True</span></span><br><span class="line">print(<span class="number">1</span> <span class="keyword">not</span> <span class="keyword">in</span> dict1)  	<span class="comment">#True</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h1 id="七、函数-amp-方法"><a href="#七、函数-amp-方法" class="headerlink" title="七、函数&amp;方法"></a>七、函数&amp;方法</h1><table>
 <thead>
 <tr>
-<th>1</th>
-<th>dict.fromkeys(seq,value)</th>
-<th>以序列中所有的元素作为key，指定的值作为value创建一个新的字典</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>1</td>
+<td>dict.fromkeys(seq,value)</td>
+<td>以序列中所有的元素作为key，指定的值作为value创建一个新的字典</td>
 </tr>
 </tbody>
 </table>
-<pre><code>dict1 = dict.fromkeys(&quot;abc&quot;, 123)
-print(dict1)
-
-结果：
-{&apos;a&apos;: 123, &apos;b&apos;: 123, &apos;c&apos;: 123}
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dict1 = dict.fromkeys(<span class="string">"abc"</span>, <span class="number">123</span>)</span><br><span class="line">print(dict1)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&#123;<span class="string">'a'</span>: <span class="number">123</span>, <span class="string">'b'</span>: <span class="number">123</span>, <span class="string">'c'</span>: <span class="number">123</span>&#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>2</th>
-<th>dict.keys()</th>
-<th>将字典所有的key取出产生一个新的序列</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>2</td>
+<td>dict.keys()</td>
+<td>将字典所有的key取出产生一个新的序列</td>
 </tr>
 </tbody>
 </table>
-<pre><code>dict2 = {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
-print(dict2.keys())
-
-结果：
-dict_keys([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;])
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dict2 = &#123;<span class="string">"a"</span>: <span class="number">1</span>, <span class="string">"b"</span>: <span class="number">2</span>, <span class="string">"c"</span>: <span class="number">3</span>&#125;</span><br><span class="line">print(dict2.keys())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">dict_keys([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>3</th>
-<th>dict.values()</th>
-<th>将字典所有的value取出产生一个新的序列</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>3</td>
+<td>dict.values()</td>
+<td>将字典所有的value取出产生一个新的序列</td>
 </tr>
 </tbody>
 </table>
-<pre><code>dict3 = {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
-print(dict3.values())
-
-结果：
-dict_values([1, 2, 3])
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dict3 = &#123;<span class="string">"a"</span>: <span class="number">1</span>, <span class="string">"b"</span>: <span class="number">2</span>, <span class="string">"c"</span>: <span class="number">3</span>&#125;</span><br><span class="line">print(dict3.values())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">dict_values([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>4</th>
-<th>dict.items()</th>
-<th>将字典所有的key和value作为一个元组取出产生一个新的序列</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>4</td>
+<td>dict.items()</td>
+<td>将字典所有的key和value作为一个元组取出产生一个新的序列</td>
 </tr>
 </tbody>
 </table>
-<pre><code>dict4 = {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
-print(dict4.items())
-
-结果：
-dict_items([(&apos;a&apos;, 1), (&apos;b&apos;, 2), (&apos;c&apos;, 3)])
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dict4 = &#123;<span class="string">"a"</span>: <span class="number">1</span>, <span class="string">"b"</span>: <span class="number">2</span>, <span class="string">"c"</span>: <span class="number">3</span>&#125;</span><br><span class="line">print(dict4.items())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">dict_items([(<span class="string">'a'</span>, <span class="number">1</span>), (<span class="string">'b'</span>, <span class="number">2</span>), (<span class="string">'c'</span>, <span class="number">3</span>)])</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>5</th>
-<th>dict.setdefault(key,value=None)</th>
-<th>当key存在时，不做修改；当key不存在时，添加键值对key：value，value默认为None</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>5</td>
+<td>dict.setdefault(key,value=None)</td>
+<td>当key存在时，不做修改；当key不存在时，添加键值对key：value，value默认为None</td>
 </tr>
 </tbody>
 </table>
-<pre><code>dict5 = {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
-dict5.setdefault(&quot;a&quot;, 5)
-dict5.setdefault(&quot;a1&quot;, 3)
-dict5.setdefault(&quot;sex&quot;)
-print(dict5)
-
-结果：
-{&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 3, &apos;a1&apos;: 3, &apos;sex&apos;: None}
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dict5 = &#123;<span class="string">"a"</span>: <span class="number">1</span>, <span class="string">"b"</span>: <span class="number">2</span>, <span class="string">"c"</span>: <span class="number">3</span>&#125;</span><br><span class="line">dict5.setdefault(<span class="string">"a"</span>, <span class="number">5</span>)</span><br><span class="line">dict5.setdefault(<span class="string">"a1"</span>, <span class="number">3</span>)</span><br><span class="line">dict5.setdefault(<span class="string">"sex"</span>)</span><br><span class="line">print(dict5)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&#123;<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">3</span>, <span class="string">'a1'</span>: <span class="number">3</span>, <span class="string">'sex'</span>: <span class="literal">None</span>&#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>6</th>
-<th>dict1.update(dict2)</th>
-<th>使用dict2中的键值对去更新dict1（如果dict2中的key，dict1中本身存在就是修改，不存在就添加）</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>6</td>
+<td>dict1.update(dict2)</td>
+<td>使用dict2中的键值对去更新dict1（如果dict2中的key，dict1中本身存在就是修改，不存在就添加）</td>
 </tr>
 </tbody>
 </table>
-<pre><code>dict6 = {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}
-dict6.update({&quot;c&quot;: 33, &quot;d&quot;: 44})
-print(dict6)
-
-结果：
-{&apos;a&apos;: 1, &apos;b&apos;: 2, &apos;c&apos;: 33, &apos;d&apos;: 44}
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dict6 = &#123;<span class="string">"a"</span>: <span class="number">1</span>, <span class="string">"b"</span>: <span class="number">2</span>, <span class="string">"c"</span>: <span class="number">3</span>&#125;</span><br><span class="line">dict6.update(&#123;<span class="string">"c"</span>: <span class="number">33</span>, <span class="string">"d"</span>: <span class="number">44</span>&#125;)</span><br><span class="line">print(dict6)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&#123;<span class="string">'a'</span>: <span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>, <span class="string">'c'</span>: <span class="number">33</span>, <span class="string">'d'</span>: <span class="number">44</span>&#125;</span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:31</p>
+        <p>最后更新： 2019年05月11日 14:14</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——dict(字典)/" title="python基础——dict(字典)">http://yoursite.com/2015/11/27/python基础——dict(字典)/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -486,19 +451,19 @@ print(dict6)
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——file(文件操作)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——ClassObject(类)/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——file(文件操作)
+          python基础——ClassObject(类)
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——str(字符串)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——str(字符串)</span>
+    <a href="/2015/11/27/python基础——tuple(元组)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——tuple(元组)</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -560,10 +525,10 @@ print(dict6)
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -596,7 +561,7 @@ print(dict6)
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

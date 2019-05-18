@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、创建列表list1 = [1, 2, 3, 4, 5, &amp;quot;good&amp;quot;, True] 注：列表的数据项不需要具有相同的类型  二、列表操作符   表达式 结果 描述     [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [“ab!”]*3 [“ab!”, “ab!”, “ab!”] 重复   3 in [1, 2, 3] True">
+  <meta name="description" content="一、创建列表1list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True] 注：列表的数据项不需要具有相同的类型  二、列表操作符   表达式 结果 描述     [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [“ab!”]*3 [“ab!”, “ab!”, “ab!”] 重复   3 in [1, 2, 3] True 元素是否存在于列">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——list(列表)">
 <meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——list(列表)/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、创建列表list1 = [1, 2, 3, 4, 5, &amp;quot;good&amp;quot;, True] 注：列表的数据项不需要具有相同的类型  二、列表操作符   表达式 结果 描述     [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [“ab!”]*3 [“ab!”, “ab!”, “ab!”] 重复   3 in [1, 2, 3] True">
+<meta property="og:description" content="一、创建列表1list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True] 注：列表的数据项不需要具有相同的类型  二、列表操作符   表达式 结果 描述     [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [“ab!”]*3 [“ab!”, “ab!”, “ab!”] 重复   3 in [1, 2, 3] True 元素是否存在于列">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:32:07.578Z">
+<meta property="og:updated_time" content="2019-05-11T06:30:49.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——list(列表)">
-<meta name="twitter:description" content="一、创建列表list1 = [1, 2, 3, 4, 5, &amp;quot;good&amp;quot;, True] 注：列表的数据项不需要具有相同的类型  二、列表操作符   表达式 结果 描述     [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [“ab!”]*3 [“ab!”, “ab!”, “ab!”] 重复   3 in [1, 2, 3] True">
+<meta name="twitter:description" content="一、创建列表1list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True] 注：列表的数据项不需要具有相同的类型  二、列表操作符   表达式 结果 描述     [1, 2, 3] + [4, 5, 6] [1, 2, 3, 4, 5, 6] 组合   [“ab!”]*3 [“ab!”, “ab!”, “ab!”] 重复   3 in [1, 2, 3] True 元素是否存在于列">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -146,8 +146,8 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="一、创建列表"><a href="#一、创建列表" class="headerlink" title="一、创建列表"></a>一、创建列表</h1><pre><code>list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True]
-</code></pre><p>注：列表的数据项不需要具有相同的类型</p>
+            <h1 id="一、创建列表"><a href="#一、创建列表" class="headerlink" title="一、创建列表"></a>一、创建列表</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="string">"good"</span>, <span class="literal">True</span>]</span><br></pre></td></tr></table></figure>
+<p>注：列表的数据项不需要具有相同的类型</p>
 <hr>
 <h1 id="二、列表操作符"><a href="#二、列表操作符" class="headerlink" title="二、列表操作符"></a>二、列表操作符</h1><table>
 <thead>
@@ -179,336 +179,263 @@
 <h1 id="三、列表函数-amp-方法"><a href="#三、列表函数-amp-方法" class="headerlink" title="三、列表函数&amp;方法"></a>三、列表函数&amp;方法</h1><table>
 <thead>
 <tr>
-<th>1</th>
-<th>len(list)</th>
-<th>列表元素个数</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>1</td>
+<td>len(list)</td>
+<td>列表元素个数</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list1 = [1, 2, 3]
-print(len(list1))
-
-结果：
-3
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">print(len(list1))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>2</th>
-<th>max(list)</th>
-<th>返回列表元素最大值</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>2</td>
+<td>max(list)</td>
+<td>返回列表元素最大值</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list2 = [1, 2, 3, 4, 5]
-print(max(list2))
-
-结果：
-5
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list2 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">print(max(list2))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>3</th>
-<th>min(list)</th>
-<th>返回列表元素最小值</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>3</td>
+<td>min(list)</td>
+<td>返回列表元素最小值</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list3 = [1, 2, 3, 4, 5]
-print(min(list3))
-
-结果：
-1
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list3 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">print(min(list3))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>4</th>
-<th>list(seq)</th>
-<th>将元组转换为列表</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>4</td>
+<td>list(seq)</td>
+<td>将元组转换为列表</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list4 = list((1, 2, 3, 4))
-print(list4)
-
-结果：
-[1, 2, 3, 4]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list4 = list((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">print(list4)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>5</th>
-<th>list.append(obj)</th>
-<th>在列表末尾添加新的对象</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>5</td>
+<td>list.append(obj)</td>
+<td>在列表末尾添加新的对象</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list5 = [1, 2, 3, 4, 5]
-list5.append(6)
-list5.append([7, 8, 9])
-print(list5)
-
-结果：
-[1, 2, 3, 4, 5, 6, [7, 8, 9]]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list5 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">list5.append(<span class="number">6</span>)</span><br><span class="line">list5.append([<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>])</span><br><span class="line">print(list5)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>6</th>
-<th>list.extend(seq)</th>
-<th>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>6</td>
+<td>list.extend(seq)</td>
+<td>在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list6 = [1, 2, 3, 4, 5]
-list6.extend([6, 7, 8])
-print(list6)
-
-结果：
-[1, 2, 3, 4, 5, 6, 7, 8]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list6 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">list6.extend([<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>])</span><br><span class="line">print(list6)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>7</th>
-<th>list.insert(index, obj)</th>
-<th>在指定下标处添加一个元素，不覆盖原数据，原数据向后顺延</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>7</td>
+<td>list.insert(index, obj)</td>
+<td>在指定下标处添加一个元素，不覆盖原数据，原数据向后顺延</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list7 = [1, 2, 3, 4, 5]
-list7.insert(2, 100)
-list7.insert(2, [200, 300])
-print(list7)
-
-结果：
-[1, 2, [200, 300], 100, 3, 4, 5]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list7 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">list7.insert(<span class="number">2</span>, <span class="number">100</span>)</span><br><span class="line">list7.insert(<span class="number">2</span>, [<span class="number">200</span>, <span class="number">300</span>])</span><br><span class="line">print(list7)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, [<span class="number">200</span>, <span class="number">300</span>], <span class="number">100</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>8</th>
-<th>list.pop([index=-1]])</th>
-<th>移除列表中指定下标处的元素（默认最后一个元素），并且返回该元素的值</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>8</td>
+<td>list.pop([index=-1]])</td>
+<td>移除列表中指定下标处的元素（默认最后一个元素），并且返回该元素的值</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list8 = [1, 2, 3, 4, 5]
-list8.pop()
-print(list8)
-print(list8.pop(2))
-print(list8)
-
-结果：
-[1, 2, 3, 4]
-3
-[1, 2, 4]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">list8 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">list8.pop()</span><br><span class="line">print(list8)</span><br><span class="line">print(list8.pop(<span class="number">2</span>))</span><br><span class="line">print(list8)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="number">3</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>9</th>
-<th>list.remove(obj)</th>
-<th>移除列表中某个元素的第一个匹配项</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>9</td>
+<td>list.remove(obj)</td>
+<td>移除列表中某个元素的第一个匹配项</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list9 = [1, 2, 3, 4, 5, 4]
-list9.remove(4)
-print(list9)
-
-结果：
-[1, 2, 3, 5, 4]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list9 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>]</span><br><span class="line">list9.remove(<span class="number">4</span>)</span><br><span class="line">print(list9)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>10</th>
-<th>list.clear()</th>
-<th>清空列表</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>10</td>
+<td>list.clear()</td>
+<td>清空列表</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list10 = [1, 2, 3, 4, 5]
-list10.clear()
-print(list10)
-
-结果：
-[]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list10 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">list10.clear()</span><br><span class="line">print(list10)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>11</th>
-<th>list.index(obj)</th>
-<th>从列表中找出某个元素第一个匹配项的索引位置</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>11</td>
+<td>list.index(obj)</td>
+<td>从列表中找出某个元素第一个匹配项的索引位置</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list11 = [1, 2, 3, 4, 5, 3, 4, 5, 6]
-print(list11.index(3))
-print(list11.index(3, 3, 7))    # 圈定范围
-
-结果：
-2
-5
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list11 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">print(list11.index(<span class="number">3</span>))</span><br><span class="line">print(list11.index(<span class="number">3</span>, <span class="number">3</span>, <span class="number">7</span>))    <span class="comment"># 圈定范围</span></span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>12</th>
-<th>list.count(obj)</th>
-<th>统计某个元素在列表中出现的次数</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>12</td>
+<td>list.count(obj)</td>
+<td>统计某个元素在列表中出现的次数</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list12 = [1, 2, 3, 4, 3, 4, 5, 3, 4, 5, 3]
-print(list12.count(3))
-
-结果：
-4
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list12 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>]</span><br><span class="line">print(list12.count(<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>13</th>
-<th>list.reverse()</th>
-<th>反向列表中元素</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>13</td>
+<td>list.reverse()</td>
+<td>反向列表中元素</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list13 = [1, 3, 4, 2, 5]
-list13.reverse()
-print(list13)
-
-结果：
-[5, 2, 4, 3, 1]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list13 = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>]</span><br><span class="line">list13.reverse()</span><br><span class="line">print(list13)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">5</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>14</th>
-<th>list.sort(cmp=None, key=None, reverse=False)</th>
-<th>对原列表进行排序</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>14</td>
+<td>list.sort(cmp=None, key=None, reverse=False)</td>
+<td>对原列表进行排序</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list14 = [2, 1, 3, 5, 4]
-list14.sort()
-print(list14)
-list14.sort(reverse=True)  # True为降序，默认为False升序
-print(list14)
-
-结果：
-[1, 2, 3, 4, 5]
-[5, 4, 3, 2, 1]
-</code></pre><p><strong>注：sorted(列表)——产生一个新的列表</strong></p>
-<pre><code>list14 = [2, 1, 3, 5, 4]
-print(sorted(list14))
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">list14 = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>]</span><br><span class="line">list14.sort()</span><br><span class="line">print(list14)</span><br><span class="line">list14.sort(reverse=<span class="literal">True</span>)  <span class="comment"># True为降序，默认为False升序</span></span><br><span class="line">print(list14)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">[<span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<p><strong>注：sorted(列表)——产生一个新的列表</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list14 = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>]</span><br><span class="line">print(sorted(list14))</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
-<th>15</th>
-<th>list.copy()</th>
-<th>复制列表（浅拷贝）</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>15</td>
+<td>list.copy()</td>
+<td>复制列表（浅拷贝）</td>
 </tr>
 </tbody>
 </table>
-<pre><code>list15 = [1, 2, 3, 4, 5]
-list16 = list15.copy()
-list16[1] = 200
-print(list15)
-print(list16)
-print(id(list15))
-print(id(list16))
-
-结果：
-[1, 2, 3, 4, 5]
-[1, 200, 3, 4, 5]
-33776264
-33776328
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">list15 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">list16 = list15.copy()</span><br><span class="line">list16[<span class="number">1</span>] = <span class="number">200</span></span><br><span class="line">print(list15)</span><br><span class="line">print(list16)</span><br><span class="line">print(id(list15))</span><br><span class="line">print(id(list16))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">200</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="number">33776264</span></span><br><span class="line"><span class="number">33776328</span></span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:32</p>
+        <p>最后更新： 2019年05月11日 14:30</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——list(列表)/" title="python基础——list(列表)">http://yoursite.com/2015/11/27/python基础——list(列表)/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -633,19 +560,19 @@ print(id(list16))
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——pymysql/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——继承衍生功能/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——pymysql
+          python基础——继承衍生功能
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——function(函数)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——function(函数)</span>
+    <a href="/2015/11/27/python基础——str(字符串)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——str(字符串)</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -707,10 +634,10 @@ print(id(list16))
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -743,7 +670,7 @@ print(id(list16))
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

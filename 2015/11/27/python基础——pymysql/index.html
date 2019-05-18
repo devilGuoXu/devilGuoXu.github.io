@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、建立连接import pymysql  con_obj = pymysql.connect(host=&amp;apos;localhost&amp;apos;,                           user=&amp;apos;root&amp;apos;,                           password=&amp;apos;yuting123456&amp;apos;,">
+  <meta name="description" content="一、建立连接123456789import pymysqlcon_obj = pymysql.connect(host=&apos;localhost&apos;,                          user=&apos;root&apos;,                          password=&apos;yuting123456&apos;,                          database=&apos;scho">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——pymysql">
 <meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——pymysql/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、建立连接import pymysql  con_obj = pymysql.connect(host=&amp;apos;localhost&amp;apos;,                           user=&amp;apos;root&amp;apos;,                           password=&amp;apos;yuting123456&amp;apos;,">
+<meta property="og:description" content="一、建立连接123456789import pymysqlcon_obj = pymysql.connect(host=&apos;localhost&apos;,                          user=&apos;root&apos;,                          password=&apos;yuting123456&apos;,                          database=&apos;scho">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:32:24.268Z">
+<meta property="og:updated_time" content="2019-05-11T06:34:30.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——pymysql">
-<meta name="twitter:description" content="一、建立连接import pymysql  con_obj = pymysql.connect(host=&amp;apos;localhost&amp;apos;,                           user=&amp;apos;root&amp;apos;,                           password=&amp;apos;yuting123456&amp;apos;,">
+<meta name="twitter:description" content="一、建立连接123456789import pymysqlcon_obj = pymysql.connect(host=&apos;localhost&apos;,                          user=&apos;root&apos;,                          password=&apos;yuting123456&apos;,                          database=&apos;scho">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -146,16 +146,8 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="一、建立连接"><a href="#一、建立连接" class="headerlink" title="一、建立连接"></a>一、建立连接</h1><pre><code>import pymysql
-
-con_obj = pymysql.connect(host=&apos;localhost&apos;,
-                          user=&apos;root&apos;,
-                          password=&apos;yuting123456&apos;,
-                          database=&apos;school&apos;,
-                          port=3306,
-                          charset=&apos;utf8&apos;,
-                          autocommit=True)
-</code></pre><table>
+            <h1 id="一、建立连接"><a href="#一、建立连接" class="headerlink" title="一、建立连接"></a>一、建立连接</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">con_obj = pymysql.connect(host=<span class="string">'localhost'</span>,</span><br><span class="line">                          user=<span class="string">'root'</span>,</span><br><span class="line">                          password=<span class="string">'yuting123456'</span>,</span><br><span class="line">                          database=<span class="string">'school'</span>,</span><br><span class="line">                          port=<span class="number">3306</span>,</span><br><span class="line">                          charset=<span class="string">'utf8'</span>,</span><br><span class="line">                          autocommit=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
 <th>属性</th>
@@ -195,15 +187,13 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 </table>
 <hr>
 <h1 id="二、获取游标对象"><a href="#二、获取游标对象" class="headerlink" title="二、获取游标对象"></a>二、获取游标对象</h1><p>提供数据库操作的上下文（注：游标提供的上下文是事务环境）</p>
-<pre><code>with con_obj.cursor() as cursor_object:
-    # 在这后面操作数据库，执行sql语言
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> con_obj.cursor() <span class="keyword">as</span> cursor_object:</span><br><span class="line">	<span class="comment"># 在这后面操作数据库，执行sql语言</span></span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="三、操作数据库"><a href="#三、操作数据库" class="headerlink" title="三、操作数据库"></a>三、操作数据库</h1><p>连接对象.execute(sql语句)<br>如：</p>
-<pre><code>cursor_object.execute(&apos;use school;&apos;)
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cursor_object.execute(<span class="string">'use school;'</span>)</span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:32</p>
+        <p>最后更新： 2019年05月11日 14:34</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——pymysql/" title="python基础——pymysql">http://yoursite.com/2015/11/27/python基础——pymysql/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -328,19 +318,19 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——tuple(元组)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——生成器/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——tuple(元组)
+          python基础——生成器
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——list(列表)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——list(列表)</span>
+    <a href="/2015/11/27/python基础——自定义print/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——自定义print</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -402,10 +392,10 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -438,7 +428,7 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

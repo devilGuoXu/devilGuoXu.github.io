@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、安装1. 安装virtualenv pip install virtualenv 2. 创建虚拟环境 virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask 3. 激活环境 cd pyflask/Scripts activate 4. 退出环境 deactivate 5.">
+  <meta name="description" content="一、安装1. 安装virtualenv 1pip install virtualenv 2. 创建虚拟环境 1virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask 3. 激活环境 12cd pyflask/Scriptsactivate 4. 退出环境 1deactivat">
 <meta name="keywords" content="Python,Python框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python框架——flask">
 <meta property="og:url" content="http://yoursite.com/2015/11/30/python框架——flask/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、安装1. 安装virtualenv pip install virtualenv 2. 创建虚拟环境 virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask 3. 激活环境 cd pyflask/Scripts activate 4. 退出环境 deactivate 5.">
+<meta property="og:description" content="一、安装1. 安装virtualenv 1pip install virtualenv 2. 创建虚拟环境 1virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask 3. 激活环境 12cd pyflask/Scriptsactivate 4. 退出环境 1deactivat">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:34:11.158Z">
+<meta property="og:updated_time" content="2019-05-11T07:16:24.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python框架——flask">
-<meta name="twitter:description" content="一、安装1. 安装virtualenv pip install virtualenv 2. 创建虚拟环境 virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask 3. 激活环境 cd pyflask/Scripts activate 4. 退出环境 deactivate 5.">
+<meta name="twitter:description" content="一、安装1. 安装virtualenv 1pip install virtualenv 2. 创建虚拟环境 1virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask 3. 激活环境 12cd pyflask/Scriptsactivate 4. 退出环境 1deactivat">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -147,50 +147,37 @@
       
             
             <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><p><strong>1. 安装virtualenv</strong></p>
-<pre><code>pip install virtualenv
-</code></pre><p><strong>2. 创建虚拟环境</strong></p>
-<pre><code>virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask
-</code></pre><p><strong>3. 激活环境</strong></p>
-<pre><code>cd pyflask/Scripts
-activate
-</code></pre><p><strong>4. 退出环境</strong></p>
-<pre><code>deactivate
-</code></pre><p><strong>5. flask安装与使用</strong>（先激活环境，在执行）</p>
-<pre><code>pip install flask
-</code></pre><hr>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
+<p><strong>2. 创建虚拟环境</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pyflask</span><br></pre></td></tr></table></figure>
+<p><strong>3. 激活环境</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd pyflask/Scripts</span><br><span class="line">activate</span><br></pre></td></tr></table></figure>
+<p><strong>4. 退出环境</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+<p><strong>5. flask安装与使用</strong>（先激活环境，在执行）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install flask</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="二、启动"><a href="#二、启动" class="headerlink" title="二、启动"></a>二、启动</h1><font size="5"><strong>1. flask库</strong></font>
 
 <p>应用代码</p>
-<pre><code>from flask import Flask
-app = Flask(__name__)
-app.run([host=&apos;0.0.0.0&apos;, port=&apos;80&apos;, debug=True])
-</code></pre><p>启动</p>
-<pre><code>python xxx.py
-</code></pre><p><br><font size="5"><strong>2. flask-script库</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line">app.run([host=<span class="string">'0.0.0.0'</span>, port=<span class="string">'80'</span>, debug=<span class="literal">True</span>])</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python xxx.py</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. flask-script库</strong></font></p>
 <p>安装</p>
-<pre><code>pip install flask-script
-</code></pre><p>应用代码</p>
-<pre><code>from flask import Flask
-from flask_script import Manager
-app = Flask(__name__)
-manege = Manager(app)
-manage.run()
-</code></pre><p>启动</p>
-<pre><code>python xxx.py runserver -p -h -d
-</code></pre><hr>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install flask-script</span><br></pre></td></tr></table></figure>
+<p>应用代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"><span class="keyword">from</span> flask_script <span class="keyword">import</span> Manager</span><br><span class="line">app = Flask(__name__)</span><br><span class="line">manege = Manager(app)</span><br><span class="line">manage.run()</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python xxx.py runserver -p -h -d</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="三、路由规则"><a href="#三、路由规则" class="headerlink" title="三、路由规则"></a>三、路由规则</h1><font size="5">route() 装饰器把一个函数绑定到对应的 URL 上</font>
 
 <p>例如</p>
-<pre><code>@app.route(&apos;/&apos;)
-def index():
-    return &apos;Index Page&apos;
-
-@app.route(&apos;/hello/&apos;)
-def hello():
-    return &apos;Hello World&apos;
-</code></pre><p><br><font size="5">定义格式</font></p>
-<pre><code>&lt;转换器(类型):参数名&gt;
-</code></pre><table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Index Page'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/hello/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span></span><br></pre></td></tr></table></figure>
+<p><br><font size="5">定义格式</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;转换器(类型):参数名&gt;</span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
 <th>名称</th>
@@ -220,80 +207,69 @@ def hello():
 <h1 id="四、请求"><a href="#四、请求" class="headerlink" title="四、请求"></a>四、请求</h1><font size="5"><strong>1. 获取参数</strong></font>
 
 <p>GET请求</p>
-<pre><code>request.args
-request.args[&apos;key&apos;]
-request.args.get(&apos;key&apos;)
-</code></pre><p>POST请求</p>
-<pre><code>request.form
-request.form[&apos;key&apos;]
-request.form.get(&apos;key&apos;)
-</code></pre><p>获取多个同样的key对应的vallue值</p>
-<pre><code>getlist(&apos;key&apos;)
-</code></pre><p><br><font size="5"><strong>2. 获取请求路径</strong></font></p>
-<pre><code>request.path
-</code></pre><p><br><font size="5"><strong>3. 请求cookies</strong></font></p>
-<pre><code>request.cookies
-</code></pre><p><br><font size="5"><strong>4. 获取上传文件</strong></font></p>
-<pre><code>request.files
-</code></pre><p>取值</p>
-<pre><code>request.files.get(&apos;key&apos;)
-request.files[&apos;key&apos;]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request.args</span><br><span class="line">request.args[<span class="string">'key'</span>]</span><br><span class="line">request.args.get(<span class="string">'key'</span>)</span><br></pre></td></tr></table></figure>
+<p>POST请求</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request.form</span><br><span class="line">request.form[<span class="string">'key'</span>]</span><br><span class="line">request.form.get(<span class="string">'key'</span>)</span><br></pre></td></tr></table></figure>
+<p>获取多个同样的key对应的vallue值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getlist(<span class="string">'key'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 获取请求路径</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.path</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 请求cookies</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.cookies</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 获取上传文件</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.files</span><br></pre></td></tr></table></figure>
+<p>取值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">request.files.get(<span class="string">'key'</span>)</span><br><span class="line">request.files[<span class="string">'key'</span>]</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="五、响应"><a href="#五、响应" class="headerlink" title="五、响应"></a>五、响应</h1><font size="5"><strong>1. 导包</strong></font>
 
-<pre><code>from flask import make_response
-</code></pre><p><br><font size="5"><strong>2. 使用</strong></font></p>
-<pre><code>make_response(&apos;响应内容&apos;, 响应状态码)
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> make_response</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 使用</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make_response(<span class="string">'响应内容'</span>, 响应状态码)</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="六、cookie与session"><a href="#六、cookie与session" class="headerlink" title="六、cookie与session"></a>六、cookie与session</h1><font size="6"><strong>1. cookie</strong></font>
 
 <p>设置令牌</p>
-<pre><code>res = make_response()
-res.set_cookie(key,value,max_age)
-</code></pre><p>删除</p>
-<pre><code>res=make_response()
-res.delete_cookie(key)
-</code></pre><p><br><font size="6"><strong>2. session</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res = make_response()</span><br><span class="line">res.set_cookie(key,value,max_age)</span><br></pre></td></tr></table></figure>
+<p>删除</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">res=make_response()</span><br><span class="line">res.delete_cookie(key)</span><br></pre></td></tr></table></figure>
+<p><br><font size="6"><strong>2. session</strong></font></p>
 <p><strong>session数据保存在客户端</strong><br>导包</p>
-<pre><code>from flask import session
-</code></pre><p>使用</p>
-<pre><code>session[&apos;key&apos;]=value
-</code></pre><p>加密复杂程度</p>
-<pre><code>secret_key:&apos;xxx&apos;
-</code></pre><p><br><strong>session数据保存在服务器端</strong><br>安装</p>
-<pre><code>pip install redis flask-session
-</code></pre><p>导包</p>
-<pre><code>from flask_session import Session
-</code></pre><p>使用</p>
-<pre><code>app.config[&apos;SESSION_TYPE&apos;] =&apos;redis&apos;
-app.config[&apos;SESSION_REDIS&apos;] = redis.Redis()
-Session(app)
-</code></pre><p>删除</p>
-<pre><code>del session[&apos;key&apos;]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> session</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session[<span class="string">'key'</span>]=value</span><br></pre></td></tr></table></figure>
+<p>加密复杂程度</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">secret_key:<span class="string">'xxx'</span></span><br></pre></td></tr></table></figure>
+<p><br><strong>session数据保存在服务器端</strong><br>安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install redis flask-session</span><br></pre></td></tr></table></figure>
+<p>导包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask_session <span class="keyword">import</span> Session</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.config[<span class="string">'SESSION_TYPE'</span>] =<span class="string">'redis'</span></span><br><span class="line">app.config[<span class="string">'SESSION_REDIS'</span>] = redis.Redis()</span><br><span class="line">Session(app)</span><br></pre></td></tr></table></figure>
+<p>删除</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> session[<span class="string">'key'</span>]</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="七、蓝图"><a href="#七、蓝图" class="headerlink" title="七、蓝图"></a>七、蓝图</h1><font size="5"><strong>1. 安装</strong></font>
 
-<pre><code>pip install flask-blueprint
-</code></pre><p><br><font size="5"><strong>2. 使用</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install flask-blueprint</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 使用</strong></font></p>
 <p>第一步</p>
-<pre><code>blue = Blueprint(&apos;第一个参数&apos;, __name__)
-@blue.route(&apos;路由地址&apos;)
-</code></pre><p>第二步</p>
-<pre><code>flask对象
-app.register_blueprint(blueprint=blue)
-</code></pre><p><br><font size="5"><strong>3. 跳转</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">blue = Blueprint(<span class="string">'第一个参数'</span>, __name__)</span><br><span class="line"><span class="meta">@blue.route('路由地址')</span></span><br></pre></td></tr></table></figure>
+<p>第二步</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flask对象</span><br><span class="line">app.register_blueprint(blueprint=blue)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 跳转</strong></font></p>
 <p>无参跳转</p>
-<pre><code>redirect(url_for(&apos;生成蓝图的第一个参数.跳转的函数名称&apos;))
-</code></pre><p>有参跳转</p>
-<pre><code>redirect(url_for(&apos;生成蓝图的第一个参数.跳转的函数名称&apos;, 参数名=值, 参数名2=值2))
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redirect(url_for(<span class="string">'生成蓝图的第一个参数.跳转的函数名称'</span>))</span><br></pre></td></tr></table></figure>
+<p>有参跳转</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redirect(url_for(<span class="string">'生成蓝图的第一个参数.跳转的函数名称'</span>, 参数名=值, 参数名<span class="number">2</span>=值<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="八、模板"><a href="#八、模板" class="headerlink" title="八、模板"></a>八、模板</h1><font size="5"><strong>1. 父模板</strong></font>
 
-<p>block块定义<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block 名称 %&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>block块定义<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block 名称 %&#125;</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
 <p><br><font size="5"><strong>2. 子模板</strong></font></p>
-<p>继承父模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &apos;父模板&apos; %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>动态可选填充block块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block 名称 %&#125;</span><br><span class="line">动态内容</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><br><font size="5"><strong>3. 语法</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解析标签: &#123;% 标签名 %&#125;  &#123;% end标签名 %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>继承父模板<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends '父模板' %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>动态可选填充block块<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% block 名称 %&#125;</span><br><span class="line">动态内容</span><br><span class="line">&#123;% endblock %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><br><font size="5"><strong>3. 语法</strong></font><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解析标签: &#123;% 标签名 %&#125;  &#123;% end标签名 %&#125;</span><br></pre></td></tr></table></figure></p>
 <table>
 <thead>
 <tr>
@@ -316,7 +292,7 @@ app.register_blueprint(blueprint=blue)
 </tr>
 </tbody>
 </table>
-<p><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解析变量:  &#123;&#123; 变量名 &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><br><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解析变量:  &#123;&#123; 变量名 &#125;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>loop变量</p>
 <table>
 <thead>
@@ -354,8 +330,8 @@ app.register_blueprint(blueprint=blue)
 </table>
 <p><br><font size="5"><strong>4. 过滤器</strong></font></p>
 <p>语法</p>
-<pre><code>{{  变量 | 过滤器 }}
-</code></pre><table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;  变量 | 过滤器 &#125;&#125;</span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
 <th>过滤器</th>
@@ -380,39 +356,23 @@ app.register_blueprint(blueprint=blue)
 <hr>
 <h1 id="九、模型"><a href="#九、模型" class="headerlink" title="九、模型"></a>九、模型</h1><font size="5"><strong>1. 安装flask-sqlalchemy库</strong></font>
 
-<pre><code>pip install flask-sqlalchemy
-</code></pre><p><br><font size="5"><strong>2. 创建模型</strong></font></p>
-<pre><code>from flask_sqlalchemy import SQLAlchemy
-# 生成数据库访问对象db
-db = SQLAlchemy()
-class 类(db.Model):
-    # 定义id主键，自增字段
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    # 定义不能为空，且唯一的姓名字段
-    name = db.Column(db.String(10), unique=True, nullable=False)
-    # 定义整型，默认为20的年龄字段
-    age = db.Column(db.Integer, default=20)
-    __tablename__ = &apos;stu&apos;
-</code></pre><p><br><font size="5"><strong>3. 配置数据库信息</strong></font></p>
-<pre><code>app.config[&apos;SQLALCHEMY_DATABASE_URI&apos;] = &apos;mysql+pymysql://username:password@host:3306/database&apos;
-app.config[&apos;SQLALCHEMY_TRACK_MODIFICATIONS&apos;] = False
-db.init_app(app)
-</code></pre><p><br><font size="5"><strong>4. 映射</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install flask-sqlalchemy</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 创建模型</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask_sqlalchemy <span class="keyword">import</span> SQLAlchemy</span><br><span class="line"><span class="comment"># 生成数据库访问对象db</span></span><br><span class="line">db = SQLAlchemy()</span><br><span class="line"><span class="class"><span class="keyword">class</span> 类<span class="params">(db.Model)</span>:</span></span><br><span class="line">    <span class="comment"># 定义id主键，自增字段</span></span><br><span class="line">    id = db.Column(db.Integer, primary_key=<span class="literal">True</span>, autoincrement=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment"># 定义不能为空，且唯一的姓名字段</span></span><br><span class="line">    name = db.Column(db.String(<span class="number">10</span>), unique=<span class="literal">True</span>, nullable=<span class="literal">False</span>)</span><br><span class="line">    <span class="comment"># 定义整型，默认为20的年龄字段</span></span><br><span class="line">    age = db.Column(db.Integer, default=<span class="number">20</span>)</span><br><span class="line">    __tablename__ = <span class="string">'stu'</span></span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 配置数据库信息</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.config[<span class="string">'SQLALCHEMY_DATABASE_URI'</span>] = <span class="string">'mysql+pymysql://username:password@host:3306/database'</span></span><br><span class="line">app.config[<span class="string">'SQLALCHEMY_TRACK_MODIFICATIONS'</span>] = <span class="literal">False</span></span><br><span class="line">db.init_app(app)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 映射</strong></font></p>
 <p>创建</p>
-<pre><code>db.create_all()
-</code></pre><p>删除</p>
-<pre><code>db.drop_all()
-</code></pre><p><br><font size="5"><strong>5. 数据处理</strong></font><br><br><font size="5">增</font></p>
-<pre><code>db.session.add(插入对象)
-db.session.add_all(插入对象列表)
-db.session.commit()
-</code></pre><p><br><font size="5">删</font></p>
-<pre><code>db.session.delete(删除对象)
-db.session.commit()
-</code></pre><p><br><font size="5">改</font></p>
-<pre><code>db.session.add(插入对象)
-db.session.commit()
-</code></pre><p><br><font size="5">查</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.create_all()</span><br></pre></td></tr></table></figure>
+<p>删除</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.drop_all()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 数据处理</strong></font><br><br><font size="5">增</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">db.session.add(插入对象)</span><br><span class="line">db.session.add_all(插入对象列表)</span><br><span class="line">db.session.commit()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5">删</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.session.delete(删除对象)</span><br><span class="line">db.session.commit()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5">改</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.session.add(插入对象)</span><br><span class="line">db.session.commit()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5">查</font></p>
 <table>
 <thead>
 <tr>
@@ -506,7 +466,7 @@ db.session.commit()
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:34</p>
+        <p>最后更新： 2019年05月11日 15:16</p>
         <p>原始链接： <a class="post-url" href="/2015/11/30/python框架——flask/" title="Python框架——flask">http://yoursite.com/2015/11/30/python框架——flask/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -633,19 +593,19 @@ db.session.commit()
 
 <nav id="article-nav">
   
-    <a href="/2015/11/30/python框架——tornado/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/30/python框架——使用centos部署django项目/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          Python框架——tornado
+          Python框架——使用centos部署django项目
         
       </span>
     </a>
   
   
-    <a href="/2015/11/30/MySQL——语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">MySQL——语法</span>
+    <a href="/2015/11/30/python框架——tornado/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Python框架——tornado</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -707,10 +667,10 @@ db.session.commit()
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -743,7 +703,7 @@ db.session.commit()
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

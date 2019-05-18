@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、安装File -&amp;gt; Settings -&amp;gt;Project -&amp;gt; Project Interpreter -&amp;gt; + (添加) -&amp;gt; 搜索requests -&amp;gt; Install Package 二、方法   get(url, params=None)     url 字符串,需要获取的数据的接口地址   params 字典,参数列表(给服务器发送请求的时候需要传">
+  <meta name="description" content="一、安装File -&amp;gt; Settings -&amp;gt;Project -&amp;gt; Project Interpreter -&amp;gt; + (添加) -&amp;gt; 搜索requests -&amp;gt; Install Package 二、方法   get(url, params=None) get请求     url 字符串,需要获取的数据的接口地址   params 字典,参数列表(给服务器发送请求">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——requests">
 <meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——requests/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、安装File -&amp;gt; Settings -&amp;gt;Project -&amp;gt; Project Interpreter -&amp;gt; + (添加) -&amp;gt; 搜索requests -&amp;gt; Install Package 二、方法   get(url, params=None)     url 字符串,需要获取的数据的接口地址   params 字典,参数列表(给服务器发送请求的时候需要传">
+<meta property="og:description" content="一、安装File -&amp;gt; Settings -&amp;gt;Project -&amp;gt; Project Interpreter -&amp;gt; + (添加) -&amp;gt; 搜索requests -&amp;gt; Install Package 二、方法   get(url, params=None) get请求     url 字符串,需要获取的数据的接口地址   params 字典,参数列表(给服务器发送请求">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:32:33.556Z">
+<meta property="og:updated_time" content="2019-05-11T17:36:11.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——requests">
-<meta name="twitter:description" content="一、安装File -&amp;gt; Settings -&amp;gt;Project -&amp;gt; Project Interpreter -&amp;gt; + (添加) -&amp;gt; 搜索requests -&amp;gt; Install Package 二、方法   get(url, params=None)     url 字符串,需要获取的数据的接口地址   params 字典,参数列表(给服务器发送请求的时候需要传">
+<meta name="twitter:description" content="一、安装File -&amp;gt; Settings -&amp;gt;Project -&amp;gt; Project Interpreter -&amp;gt; + (添加) -&amp;gt; 搜索requests -&amp;gt; Install Package 二、方法   get(url, params=None) get请求     url 字符串,需要获取的数据的接口地址   params 字典,参数列表(给服务器发送请求">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -151,6 +151,7 @@
 <thead>
 <tr>
 <th>get(url, params=None)</th>
+<th>get请求</th>
 </tr>
 </thead>
 <tbody>
@@ -165,31 +166,40 @@
 </tbody>
 </table>
 <p><strong>注（完整的接口）：</strong></p>
-<pre><code>https://www.apiopen.top/meituApi?page=1
-协议 ://主机地址 / 路径 ? 参数名1=值1 &amp; 参数名2=值2
-</code></pre><h4 id="发送请求，并且获取返回的数据（服务返回的数据叫响应）"><a href="#发送请求，并且获取返回的数据（服务返回的数据叫响应）" class="headerlink" title="发送请求，并且获取返回的数据（服务返回的数据叫响应）"></a>发送请求，并且获取返回的数据（服务返回的数据叫响应）</h4><pre><code>response = requests.get(&apos;https://www.apiopen.top/meituApi?page=1&apos;)
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://www.apiopen.top/meituApi?page=1</span><br><span class="line">协议 ://主机地址 / 路径 ? 参数名1=值1 &amp; 参数名2=值2</span><br></pre></td></tr></table></figure>
+<h4 id="发送请求，并且获取返回的数据（服务返回的数据叫响应）"><a href="#发送请求，并且获取返回的数据（服务返回的数据叫响应）" class="headerlink" title="发送请求，并且获取返回的数据（服务返回的数据叫响应）"></a>发送请求，并且获取返回的数据（服务返回的数据叫响应）</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">response = requests.get(<span class="string">'https://www.apiopen.top/meituApi?page=1'</span>)</span><br><span class="line"></span><br><span class="line">response 类型：</span><br><span class="line"> &lt;<span class="class"><span class="keyword">class</span> '<span class="title">requests</span>.<span class="title">models</span>.<span class="title">Response</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="从响应中获取数据"><a href="#从响应中获取数据" class="headerlink" title="从响应中获取数据"></a>从响应中获取数据</h4><ol>
+<li>获取json数据</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gx_json = response.json()    <span class="comment"># 会自动将json数据转换成python对应的数据</span></span><br><span class="line">print(type(gx_json))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">dict</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>获取字符串数据</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gx_text = response.text</span><br><span class="line">print(type(gx_text))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>获取二进制数据(原始数据)</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gx_bytes = response.content</span><br><span class="line">print(type(gx_bytes))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">bytes</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>获取或者设置编码类型</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gx_encoding = response.encoding		<span class="comment"># 获取编码类型</span></span><br><span class="line"></span><br><span class="line">response.encoding = <span class="string">'utf8'</span>	<span class="comment"># 设置编码类型</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>获取状态吗</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gx_status_code = response.status_code</span><br><span class="line">print(gx_status_code)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">200</span></span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>获取响应头部</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gx_headers = response.headers</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>获取请求的url</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gx_url = response.url</span><br><span class="line">print(gx_url)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="string">'https://www.baidu.com'</span></span><br></pre></td></tr></table></figure>
 
-response 类型：
- &lt;class &apos;requests.models.Response&apos;&gt;
-</code></pre><h4 id="从响应中获取数据"><a href="#从响应中获取数据" class="headerlink" title="从响应中获取数据"></a>从响应中获取数据</h4><p>1.获取json数据</p>
-<pre><code>gx_json = response.json()    # 会自动将json数据转换成python对应的数据
-
-gx_json 类型：
-&lt;class &apos;dict&apos;&gt;
-</code></pre><p>2.获取字符串数据</p>
-<pre><code>gx_text = response.text
-
-gx_text 类型：
-&lt;class &apos;str&apos;&gt;
-</code></pre><p>3.获取二进制数据(原始数据)</p>
-<pre><code>gx_bytes = response.content
-
-gx_bytes 类型：
-&lt;class &apos;bytes&apos;&gt;
-</code></pre>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:32</p>
+        <p>最后更新： 2019年05月12日 01:36</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——requests/" title="python基础——requests">http://yoursite.com/2015/11/27/python基础——requests/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -314,19 +324,19 @@ gx_bytes 类型：
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——pygame/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——正则表达式
+          python基础——pygame
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——运算符/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——运算符</span>
+    <a href="/2015/11/27/python基础——json/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——json</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -388,10 +398,10 @@ gx_bytes 类型：
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -424,7 +434,7 @@ gx_bytes 类型：
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

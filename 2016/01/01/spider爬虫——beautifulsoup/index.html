@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>python基础——threading(线程) | GuoXu&#39;s Blog</title>
+  <title>spider爬虫——beautifulsoup | GuoXu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、导入线程库123import threading/或from threading import Thread  二、创建子线程函数创建线程Thread(target,args)   -  创建子线程对象说明:target —— Function，需要传一个函数(这个函数中的内容会在子线程中执行)args —— 元祖，target对应的函数的参数 1234567# 创建t1 = threadin">
-<meta name="keywords" content="Python">
+  <meta name="description" content="一、安装1pip3 install beautifulsoup4 二、导入1234from bs4 import BeautifulSoup# 生成对象soup = BeautifulSoup(open(&apos;文件路径&apos;), &apos;lxml&apos;) 三、使用获取标签 123# 找到第一个符合要求的标签#soup.标签名soup.a 获取属性 12345678# 获取所有的属性和值，返回一个字典#soup.标签">
+<meta name="keywords" content="spider爬虫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python基础——threading(线程)">
-<meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——threading(线程)/index.html">
+<meta property="og:title" content="spider爬虫——beautifulsoup">
+<meta property="og:url" content="http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、导入线程库123import threading/或from threading import Thread  二、创建子线程函数创建线程Thread(target,args)   -  创建子线程对象说明:target —— Function，需要传一个函数(这个函数中的内容会在子线程中执行)args —— 元祖，target对应的函数的参数 1234567# 创建t1 = threadin">
+<meta property="og:description" content="一、安装1pip3 install beautifulsoup4 二、导入1234from bs4 import BeautifulSoup# 生成对象soup = BeautifulSoup(open(&apos;文件路径&apos;), &apos;lxml&apos;) 三、使用获取标签 123# 找到第一个符合要求的标签#soup.标签名soup.a 获取属性 12345678# 获取所有的属性和值，返回一个字典#soup.标签">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-11T06:41:08.927Z">
+<meta property="og:updated_time" content="2019-05-11T07:52:00.051Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python基础——threading(线程)">
-<meta name="twitter:description" content="一、导入线程库123import threading/或from threading import Thread  二、创建子线程函数创建线程Thread(target,args)   -  创建子线程对象说明:target —— Function，需要传一个函数(这个函数中的内容会在子线程中执行)args —— 元祖，target对应的函数的参数 1234567# 创建t1 = threadin">
+<meta name="twitter:title" content="spider爬虫——beautifulsoup">
+<meta name="twitter:description" content="一、安装1pip3 install beautifulsoup4 二、导入1234from bs4 import BeautifulSoup# 生成对象soup = BeautifulSoup(open(&apos;文件路径&apos;), &apos;lxml&apos;) 三、使用获取标签 123# 找到第一个符合要求的标签#soup.标签名soup.a 获取属性 12345678# 获取所有的属性和值，返回一个字典#soup.标签">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -110,14 +110,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-python基础——threading(线程)" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-spider爬虫——beautifulsoup" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      python基础——threading(线程)
+      spider爬虫——beautifulsoup
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -125,12 +125,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/Python/">Python</a>
+                      <a href="/categories/spider爬虫/">spider爬虫</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2015-11-27
+          <i class="fa fa-calendar"></i>  2016-01-01
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -146,20 +146,25 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="一、导入线程库"><a href="#一、导入线程库" class="headerlink" title="一、导入线程库"></a>一、导入线程库</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line">/或</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="二、创建子线程"><a href="#二、创建子线程" class="headerlink" title="二、创建子线程"></a>二、创建子线程</h1><h3 id="函数创建线程"><a href="#函数创建线程" class="headerlink" title="函数创建线程"></a>函数创建线程</h3><p>Thread(target,args)   -  创建子线程对象<br>说明:<br>target —— Function，需要传一个函数(这个函数中的内容会在子线程中执行)<br>args —— 元祖，target对应的函数的参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建</span></span><br><span class="line">t1 = threading.Thread(target=函数, args=(<span class="string">'函数参数'</span>,))</span><br><span class="line">/或</span><br><span class="line">t2 = Thread(target=函数, args=(<span class="string">'函数参数'</span>,))</span><br><span class="line"><span class="comment"># 执行</span></span><br><span class="line">t1.start()</span><br><span class="line">t2.start()</span><br></pre></td></tr></table></figure>
-<p>注：当通过创建好的子线程对象调用start方法的时候，会自动在子线程中调用target对应的函数, 并且将args中值作为实参</p>
-<h3 id="类创建线程"><a href="#类创建线程" class="headerlink" title="类创建线程"></a>类创建线程</h3><p>可以通过写一个类继承Thread类，来创建属于自己的线程类。<br>1.声明类继承Thread<br>2.重写run方法。这个方法中的任务就是需要在子线程中执行的任务<br>3.需要线程对象的时候，创建当前声明的类的对象；然后通过start方法在子线程中去执行run方法中的任务</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 声明</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> 类<span class="params">(Thread)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, 参数)</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        run()中需要的参数 = 参数</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        执行的任务</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建</span></span><br><span class="line">t = 类(参数)</span><br><span class="line"><span class="comment"># 执行</span></span><br><span class="line">t.start()</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="三、join"><a href="#三、join" class="headerlink" title="三、join()"></a>三、join()</h1><p>线程对象调用join方法，会导致join后的代码会在线程中的任务结束后才执行</p>
+            <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install beautifulsoup4</span><br></pre></td></tr></table></figure>
+<h1 id="二、导入"><a href="#二、导入" class="headerlink" title="二、导入"></a>二、导入</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成对象</span></span><br><span class="line">soup = BeautifulSoup(open(<span class="string">'文件路径'</span>), <span class="string">'lxml'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="三、使用"><a href="#三、使用" class="headerlink" title="三、使用"></a>三、使用</h1><p>获取标签</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 找到第一个符合要求的标签</span></span><br><span class="line"><span class="comment">#soup.标签名</span></span><br><span class="line">soup.a</span><br></pre></td></tr></table></figure>
+<p>获取属性</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取所有的属性和值，返回一个字典</span></span><br><span class="line"><span class="comment">#soup.标签名.attrs</span></span><br><span class="line">soup.a.attrs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取属性的内容</span></span><br><span class="line"><span class="comment"># soup.标签名.attrs['属性名']</span></span><br><span class="line">soup.a.attrs[<span class="string">'href'</span>]</span><br><span class="line">soup.a[<span class="string">'href'</span>]	<span class="comment"># 简写</span></span><br></pre></td></tr></table></figure>
+<p>获取内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取标签内的内容</span></span><br><span class="line"><span class="comment"># soup.标签.text</span></span><br><span class="line">soup.div.text</span><br><span class="line">soup.div.get_text()</span><br><span class="line">soup.div.string	<span class="comment"># 注：string与前两不同处，如果标签还有标签，那么string获取到的结果为None</span></span><br></pre></td></tr></table></figure>
+<p>find</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取第一个符合要求的标签</span></span><br><span class="line"><span class="comment"># find(self, name=None, attrs=&#123;&#125;, recursive=True, text=None, **kwargs)</span></span><br><span class="line">soup.find(<span class="string">'a'</span>, title=<span class="string">'qing'</span>, class_=<span class="string">'gg'</span>)	<span class="comment"># 第一个class='gg',title='qing'的a标签</span></span><br><span class="line"><span class="comment"># 注：不仅soup对象可以调用，普通的对象都可以调用soup.find(xx).find(xx)</span></span><br></pre></td></tr></table></figure>
+<p>findall</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 返回一个列表</span></span><br><span class="line"><span class="comment"># find_all(self, name=None, attrs=&#123;&#125;, recursive=True, text=None, limit=None, **kwargs)</span></span><br><span class="line">soup.find_all([<span class="string">'a'</span>, <span class="string">'div'</span>], limit=<span class="number">2</span>)	<span class="comment"># limit限制前两个</span></span><br></pre></td></tr></table></figure>
+<p>select</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 选择器查找，返回永远是列表，需要通过下标提取指定对象</span></span><br><span class="line"><span class="comment"># select(self, selector, namespaces=None, limit=None, **kwargs)</span></span><br><span class="line">soup.select(<span class="string">'.gg'</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年05月11日 14:41</p>
-        <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——threading(线程)/" title="python基础——threading(线程)">http://yoursite.com/2015/11/27/python基础——threading(线程)/</a></p>
+        <p>最后更新： 2019年05月11日 15:52</p>
+        <p>原始链接： <a class="post-url" href="/2016/01/01/spider爬虫——beautifulsoup/" title="spider爬虫——beautifulsoup">http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/logo.png" alt="Allen">
@@ -216,7 +221,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2015/11/27/python基础——threading(线程)/&title=《python基础——threading(线程)》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/&title=《spider爬虫——beautifulsoup》 — GuoXu's Blog&pic=https://github.com/devilGuoXu/picture_bed/blob/master/spider.jpg?raw=true" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -226,22 +231,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2015/11/27/python基础——threading(线程)/&title=《python基础——threading(线程)》 — GuoXu's Blog&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/&title=《spider爬虫——beautifulsoup》 — GuoXu's Blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2015/11/27/python基础——threading(线程)/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python基础——threading(线程)》 — GuoXu's Blog&url=http://yoursite.com/2015/11/27/python基础——threading(线程)/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《spider爬虫——beautifulsoup》 — GuoXu's Blog&url=http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2015/11/27/python基础——threading(线程)/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -251,7 +256,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2015/11/27/python基础——threading(线程)/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2016/01/01/spider爬虫——beautifulsoup/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -263,7 +268,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/Python/" class="color2">Python</a>
+    <a href="/tags/spider爬虫/" class="color4">spider爬虫</a>
       
   </li>
 
@@ -276,26 +281,26 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、导入线程库"><span class="post-toc-text">一、导入线程库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、创建子线程"><span class="post-toc-text">二、创建子线程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数创建线程"><span class="post-toc-text">函数创建线程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类创建线程"><span class="post-toc-text">类创建线程</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、join"><span class="post-toc-text">三、join()</span></a></li>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、安装"><span class="post-toc-text">一、安装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、导入"><span class="post-toc-text">二、导入</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、使用"><span class="post-toc-text">三、使用</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——exception(异常)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/01/spider爬虫——xpath/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——exception(异常)
+          spider爬虫——xpath
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——file(文件操作)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——file(文件操作)</span>
+    <a href="/2015/11/30/MySQL——终端命令集/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">MySQL——终端命令集</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   

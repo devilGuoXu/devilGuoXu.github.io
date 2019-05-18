@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、安装redis[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz [root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz [root@izuf60njz4i1cruqxq3sv9z ~]# tar">
+  <meta name="description" content="一、安装redis12345[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz[root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz[root@izuf60njz4i1cruqxq3sv9z ~]#">
 <meta name="keywords" content="redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis——命令大全">
 <meta property="og:url" content="http://yoursite.com/2015/11/26/redis——命令大全/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、安装redis[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz [root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz [root@izuf60njz4i1cruqxq3sv9z ~]# tar">
+<meta property="og:description" content="一、安装redis12345[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz[root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz[root@izuf60njz4i1cruqxq3sv9z ~]#">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-06T11:33:46.319Z">
+<meta property="og:updated_time" content="2019-05-15T05:18:11.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis——命令大全">
-<meta name="twitter:description" content="一、安装redis[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz [root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz [root@izuf60njz4i1cruqxq3sv9z ~]# tar">
+<meta name="twitter:description" content="一、安装redis12345[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz[root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz[root@izuf60njz4i1cruqxq3sv9z ~]#">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -146,32 +146,20 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="一、安装redis"><a href="#一、安装redis" class="headerlink" title="一、安装redis"></a>一、安装redis</h1><pre><code>[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz
-[root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz
-[root@izuf60njz4i1cruqxq3sv9z ~]# tar -xvf redis-3.2.12.tar
-[root@izuf60njz4i1cruqxq3sv9z ~]# cd redis-3.2.12
-[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# make &amp;&amp; make install
-</code></pre><p>安装好后测试一下</p>
-<pre><code>[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# redis-server --version
-[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# redis-cli --version
-</code></pre><hr>
-<h1 id="二、修改配置文件"><a href="#二、修改配置文件" class="headerlink" title="二、修改配置文件"></a>二、修改配置文件</h1><pre><code>[root@izuf60njz4i1cruqxq3sv9z ~]# cd redis-3.2.12            # 进入redis.conf所在的目录
-[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# cp redis.conf ~/redis.conf
-[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# cd ~
-[root@izuf60njz4i1cruqxq3sv9z ~]# [root@izuf60njz4i1cruqxq3sv9z ~]# vim redis.conf
-</code></pre><p>61行左右修改：</p>
-<pre><code># 绑定ip地址，修改为自己的阿里云服务器私有ip地址
-bind 172.19.57.120
-</code></pre><p>85行左右修改：</p>
-<pre><code># 设置端口
-port 6379
-</code></pre><p>482行左右修改：</p>
-<pre><code># 设置密码
-requirepass XXX
-</code></pre><p>596行左右修改：</p>
-<pre><code># 打开数据化持久方案aof
-appendonly yes
-</code></pre><hr>
+            <h1 id="一、安装redis"><a href="#一、安装redis" class="headerlink" title="一、安装redis"></a>一、安装redis</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf60njz4i1cruqxq3sv9z ~]# wget http://download.redis.io/releases/redis-3.2.12.tar.gz</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z ~]# gunzip redis-3.2.12.tar.gz</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z ~]# tar -xvf redis-3.2.12.tar</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z ~]# cd redis-3.2.12</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>安装好后测试一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# redis-server --version</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# redis-cli --version</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="二、修改配置文件"><a href="#二、修改配置文件" class="headerlink" title="二、修改配置文件"></a>二、修改配置文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@izuf60njz4i1cruqxq3sv9z ~]# cd redis-3.2.12			# 进入redis.conf所在的目录</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# cp redis.conf ~/redis.conf</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z redis-3.2.12]# cd ~</span><br><span class="line">[root@izuf60njz4i1cruqxq3sv9z ~]# [root@izuf60njz4i1cruqxq3sv9z ~]# vim redis.conf</span><br></pre></td></tr></table></figure>
+<p>61行左右修改：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 绑定ip地址，修改为自己的阿里云服务器私有ip地址</span><br><span class="line">bind 172.19.57.120</span><br></pre></td></tr></table></figure>
+<p>85行左右修改：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 设置端口</span><br><span class="line">port 6379</span><br></pre></td></tr></table></figure>
+<p>482行左右修改：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 设置密码</span><br><span class="line">requirepass XXX</span><br></pre></td></tr></table></figure>
+<p>596行左右修改：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 打开数据化持久方案aof</span><br><span class="line">appendonly yes</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="三、启动redis"><a href="#三、启动redis" class="headerlink" title="三、启动redis"></a>三、启动redis</h1><h4 id="1-启动redis服务器"><a href="#1-启动redis服务器" class="headerlink" title="1.启动redis服务器"></a>1.启动redis服务器</h4><table>
 <thead>
 <tr>
@@ -181,7 +169,7 @@ appendonly yes
 </thead>
 <tbody>
 <tr>
-<td><code>sudo redis-server ./redis.conf</code></td>
+<td><code>sudo /usr/local/redis-5.0.4/bin/redis-server /usr/local/redis-5.0.4/etc/redis.conf</code></td>
 <td>启动redis服务</td>
 </tr>
 <tr>
@@ -285,7 +273,7 @@ appendonly yes
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年05月06日 19:33</p>
+        <p>最后更新： 2019年05月15日 13:18</p>
         <p>原始链接： <a class="post-url" href="/2015/11/26/redis——命令大全/" title="redis——命令大全">http://yoursite.com/2015/11/26/redis——命令大全/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -421,8 +409,8 @@ appendonly yes
     </a>
   
   
-    <a href="/2015/11/26/Pycharm——快捷键(mac)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Pycharm——快捷键(mac)</span>
+    <a href="/2015/11/19/Mac——常用指令/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Mac——常用指令</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -484,10 +472,10 @@ appendonly yes
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -520,7 +508,7 @@ appendonly yes
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

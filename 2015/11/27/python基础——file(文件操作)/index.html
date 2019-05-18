@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、打开文件格式：   open(file, mode, endcoding) 打开并返回被打开的文件对象         说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层目录">
+  <meta name="description" content="一、打开文件格式：   语法 功能     open(file, mode, encoding) 打开并返回被打开的文件对象    说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——file(文件操作)">
 <meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——file(文件操作)/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、打开文件格式：   open(file, mode, endcoding) 打开并返回被打开的文件对象         说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层目录">
+<meta property="og:description" content="一、打开文件格式：   语法 功能     open(file, mode, encoding) 打开并返回被打开的文件对象    说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:31:41.899Z">
+<meta property="og:updated_time" content="2019-05-11T05:07:42.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——file(文件操作)">
-<meta name="twitter:description" content="一、打开文件格式：   open(file, mode, endcoding) 打开并返回被打开的文件对象         说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层目录">
+<meta name="twitter:description" content="一、打开文件格式：   语法 功能     open(file, mode, encoding) 打开并返回被打开的文件对象    说明： file —— 字符串, 需要打开的文件的路径     名称 格式 含义     绝对路径 全部 文件在电脑上全路径(了解)   相对路径 ./ 当前py文件所在的目录， 可以省略    ../ 代表当前目录的上层目录    …/ 代表当前目录的上层目录的上层">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -149,13 +149,14 @@
             <h1 id="一、打开文件"><a href="#一、打开文件" class="headerlink" title="一、打开文件"></a>一、打开文件</h1><h4 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h4><table>
 <thead>
 <tr>
-<th>open(file, mode, endcoding)</th>
-<th>打开并返回被打开的文件对象</th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>open(file, mode, encoding)</td>
+<td>打开并返回被打开的文件对象</td>
 </tr>
 </tbody>
 </table>
@@ -321,26 +322,16 @@
 <h1 id="三、关闭文件"><a href="#三、关闭文件" class="headerlink" title="三、关闭文件"></a>三、关闭文件</h1><p>文件对象.close()</p>
 <hr>
 <h1 id="四、文件操作（简写）"><a href="#四、文件操作（简写）" class="headerlink" title="四、文件操作（简写）"></a>四、文件操作（简写）</h1><p>打开文件，操作完成后会自动关闭文件</p>
-<h4 id="格式：-1"><a href="#格式：-1" class="headerlink" title="格式："></a>格式：</h4><pre><code>with open(file, mode, endcoding) as 文件对象:
-        文件操作代码
-</code></pre><h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>用一个变量来保存当前文件执行的次数: 第一次执行py文件的时候打印1，第二次执行打印2….</p>
+<h4 id="格式：-1"><a href="#格式：-1" class="headerlink" title="格式："></a>格式：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(file, mode, encoding) <span class="keyword">as</span> 文件对象:</span><br><span class="line">		文件操作</span><br></pre></td></tr></table></figure>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>用一个变量来保存当前文件执行的次数: 第一次执行py文件的时候打印1，第二次执行打印2….</p>
 <pre><code># 将数据从文件中读出来
 with open(&apos;files/data.txt&apos;, encoding=&apos;utf-8&apos;) as f:
     num = int(f.read())
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改数据</span></span><br><span class="line">num += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将新的数据再写入文件中</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'files/data.txt'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(str(num))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示数据</span></span><br><span class="line">print(num)</span><br></pre></td></tr></table></figure>
 
-# 修改数据
-num += 1
-
-# 将新的数据再写入文件中
-with open(&apos;files/data.txt&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as f:
-    f.write(str(num))
-
-# 显示数据
-print(num)
-</code></pre>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:31</p>
+        <p>最后更新： 2019年05月11日 13:07</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——file(文件操作)/" title="python基础——file(文件操作)">http://yoursite.com/2015/11/27/python基础——file(文件操作)/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -465,19 +456,19 @@ print(num)
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——exception(异常)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——threading(线程)/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——exception(异常)
+          python基础——threading(线程)
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——dict(字典)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——dict(字典)</span>
+    <a href="/2015/11/27/python基础——关键字/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——关键字</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -539,10 +530,10 @@ print(num)
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -575,7 +566,7 @@ print(num)
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

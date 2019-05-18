@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、异常捕获1. try - except  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获) 语法格式： try:     代码段1(可能会出现异常的代码段) except:     代码段2(出现异常后处理异常的代码段) finally:     代码段3(不管前面出现任何情况都会执行的代码段)  其他语句 2. try - except 错误类型(捕获指定类型的异常 - 只有代">
+  <meta name="description" content="一、异常捕获1. try - except  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获) 语法格式： 12345678try:	代码段1(可能会出现异常的代码段)except:	代码段2(出现异常后处理异常的代码段)finally:	代码段3(不管前面出现任何情况都会执行的代码段)其他语句 2. try - except 错误类型(捕获指定类型的异常 - 只有代码段1中出现了指">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——exception(异常)">
 <meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——exception(异常)/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、异常捕获1. try - except  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获) 语法格式： try:     代码段1(可能会出现异常的代码段) except:     代码段2(出现异常后处理异常的代码段) finally:     代码段3(不管前面出现任何情况都会执行的代码段)  其他语句 2. try - except 错误类型(捕获指定类型的异常 - 只有代">
+<meta property="og:description" content="一、异常捕获1. try - except  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获) 语法格式： 12345678try:	代码段1(可能会出现异常的代码段)except:	代码段2(出现异常后处理异常的代码段)finally:	代码段3(不管前面出现任何情况都会执行的代码段)其他语句 2. try - except 错误类型(捕获指定类型的异常 - 只有代码段1中出现了指">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:31:32.425Z">
+<meta property="og:updated_time" content="2019-05-11T06:14:30.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——exception(异常)">
-<meta name="twitter:description" content="一、异常捕获1. try - except  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获) 语法格式： try:     代码段1(可能会出现异常的代码段) except:     代码段2(出现异常后处理异常的代码段) finally:     代码段3(不管前面出现任何情况都会执行的代码段)  其他语句 2. try - except 错误类型(捕获指定类型的异常 - 只有代">
+<meta name="twitter:description" content="一、异常捕获1. try - except  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获) 语法格式： 12345678try:	代码段1(可能会出现异常的代码段)except:	代码段2(出现异常后处理异常的代码段)finally:	代码段3(不管前面出现任何情况都会执行的代码段)其他语句 2. try - except 错误类型(捕获指定类型的异常 - 只有代码段1中出现了指">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -148,46 +148,22 @@
             
             <h1 id="一、异常捕获"><a href="#一、异常捕获" class="headerlink" title="一、异常捕获"></a>一、异常捕获</h1><h3 id="1-try-except"><a href="#1-try-except" class="headerlink" title="1. try - except"></a>1. try - except</h3><p>  (可以捕获所有类型的异常 - 只要代码段1中出现了异常就捕获)</p>
 <p><strong>语法格式：</strong></p>
-<pre><code>try:
-    代码段1(可能会出现异常的代码段)
-except:
-    代码段2(出现异常后处理异常的代码段)
-finally:
-    代码段3(不管前面出现任何情况都会执行的代码段)
-
-其他语句
-</code></pre><h3 id="2-try-except-错误类型"><a href="#2-try-except-错误类型" class="headerlink" title="2. try - except 错误类型"></a>2. try - except 错误类型</h3><p>(捕获指定类型的异常 - 只有代码段1中出现了指定类型的异常才捕获)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	代码段<span class="number">1</span>(可能会出现异常的代码段)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">	代码段<span class="number">2</span>(出现异常后处理异常的代码段)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">	代码段<span class="number">3</span>(不管前面出现任何情况都会执行的代码段)</span><br><span class="line"></span><br><span class="line">其他语句</span><br></pre></td></tr></table></figure>
+<h3 id="2-try-except-错误类型"><a href="#2-try-except-错误类型" class="headerlink" title="2. try - except 错误类型"></a>2. try - except 错误类型</h3><p>(捕获指定类型的异常 - 只有代码段1中出现了指定类型的异常才捕获)</p>
 <p><strong>语法格式：</strong></p>
-<pre><code>try:
-    代码段1(可能会出现异常的代码段)
-except 错误类型:
-    代码段2(出现异常后处理异常的代码段)
-
-其他语句
-</code></pre><h3 id="3-try-except-错误类型1-错误类型2…"><a href="#3-try-except-错误类型1-错误类型2…" class="headerlink" title="3. try - except (错误类型1,错误类型2…)"></a>3. try - except (错误类型1,错误类型2…)</h3><p>(同时捕获多种指定异常)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	代码段<span class="number">1</span>(可能会出现异常的代码段)</span><br><span class="line"><span class="keyword">except</span> 错误类型:</span><br><span class="line">	代码段<span class="number">2</span>(出现异常后处理异常的代码段)</span><br><span class="line"></span><br><span class="line">其他语句</span><br></pre></td></tr></table></figure>
+<h3 id="3-try-except-错误类型1-错误类型2…"><a href="#3-try-except-错误类型1-错误类型2…" class="headerlink" title="3. try - except (错误类型1,错误类型2…)"></a>3. try - except (错误类型1,错误类型2…)</h3><p>(同时捕获多种指定异常)</p>
 <p><strong>语法格式：</strong></p>
-<pre><code>try:
-    代码段1(可能会出现异常的代码段)
-except (错误类型1,错误类型2...):
-    代码段2(出现异常后处理异常的代码段)
-
-其他语句
-</code></pre><h3 id="4-try-except-错误类型1-except-错误类型2…"><a href="#4-try-except-错误类型1-except-错误类型2…" class="headerlink" title="4. try - except 错误类型1 - except 错误类型2…"></a>4. try - except 错误类型1 - except 错误类型2…</h3><p>(同时捕获多种异常，可以对不同的异常做不同的处理)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	代码段<span class="number">1</span>(可能会出现异常的代码段)</span><br><span class="line"><span class="keyword">except</span> (错误类型<span class="number">1</span>,错误类型<span class="number">2.</span>..):</span><br><span class="line">	代码段<span class="number">2</span>(出现异常后处理异常的代码段)</span><br><span class="line"></span><br><span class="line">其他语句</span><br></pre></td></tr></table></figure>
+<h3 id="4-try-except-错误类型1-except-错误类型2…"><a href="#4-try-except-错误类型1-except-错误类型2…" class="headerlink" title="4. try - except 错误类型1 - except 错误类型2…"></a>4. try - except 错误类型1 - except 错误类型2…</h3><p>(同时捕获多种异常，可以对不同的异常做不同的处理)</p>
 <p><strong>语法格式：</strong></p>
-<pre><code>try:
-    代码段1(可能会出现异常的代码段)
-except 错误类型1:
-    代码段2
-except 错误类型2:
-    代码段3
-
-其他语句
-</code></pre><h1 id="二、抛出异常"><a href="#二、抛出异常" class="headerlink" title="二、抛出异常"></a>二、抛出异常</h1><p>主动让程序奔溃</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	代码段<span class="number">1</span>(可能会出现异常的代码段)</span><br><span class="line"><span class="keyword">except</span> 错误类型<span class="number">1</span>:</span><br><span class="line">	代码段<span class="number">2</span></span><br><span class="line"><span class="keyword">except</span> 错误类型<span class="number">2</span>:</span><br><span class="line">	代码段<span class="number">3</span></span><br><span class="line"></span><br><span class="line">其他语句</span><br></pre></td></tr></table></figure>
+<h1 id="二、抛出异常"><a href="#二、抛出异常" class="headerlink" title="二、抛出异常"></a>二、抛出异常</h1><p>主动让程序奔溃</p>
 <h3 id="raise-错误类型"><a href="#raise-错误类型" class="headerlink" title="raise 错误类型"></a>raise 错误类型</h3><p>（程序执行到这句代码就出现指定类型的异常!）<br>说明：错误类型 - 可以是系统提供的错误类型, 也可以是自定义错误类型(要求这个值必须是一个类，而且是Exception的子类)</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:31</p>
+        <p>最后更新： 2019年05月11日 14:14</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——exception(异常)/" title="python基础——exception(异常)">http://yoursite.com/2015/11/27/python基础——exception(异常)/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -312,19 +288,19 @@ except 错误类型2:
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——位运算/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——function(函数)/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——位运算
+          python基础——function(函数)
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——file(文件操作)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——file(文件操作)</span>
+    <a href="/2015/11/27/python基础——threading(线程)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——threading(线程)</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -386,10 +362,10 @@ except 错误类型2:
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -422,7 +398,7 @@ except 错误类型2:
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

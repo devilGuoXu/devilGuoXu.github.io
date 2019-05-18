@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、命名a —— asynchronous异步ja —— javascriptx —— xml  二、get/post请求   $.get/post(url,data,fn,type) 获取url接口提供的数据     url 请求地址(字符串)   data 参数(对象)   fn 回调函数，请求结束后，会自动调用这个函数；这个函数的参数就是请求结果   type 返回数据类型(字符串),如:">
+  <meta name="description" content="一、命名a —— asynchronous异步ja —— javascriptx —— xml  二、get/post请求   $.get/post(url,data,fn,type) 获取url接口提供的数据     url 请求地址(字符串)   data 参数(对象)   fn 回调函数，请求结束后，会自动调用这函数；这个函数的参数就是请求结果   type 返回数据类型(字符串),如: j">
 <meta name="keywords" content="web前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web前端——ajax">
 <meta property="og:url" content="http://yoursite.com/2015/11/28/web前端——ajax/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、命名a —— asynchronous异步ja —— javascriptx —— xml  二、get/post请求   $.get/post(url,data,fn,type) 获取url接口提供的数据     url 请求地址(字符串)   data 参数(对象)   fn 回调函数，请求结束后，会自动调用这个函数；这个函数的参数就是请求结果   type 返回数据类型(字符串),如:">
+<meta property="og:description" content="一、命名a —— asynchronous异步ja —— javascriptx —— xml  二、get/post请求   $.get/post(url,data,fn,type) 获取url接口提供的数据     url 请求地址(字符串)   data 参数(对象)   fn 回调函数，请求结束后，会自动调用这函数；这个函数的参数就是请求结果   type 返回数据类型(字符串),如: j">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:35:36.200Z">
+<meta property="og:updated_time" content="2019-05-11T17:00:27.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web前端——ajax">
-<meta name="twitter:description" content="一、命名a —— asynchronous异步ja —— javascriptx —— xml  二、get/post请求   $.get/post(url,data,fn,type) 获取url接口提供的数据     url 请求地址(字符串)   data 参数(对象)   fn 回调函数，请求结束后，会自动调用这个函数；这个函数的参数就是请求结果   type 返回数据类型(字符串),如:">
+<meta name="twitter:description" content="一、命名a —— asynchronous异步ja —— javascriptx —— xml  二、get/post请求   $.get/post(url,data,fn,type) 获取url接口提供的数据     url 请求地址(字符串)   data 参数(对象)   fn 回调函数，请求结束后，会自动调用这函数；这个函数的参数就是请求结果   type 返回数据类型(字符串),如: j">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -166,7 +166,7 @@
 </tr>
 <tr>
 <td>fn</td>
-<td>回调函数，请求结束后，会自动调用这个函数；这个函数的参数就是请求结果</td>
+<td>回调函数，请求结束后，会自动调用这函数；这个函数的参数就是请求结果</td>
 </tr>
 <tr>
 <td>type</td>
@@ -175,18 +175,10 @@
 </tbody>
 </table>
 <hr>
-<h1 id="三、ajax"><a href="#三、ajax" class="headerlink" title="三、ajax"></a>三、ajax</h1><pre><code>$.ajax({
-    type:&quot;get/post&quot;,
-    url:&quot;请求地址&quot;,
-    data:{参数对象},
-    async:true, - 是否异步
-    success:function(result - 请求结果){
-    } - 回调函数
-});
-</code></pre>
+<h1 id="三、ajax"><a href="#三、ajax" class="headerlink" title="三、ajax"></a>三、ajax</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	type:<span class="string">"get/post"</span>,</span><br><span class="line">	url:<span class="string">"请求地址"</span>,</span><br><span class="line">	data:&#123;参数对象&#125;,</span><br><span class="line">	<span class="keyword">async</span>:<span class="literal">true</span>, - 是否异步</span><br><span class="line">	success:<span class="function"><span class="keyword">function</span>(<span class="params">result - 请求结果</span>)</span>&#123;</span><br><span class="line">	&#125; - 回调函数</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:35</p>
+        <p>最后更新： 2019年05月12日 01:00</p>
         <p>原始链接： <a class="post-url" href="/2015/11/28/web前端——ajax/" title="web前端——ajax">http://yoursite.com/2015/11/28/web前端——ajax/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -385,10 +377,10 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -421,7 +413,7 @@
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

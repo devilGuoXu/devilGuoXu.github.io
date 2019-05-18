@@ -8,20 +8,20 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、虚拟环境virtualenv --no-site-packages [-p python.exe路径] 环境名  二、安装与使用1. 安装  pip install django==2.1.7 2. 创建django项目 django-admin startproject 项目名 3. 创建django应用 python manage.py startapp 应用名 4. 启动，修改ip和端口">
+  <meta name="description" content="一、虚拟环境1virtualenv --no-site-packages [-p python.exe路径] 环境名  二、安装与使用1. 安装  1pip install django==2.1.7 2. 创建django项目 1django-admin startproject 项目名 3. 创建django应用 1python manage.py startapp 应用名 4. 启动，修改i">
 <meta name="keywords" content="Python,Python框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python框架——django">
 <meta property="og:url" content="http://yoursite.com/2015/11/30/python框架——django/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、虚拟环境virtualenv --no-site-packages [-p python.exe路径] 环境名  二、安装与使用1. 安装  pip install django==2.1.7 2. 创建django项目 django-admin startproject 项目名 3. 创建django应用 python manage.py startapp 应用名 4. 启动，修改ip和端口">
+<meta property="og:description" content="一、虚拟环境1virtualenv --no-site-packages [-p python.exe路径] 环境名  二、安装与使用1. 安装  1pip install django==2.1.7 2. 创建django项目 1django-admin startproject 项目名 3. 创建django应用 1python manage.py startapp 应用名 4. 启动，修改i">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/middleware1.png?raw=true">
 <meta property="og:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/middleware2.png?raw=true">
-<meta property="og:updated_time" content="2019-04-24T11:34:00.118Z">
+<meta property="og:updated_time" content="2019-05-14T10:58:16.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python框架——django">
-<meta name="twitter:description" content="一、虚拟环境virtualenv --no-site-packages [-p python.exe路径] 环境名  二、安装与使用1. 安装  pip install django==2.1.7 2. 创建django项目 django-admin startproject 项目名 3. 创建django应用 python manage.py startapp 应用名 4. 启动，修改ip和端口">
+<meta name="twitter:description" content="一、虚拟环境1virtualenv --no-site-packages [-p python.exe路径] 环境名  二、安装与使用1. 安装  1pip install django==2.1.7 2. 创建django项目 1django-admin startproject 项目名 3. 创建django应用 1python manage.py startapp 应用名 4. 启动，修改i">
 <meta name="twitter:image" content="https://github.com/devilGuoXu/picture_bed/blob/master/middleware1.png?raw=true">
   
   
@@ -149,61 +149,35 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="一、虚拟环境"><a href="#一、虚拟环境" class="headerlink" title="一、虚拟环境"></a>一、虚拟环境</h1><pre><code>virtualenv --no-site-packages [-p python.exe路径] 环境名
-</code></pre><hr>
+            <h1 id="一、虚拟环境"><a href="#一、虚拟环境" class="headerlink" title="一、虚拟环境"></a>一、虚拟环境</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv --no-site-packages [-p python.exe路径] 环境名</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="二、安装与使用"><a href="#二、安装与使用" class="headerlink" title="二、安装与使用"></a>二、安装与使用</h1><font size="5"><strong>1. 安装</strong></font>
 
-<pre><code>pip install django==2.1.7
-</code></pre><p><br><font size="5"><strong>2. 创建django项目</strong></font></p>
-<pre><code>django-admin startproject 项目名
-</code></pre><p><br><font size="5"><strong>3. 创建django应用</strong></font></p>
-<pre><code>python manage.py startapp 应用名
-</code></pre><p><br><font size="5"><strong>4. 启动，修改ip和端口</strong></font></p>
-<pre><code>python manage.py runserver [IP:]端口
-</code></pre><p><br><font size="5"><strong>5. 配置文件settings.py</strong></font><br><br><font size="4">1). 数据库</font></p>
-<pre><code>DATABASES = {
-    &apos;default&apos;: {
-        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,
-        &apos;NAME&apos;: &apos;dj9&apos;,
-        &apos;USER&apos;: &apos;root&apos;,
-        &apos;PASSWORD&apos;: &apos;123456&apos;,
-        &apos;HOST&apos;: &apos;127.0.0.1&apos;,
-        &apos;PORT&apos;: 3306,
-        &apos;OPTIONS&apos;: {&apos;isolation_level&apos;: None}
-    }
-}
-
-# 工程目录__init__.py中设置
-
-import pymysql
-
-pymysql.install_as_MySQLdb()
-</code></pre><p><br><font size="4">2). 自定义包</font></p>
-<pre><code>INSTALLED_APPS = [
-
-    ...
-    &apos;包1&apos;,
-    &apos;包2&apos;,
-    ...
-]
-</code></pre><p><br><font size="4">3). 语言</font></p>
-<pre><code>LANGUAGE_CODE = &apos;en-us&apos;
-#中文 &apos;zh-hans&apos;
-</code></pre><p><br><font size="4">4). 静态文件</font></p>
-<pre><code>STATIC_URL = &apos;/static/&apos;
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, &apos;static&apos;)
-]
-</code></pre><p><br><font size="5"><strong>6. 管理后台</strong></font><br>访问:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django==2.1.7</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 创建django项目</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject 项目名</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 创建django应用</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp 应用名</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 启动，修改ip和端口</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver [IP:]端口</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 配置文件settings.py</strong></font><br><br><font size="4">1). 数据库</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'dj9'</span>,</span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'root'</span>,</span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'12345678'</span>,</span><br><span class="line">        <span class="string">'HOST'</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">        <span class="string">'PORT'</span>: <span class="number">3306</span>,</span><br><span class="line">		<span class="string">'OPTIONS'</span>: &#123;<span class="string">'isolation_level'</span>: <span class="literal">None</span>&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 工程目录__init__.py中设置</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
+<p><br><font size="4">2). 自定义包</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line">    <span class="string">'包1'</span>,</span><br><span class="line">    <span class="string">'包2'</span>,</span><br><span class="line">	...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><br><font size="4">3). 语言</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = <span class="string">'en-us'</span></span><br><span class="line"><span class="comment">#中文 'zh-hans'</span></span><br></pre></td></tr></table></figure>
+<p><br><font size="4">4). 静态文件</font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">STATIC_URL = <span class="string">'/static/'</span></span><br><span class="line">STATICFILES_DIRS = [</span><br><span class="line">    os.path.join(BASE_DIR, <span class="string">'static'</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>6. 管理后台</strong></font><br>访问:</p>
 <pre><code>IP:端口/admin/
 </code></pre><p>创建账号:</p>
-<pre><code>python manage.py createsuperuser
-</code></pre><hr>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="三、-模型"><a href="#三、-模型" class="headerlink" title="三、 模型"></a>三、 模型</h1><h4 id="1-迁移"><a href="#1-迁移" class="headerlink" title="1. 迁移"></a>1. 迁移</h4><p>生成迁移文件:</p>
-<pre><code>python manage.py makemigrations
-</code></pre><p>执行迁移文件:</p>
-<pre><code>python manage.py migrate
-</code></pre><p>注意: 当第一次迁移django默认提供的表时，直接执行migrate命令即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br></pre></td></tr></table></figure>
+<p>执行迁移文件:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>注意: 当第一次迁移django默认提供的表时，直接执行migrate命令即可</p>
 <h4 id="2-字段定义"><a href="#2-字段定义" class="headerlink" title="2. 字段定义"></a>2. 字段定义</h4><table>
 <thead>
 <tr>
@@ -294,121 +268,58 @@ STATICFILES_DIRS = [
 </table>
 <h4 id="4-模型操作"><a href="#4-模型操作" class="headerlink" title="4. 模型操作"></a>4. 模型操作</h4><font size="4"><strong>1. 增</strong></font>
 
-<pre><code>对象.save()
-create(字段=值,字段2=值2...)
-</code></pre><p><br><font size="4"><strong>2. 删</strong></font></p>
-<pre><code>对象.delete()
-filter().delete()
-</code></pre><p><br><font size="4"><strong>3. 改</strong></font></p>
-<pre><code>修改的对象.save()
-filter().update(字段=值，字段2=值2...)
-</code></pre><p><br><font size="4"><strong>4. 查</strong></font><br>1) filter</p>
-<pre><code>filter(字段=值)
-</code></pre><p>2) get</p>
-<pre><code>get(条件)
-# 条件必须成立，查询结果只有一个
-</code></pre><p>3) exclude</p>
-<pre><code>exclude(条件)
-# 将满足条件的信息全部过滤掉
-</code></pre><p>4) count</p>
-<pre><code>count()
-# 查询结果的个数
-</code></pre><p>5) values</p>
-<pre><code>values(&apos;字段&apos;)
-# 将对象的内容序列化成字典、json
-</code></pre><p>6) order_by</p>
-<pre><code>order_by(&apos;字段&apos;)
-# 升序
-order_by(&apos;-字段&apos;)
-# 降序
-</code></pre><p>7) pk__in</p>
-<pre><code>filter(pk__in=[1, 2, 3,...])
-# pk=id,满足集合中内容
-</code></pre><p>8) contains</p>
-<pre><code>filter(字段__contains=值)
-# sql中的like，包含
-</code></pre><p>9) startswith</p>
-<pre><code>filter(字段__startswith=值)
-# 以什么开头
-</code></pre><p>10) endswith</p>
-<pre><code>filter(字段__endswith=值)
-# 以什么结束
-</code></pre><p>11) gt、gte、lt、lte</p>
-<pre><code>filter(字段__gt=值)
-# 大于
-filter(字段__gte=值)
-# 大于等于
-filter(字段__lt=值)
-# 小于
-filter(字段__lte=值)
-# 小于等于
-</code></pre><p>12) Avg，Sum，Count, Max，Min</p>
-<pre><code>aggregate(Avg(&apos;字段&apos;))
-# 聚合
-</code></pre><p>13) F</p>
-<pre><code>filter(字段1__gt=F(&apos;字段2&apos;))
-# 对象两个属性字段，可以进行加减算法
-</code></pre><p>14) Q</p>
-<pre><code>filter(Q(条件1)|Q(条件2))
-# 或
-filter(~Q(条件))
-# 非
-</code></pre><p>15) all</p>
-<pre><code>all()
-# queryset结果
-</code></pre><p>16) first</p>
-<pre><code>first()
-# 取结果中第一个对象
-</code></pre><p>17) last</p>
-<pre><code>last()
-# 取结果中最后一个对象
-</code></pre><p>18）exists</p>
-<pre><code>exists()
-# 判断是否为空
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对象.save()</span><br><span class="line">create(字段=值,字段<span class="number">2</span>=值<span class="number">2.</span>..)</span><br></pre></td></tr></table></figure>
+<p><br><font size="4"><strong>2. 删</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对象.delete()</span><br><span class="line">filter().delete()</span><br></pre></td></tr></table></figure>
+<p><br><font size="4"><strong>3. 改</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改的对象.save()</span><br><span class="line">filter().update(字段=值，字段<span class="number">2</span>=值<span class="number">2.</span>..)</span><br></pre></td></tr></table></figure>
+<p><br><font size="4"><strong>4. 查</strong></font><br>1) filter</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">filter(字段=值)</span><br></pre></td></tr></table></figure>
+<p>2) get</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get(条件)</span><br><span class="line"><span class="comment"># 条件必须成立，查询结果只有一个</span></span><br></pre></td></tr></table></figure>
+<p>3) exclude</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exclude(条件)</span><br><span class="line"><span class="comment"># 将满足条件的信息全部过滤掉</span></span><br></pre></td></tr></table></figure>
+<p>4) count</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">count()</span><br><span class="line"><span class="comment"># 查询结果的个数</span></span><br></pre></td></tr></table></figure>
+<p>5) values</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">values(<span class="string">'字段'</span>)</span><br><span class="line"><span class="comment"># 将对象的内容序列化成字典、json</span></span><br></pre></td></tr></table></figure>
+<p>6) order_by</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">order_by(<span class="string">'字段'</span>)</span><br><span class="line"><span class="comment"># 升序</span></span><br><span class="line">order_by(<span class="string">'-字段'</span>)</span><br><span class="line"><span class="comment"># 降序</span></span><br></pre></td></tr></table></figure>
+<p>7) pk__in</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filter(pk__in=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,...])</span><br><span class="line"><span class="comment"># pk=id,满足集合中内容</span></span><br></pre></td></tr></table></figure>
+<p>8) contains</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filter(字段__contains=值)</span><br><span class="line"><span class="comment"># sql中的like，包含</span></span><br></pre></td></tr></table></figure>
+<p>9) startswith</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filter(字段__startswith=值)</span><br><span class="line"><span class="comment"># 以什么开头</span></span><br></pre></td></tr></table></figure>
+<p>10) endswith</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filter(字段__endswith=值)</span><br><span class="line"><span class="comment"># 以什么结束</span></span><br></pre></td></tr></table></figure>
+<p>11) gt、gte、lt、lte</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">filter(字段__gt=值)</span><br><span class="line"><span class="comment"># 大于</span></span><br><span class="line">filter(字段__gte=值)</span><br><span class="line"><span class="comment"># 大于等于</span></span><br><span class="line">filter(字段__lt=值)</span><br><span class="line"><span class="comment"># 小于</span></span><br><span class="line">filter(字段__lte=值)</span><br><span class="line"><span class="comment"># 小于等于</span></span><br></pre></td></tr></table></figure>
+<p>12) Avg，Sum，Count, Max，Min</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aggregate(Avg(<span class="string">'字段'</span>))</span><br><span class="line"><span class="comment"># 聚合</span></span><br></pre></td></tr></table></figure>
+<p>13) F</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filter(字段<span class="number">1</span>__gt=F(<span class="string">'字段2'</span>))</span><br><span class="line"><span class="comment"># 对象两个属性字段，可以进行加减算法</span></span><br></pre></td></tr></table></figure>
+<p>14) Q</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">filter(Q(条件<span class="number">1</span>)|Q(条件<span class="number">2</span>))</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">filter(~Q(条件))</span><br><span class="line"><span class="comment"># 非</span></span><br></pre></td></tr></table></figure>
+<p>15) all</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">all()</span><br><span class="line"><span class="comment"># queryset结果</span></span><br></pre></td></tr></table></figure>
+<p>16) first</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">first()</span><br><span class="line"><span class="comment"># 取结果中第一个对象</span></span><br></pre></td></tr></table></figure>
+<p>17) last</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">last()</span><br><span class="line"><span class="comment"># 取结果中最后一个对象</span></span><br></pre></td></tr></table></figure>
+<p>18）exists</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exists()</span><br><span class="line"><span class="comment"># 判断是否为空</span></span><br></pre></td></tr></table></figure>
+<p>####5. 模型操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py inspectdb &gt; app/models.py</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="四、模型关系"><a href="#四、模型关系" class="headerlink" title="四、模型关系"></a>四、模型关系</h1><font size="5"><strong>1. 一对一</strong></font>
 
-<pre><code>class A():
-    id = models.IntegerFiled()
-
-class B():
-    aa = models.OneToOneField(A,related_name=&apos;cc&apos;)
-
-# 已知：A对象a，查询B对象
-    related_name没定义时：a.b
-    related_name已定义时：a.cc
-
-# 已知：B对象b，查询A对象
-    b.aa
-</code></pre><p>注意: OneToOneField定义的字段可以写在关联模型的任何一方<br><br><font size="5"><strong>2. 一对多</strong></font></p>
-<pre><code>class A():
-    id
-
-class B():
-    aa = ForeignKey(A,related_name=&apos;cc&apos;)
-
-# 已知：A对象a，查询B对象
-    related_name没定义时：a.b_set
-    related_name已定义时：a.cc
-
-# 已知：B对象b，查询A对象
-    b.aa
-</code></pre><p>注意: ForeignKey定义的字段表示多的对方，因此只能放在’多’的模型中<br><br><font size="5"><strong>3. 多对多</strong></font></p>
-<pre><code>class A():
-    id
-
-class B():
-    aa = models.ManyToManyField(A,related_name=&apos;cc&apos;)
-
-# 已知：A对象a，查询B对象
-    related_name没定义时：a.b_set
-    related_name已定义时：a.cc
-
-# 已知：B对象b，查询A对象
-    b.aa
-
-# 中间表的添加: 对象.字段.add(对象)、删除: remove()
-</code></pre><p>注意: ManyToManyField定义的字段定义在任何一个关联模型中都可<br><br><font size="5"><strong>4. on_delete</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">()</span>:</span></span><br><span class="line">	id = models.IntegerFiled()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">()</span>:</span></span><br><span class="line">	aa = models.OneToOneField(A,related_name=<span class="string">'cc'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知：A对象a，查询B对象</span></span><br><span class="line">	related_name没定义时：a.b</span><br><span class="line">	related_name已定义时：a.cc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知：B对象b，查询A对象</span></span><br><span class="line">	b.aa</span><br></pre></td></tr></table></figure>
+<p>注意: OneToOneField定义的字段可以写在关联模型的任何一方<br><br><font size="5"><strong>2. 一对多</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">()</span>:</span></span><br><span class="line">	id</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">()</span>:</span></span><br><span class="line">	aa = ForeignKey(A,related_name=<span class="string">'cc'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知：A对象a，查询B对象</span></span><br><span class="line">	related_name没定义时：a.b_set</span><br><span class="line">	related_name已定义时：a.cc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知：B对象b，查询A对象</span></span><br><span class="line">	b.aa</span><br></pre></td></tr></table></figure>
+<p>注意: ForeignKey定义的字段表示多的对方，因此只能放在’多’的模型中<br><br><font size="5"><strong>3. 多对多</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">()</span>:</span></span><br><span class="line">	id</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">()</span>:</span></span><br><span class="line">	aa = models.ManyToManyField(A,related_name=<span class="string">'cc'</span>[,through=<span class="string">'中间表'</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知：A对象a，查询B对象</span></span><br><span class="line">	related_name没定义时：a.b_set</span><br><span class="line">	related_name已定义时：a.cc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知：B对象b，查询A对象</span></span><br><span class="line">	b.aa</span><br><span class="line"></span><br><span class="line"><span class="comment"># 中间表的添加: 对象.字段.add(对象)、删除: remove()</span></span><br><span class="line"><span class="comment"># []反向生成时添加</span></span><br></pre></td></tr></table></figure>
+<p>注意: ManyToManyField定义的字段定义在任何一个关联模型中都可<br><br><font size="5"><strong>4. on_delete</strong></font></p>
 <p>外键删除时的调用的功能</p>
 <table>
 <thead>
@@ -444,11 +355,11 @@ class B():
 <h1 id="五、模板"><a href="#五、模板" class="headerlink" title="五、模板"></a>五、模板</h1><font size="5"><strong>1. 父模板</strong></font>
 
 <p>挖坑</p>
-<pre><code>{ % block name % } { % endblock % }
-</code></pre><p><br><font size="5"><strong>2. 子模板</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; % block name % &#125; &#123; % endblock % &#125;</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 子模板</strong></font></p>
 <p>继承父模板后填坑</p>
-<pre><code>{ % extends &apos;父模板&apos; % }
-</code></pre><p><br><font size="5"><strong>3. 标签</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; % extends '父模板' % &#125;</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 标签</strong></font></p>
 <table>
 <thead>
 <tr>
@@ -481,31 +392,16 @@ class B():
 </code></pre><hr>
 <h1 id="六、路由URL"><a href="#六、路由URL" class="headerlink" title="六、路由URL"></a>六、路由URL</h1><font size="5"><strong>1. path</strong></font>
 
-<pre><code>path(&apos;路由/&apos;, 函数)
-
-path(&apos;路由/&lt;转换器:参数名&gt;/&apos;, 函数)
-# 转换器: int，str，uuid，path
-
-path(&apos;路由/&apos;, 函数, name=&apos;名字&apos;)
-</code></pre><p><br><font size="5"><strong>2. re_path</strong></font></p>
-<pre><code>re_path(&apos;路由/(\d+)/(\w+)/&apos;, 函数)
-re_path(&apos;路由/(?P&lt;参数名&gt;\d+)/&apos;, 函数)
-</code></pre><p><br><font size="5"><strong>3. include</strong></font></p>
-<pre><code>path(&apos;路由/&apos;, include(&apos;包.文件&apos;))
-path(&apos;路由/&apos;, include((&apos;包.文件&apos;, &apos;包&apos;), namespace=&apos;名字&apos;))
-# 拆分路由地址，将不同应用的URL文件进行拆分
-</code></pre><p><br><font size="5"><strong>4. reverse</strong></font></p>
-<pre><code># 反向解析路由
-
-# 无参
-return HttpResponseRedirect(reverse(&apos;namespace:name&apos;))
-
-# 有参
-reverse(&apos;namespace:name&apos;，kwargs={&apos;参数名&apos;: 值 })
-reverse(&apos;namespace:name&apos;，args=(值，))
-</code></pre><p><br><font size="5"><strong>5. 页面解析</strong></font></p>
-<pre><code>{% url ‘namespace：name’ 值1 值2 值3... %}
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">path(<span class="string">'路由/'</span>, 函数)</span><br><span class="line"></span><br><span class="line">path(<span class="string">'路由/&lt;转换器:参数名&gt;/'</span>, 函数)</span><br><span class="line"><span class="comment"># 转换器: int，str，uuid，path</span></span><br><span class="line"></span><br><span class="line">path(<span class="string">'路由/'</span>, 函数, name=<span class="string">'名字'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. re_path</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re_path(<span class="string">'路由/(\d+)/(\w+)/'</span>, 函数)</span><br><span class="line">re_path(<span class="string">'路由/(?P&lt;参数名&gt;\d+)/'</span>, 函数)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. include</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path(<span class="string">'路由/'</span>, include(<span class="string">'包.文件'</span>))</span><br><span class="line">path(<span class="string">'路由/'</span>, include((<span class="string">'包.文件'</span>, <span class="string">'包'</span>), namespace=<span class="string">'名字'</span>))</span><br><span class="line"><span class="comment"># 拆分路由地址，将不同应用的URL文件进行拆分</span></span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. reverse</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 反向解析路由</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 无参</span></span><br><span class="line"><span class="keyword">return</span> HttpResponseRedirect(reverse(<span class="string">'namespace:name'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 有参</span></span><br><span class="line">reverse(<span class="string">'namespace:name'</span>，kwargs=&#123;<span class="string">'参数名'</span>: 值 &#125;)</span><br><span class="line">reverse(<span class="string">'namespace:name'</span>，args=(值，))</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 页面解析</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% url ‘namespace：name’ 值1 值2 值3... %&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="七、请求与响应"><a href="#七、请求与响应" class="headerlink" title="七、请求与响应"></a>七、请求与响应</h1><font size="5"><strong>1. 请求request</strong></font>
 
 <table>
@@ -608,125 +504,84 @@ reverse(&apos;namespace:name&apos;，args=(值，))
 </table>
 <p><br><font size="5"><strong>2. 自定义USER模块</strong></font></p>
 <p>登录</p>
-<pre><code>request.session[&apos;user_id&apos;] = user.id
-</code></pre><p>退出</p>
-<pre><code>request.session.flush()
-request.session.delete(session_key)
-del request.session[&apos;user_id&apos;]
-</code></pre><p>装饰器</p>
-<pre><code>from django.http import HttpResponseRedirect
-from django.urls import reverse
-
-from user.models import 库类
-</code></pre><p>​<br>    def is_login(func):</p>
-<pre><code>def check(request):
-    # 登录的校验
-    if &apos;user_id&apos; in request.session:
-        user = 库类.objects.get(pk=request.session[&apos;user_id&apos;])
-        request.user = user
-        return func(request)
-    else:
-        return HttpResponseRedirect(reverse(&apos;namespace:name&apos;))
-return check
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.session[<span class="string">'user_id'</span>] = user.id</span><br></pre></td></tr></table></figure>
+<p>退出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request.session.flush()</span><br><span class="line">request.session.delete(session_key)</span><br><span class="line"><span class="keyword">del</span> request.session[<span class="string">'user_id'</span>]</span><br></pre></td></tr></table></figure>
+<p>装饰器</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponseRedirect</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> reverse</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> user.models <span class="keyword">import</span> 库类</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">is_login</span><span class="params">(func)</span>:</span></span><br><span class="line">	    <span class="function"><span class="keyword">def</span> <span class="title">check</span><span class="params">(request)</span>:</span></span><br><span class="line">        <span class="comment"># 登录的校验</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">'user_id'</span> <span class="keyword">in</span> request.session:</span><br><span class="line">            user = 库类.objects.get(pk=request.session[<span class="string">'user_id'</span>])</span><br><span class="line">            request.user = user</span><br><span class="line">            <span class="keyword">return</span> func(request)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> HttpResponseRedirect(reverse(<span class="string">'namespace:name'</span>))</span><br><span class="line">    <span class="keyword">return</span> check</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="九、中间件middleware"><a href="#九、中间件middleware" class="headerlink" title="九、中间件middleware"></a>九、中间件middleware</h1><font size="5"><strong>1. 配置文件</strong></font>
 
 <p>settings.py中的MIDDLEWARE添加路径</p>
-<pre><code>MIDDLEWARE = [
-    ...
-    &apos;包.文件.类&apos;,    # 中间件地址
-]
-</code></pre><p><br><font size="5"><strong>2. 导包</strong></font></p>
-<pre><code>from django.utils.deprecation import MiddlewareMixin
-</code></pre><p><br><font size="5"><strong>3. 继承</strong></font></p>
-<pre><code>class 类(MiddlewareMixin):
-</code></pre><p><br><font size="5"><strong>4. 函数</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MIDDLEWARE = [</span><br><span class="line">	...</span><br><span class="line">    <span class="string">'包.文件.类'</span>,	<span class="comment"># 中间件地址</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 导包</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.utils.deprecation <span class="keyword">import</span> MiddlewareMixin</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 继承</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类<span class="params">(MiddlewareMixin)</span>:</span></span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 函数</strong></font></p>
 <p>1). 请求进来时直接进行拦截（应用场景: 登录校验）</p>
-<pre><code>process_request(self, request)
-</code></pre><p>2). 调用view方法之前进行调用</p>
-<pre><code>process_view(self, request, view_func, view_args, view_kwargs)
-</code></pre><p>3). 不主动调用,只有出现异常时才执行</p>
-<pre><code>process_exception(self, request, exception)
-</code></pre><p>4). 最后响应浏览器时才调用</p>
-<pre><code>process_response(self, request, response)
-</code></pre><p>5). 只有当views函数中返回的对象中具有render方法，才会直接process_template_response</p>
-<pre><code>process_template_response(self, request, response)
-</code></pre><p><br><font size="5"><strong>5. 执行顺序</strong></font><br><img src="https://github.com/devilGuoXu/picture_bed/blob/master/middleware1.png?raw=true" alt><br><img src="https://github.com/devilGuoXu/picture_bed/blob/master/middleware2.png?raw=true" alt></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process_request(self, request)</span><br></pre></td></tr></table></figure>
+<p>2). 调用view方法之前进行调用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process_view(self, request, view_func, view_args, view_kwargs)</span><br></pre></td></tr></table></figure>
+<p>3). 不主动调用,只有出现异常时才执行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process_exception(self, request, exception)</span><br></pre></td></tr></table></figure>
+<p>4). 最后响应浏览器时才调用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process_response(self, request, response)</span><br></pre></td></tr></table></figure>
+<p>5). 只有当views函数中返回的对象中具有render方法，才会直接process_template_response</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process_template_response(self, request, response)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 执行顺序</strong></font><br><img src="https://github.com/devilGuoXu/picture_bed/blob/master/middleware1.png?raw=true" alt><br><img src="https://github.com/devilGuoXu/picture_bed/blob/master/middleware2.png?raw=true" alt></p>
 <hr>
 <h1 id="十、表单验证"><a href="#十、表单验证" class="headerlink" title="十、表单验证"></a>十、表单验证</h1><font size="5"><strong>1. 定义</strong></font>
 
-<pre><code>from django import forms
-
-class 类(forms.Form):
-    input标签name值 = forms.CharField(required=True, max_length=N, min_length=M,
-                               error_messages={
-                                   &apos;required&apos;: &apos;必须填写信息&apos;,
-                                   &apos;max_length&apos;: &apos;至多N字符&apos;,
-                                   &apos;min_length&apos;: &apos;至少M字符&apos;
-                               })
-
-                     forms.IntegerField
-                     forms.ImageField
-
-    def clean():
-        # 自动调用
-    def clean_字段():
-        # 校验指定字段
-</code></pre><p><br><font size="5"><strong>2. 实例表单</strong></font></p>
-<pre><code>form = UserForm(request.POST, request.FILES)
-</code></pre><p><br><font size="5"><strong>3. 验证</strong></font></p>
-<pre><code>form.is_valid()
-</code></pre><p><br><font size="5"><strong>4. 验证错误信息</strong></font></p>
-<pre><code>form.errors
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django <span class="keyword">import</span> forms</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 类<span class="params">(forms.Form)</span>:</span></span><br><span class="line">	input标签name值 = forms.CharField(required=<span class="literal">True</span>, max_length=N, min_length=M,</span><br><span class="line">                               error_messages=&#123;</span><br><span class="line">                                   <span class="string">'required'</span>: <span class="string">'必须填写信息'</span>,</span><br><span class="line">                                   <span class="string">'max_length'</span>: <span class="string">'至多N字符'</span>,</span><br><span class="line">                                   <span class="string">'min_length'</span>: <span class="string">'至少M字符'</span></span><br><span class="line">                               &#125;)</span><br><span class="line"></span><br><span class="line">					 forms.IntegerField</span><br><span class="line">					 forms.ImageField</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">clean</span><span class="params">()</span>:</span></span><br><span class="line">		<span class="comment"># 自动调用</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">clean_</span>字段<span class="params">()</span>:</span></span><br><span class="line">		<span class="comment"># 校验指定字段</span></span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 实例表单</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">form = UserForm(request.POST, request.FILES)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 验证</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">form.is_valid()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 验证错误信息</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">form.errors</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="十一、文件上传"><a href="#十一、文件上传" class="headerlink" title="十一、文件上传"></a>十一、文件上传</h1><font size="5"><strong>1. 安装</strong></font>
 
-<pre><code>pip install pillow
-</code></pre><p><br><font size="5"><strong>2. 模型中定义字段</strong></font></p>
-<pre><code>字段 = models.ImageField(upload_to=&apos;upload&apos;)
-</code></pre><p><br><font size="5"><strong>3. 设置media文件夹路径</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pillow</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 模型中定义字段</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段 = models.ImageField(upload_to=<span class="string">'upload'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 设置media文件夹路径</strong></font></p>
 <p>settings.py文件中设置</p>
-<pre><code>MEDIA_URL = &apos;media&apos;
-MEDIA_ROOT=os.path.join(BASE_DIR, &apos;media&apos;)
-</code></pre><p>展示图片需在工程目录的urls.py文件中指定路由</p>
-<pre><code>from django.contrib.staticfiles.urls import static
-
-from 主应用包.settings import MEDIA_URL, MEDIA_ROOT
-
-urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
-</code></pre><p><br><font size="5"><strong>4. 前端</strong></font></p>
-<pre><code>&lt;form enctype=&quot;multipart/form-data&quot;&gt;
-    &lt;input type=&quot;file&quot; name=&quot;名字&quot;&gt;
-&lt;/form&gt;
-</code></pre><hr>
-<h1 id="十二、分页"><a href="#十二、分页" class="headerlink" title="十二、分页"></a>十二、分页</h1><pre><code>paginator = Paginator(所有数据, 条数)
-</code></pre><p><br><font size="5"><strong>1. 获取总页数</strong></font></p>
-<pre><code>paginator.num_pages
-</code></pre><p><br><font size="5"><strong>2. 获取某一个页面</strong></font></p>
-<pre><code>页面对象 = paginator.page(页码)
-</code></pre><p><br><font size="5"><strong>3. 是否有下一页</strong></font></p>
-<pre><code>页面对象.has_next()
-</code></pre><p><br><font size="5"><strong>4. 是否有上一页</strong></font></p>
-<pre><code>页面对象.has_previous()
-</code></pre><p><br><font size="5"><strong>5. 下一页页码</strong></font></p>
-<pre><code>页面对象.next_page_number
-</code></pre><p><br><font size="5"><strong>6. 上一页页码</strong></font></p>
-<pre><code>页面对象.previous_page_number
-</code></pre><p><br><font size="5"><strong>7. 总页数（格式：rang(1,长度+1)）</strong></font></p>
-<pre><code>页面对象.paginator.page_range
-</code></pre><p><br><font size="5"><strong>8. 获取paginator对象</strong></font></p>
-<pre><code>页面对象.paginator
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MEDIA_URL = <span class="string">'media'</span></span><br><span class="line">MEDIA_ROOT=os.path.join(BASE_DIR, <span class="string">'media'</span>)</span><br></pre></td></tr></table></figure>
+<p>展示图片需在工程目录的urls.py文件中指定路由</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib.staticfiles.urls <span class="keyword">import</span> static</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> 主应用包.settings <span class="keyword">import</span> MEDIA_URL, MEDIA_ROOT</span><br><span class="line"></span><br><span class="line">urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 前端</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"名字"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="十二、分页"><a href="#十二、分页" class="headerlink" title="十二、分页"></a>十二、分页</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paginator = Paginator(所有数据, 条数)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>1. 获取总页数</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paginator.num_pages</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 获取某一个页面</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象 = paginator.page(页码)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 是否有下一页</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象.has_next()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 是否有上一页</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象.has_previous()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 下一页页码</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象.next_page_number</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>6. 上一页页码</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象.previous_page_number</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>7. 总页数（格式：rang(1,长度+1)）</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象.paginator.page_range</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>8. 获取paginator对象</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">页面对象.paginator</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="十二、权限（RBAC）"><a href="#十二、权限（RBAC）" class="headerlink" title="十二、权限（RBAC）"></a>十二、权限（RBAC）</h1><font size="5"><strong>1. 用户和权限</strong></font>
 
-<pre><code>user_permissions
-</code></pre><font size="5"><strong>2. 用户和角色</strong></font>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user_permissions</span><br></pre></td></tr></table></figure>
+<font size="5"><strong>2. 用户和角色</strong></font>
 
-<pre><code>groups
-</code></pre><font size="5"><strong>3. 角色和权限</strong></font>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groups</span><br></pre></td></tr></table></figure>
+<font size="5"><strong>3. 角色和权限</strong></font>
 
-<pre><code>permissions
-</code></pre><font size="5"><strong>4. 权限列表</strong></font>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permissions</span><br></pre></td></tr></table></figure>
+<font size="5"><strong>4. 权限列表</strong></font>
 
 <ol>
 <li>通过用户查询权限表</li>
@@ -735,19 +590,16 @@ urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
 <font size="5"><strong>5. 权限获取</strong></font>
 
 <p>获取所有权限: 包括用户对应角色权限和用户对应权限表</p>
-<pre><code>get_all_permission()
-</code></pre><p>获取用户组权限</p>
-<pre><code>get_group_permission
-</code></pre><font size="5"><strong>6. 权限校验装饰器</strong></font>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get_all_permission()</span><br></pre></td></tr></table></figure>
+<p>获取用户组权限</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get_group_permission</span><br></pre></td></tr></table></figure>
+<font size="5"><strong>6. 权限校验装饰器</strong></font>
 
-<pre><code>@permission_required(&apos;应用名.权限名&apos;)
-</code></pre><font size="5"><strong>7. 前端</strong></font>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@permission_required('应用名.权限名')</span></span><br></pre></td></tr></table></figure>
+<font size="5"><strong>7. 前端</strong></font>
 
-<pre><code># 应用名.权限名
-{{ perms }}
-
-{% if perms.user.add_users %}
-</code></pre><hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 应用名.权限名</span><br><span class="line">&#123;&#123; perms &#125;&#125;</span><br><span class="line"></span><br><span class="line">&#123;% if perms.user.add_users %&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="十三、日志"><a href="#十三、日志" class="headerlink" title="十三、日志"></a>十三、日志</h1><font size="5"><strong>1. 日志logging模块</strong></font>
 
 <p>logging模块可以收集记录错误，警告等调试信息，在程序中可以捕获这些信息，并且甚至可以将错误的重要信息等都可以通过邮件发送给开发者</p>
@@ -763,16 +615,37 @@ Formatters
 <p>Logger 为日志系统的入口。每个logger 是一个具名的容器，可以向它写入需要处理的消息。</p>
 <p>每个logger 都有一个日志级别。日志级别表示该logger 将要处理的消息的严重性。</p>
 <p>Python 定义以下几种日志级别：</p>
-<pre><code>DEBUG：用于调试目的的底层系统信息
-
-INFO：普通的系统信息
-
-WARNING：表示出现一个较小的问题。
-
-ERROR：表示出现一个较大的问题。
-
-CRITICAL：表示出现一个致命的问题。
-</code></pre><p>日志级别等级CRITICAL &gt; ERROR &gt; WARNING &gt; INFO &gt; DEBUG &gt; NOTSET</p>
+<table>
+<thead>
+<tr>
+<th>日志级别</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEBUG</td>
+<td>用于调试目的的底层系统信息</td>
+</tr>
+<tr>
+<td>INFO</td>
+<td>普通的系统信息</td>
+</tr>
+<tr>
+<td>WARNING</td>
+<td>表示出现一个较小的问题</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>表示出现一个较大的问题</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
+<td>表示出现一个致命的问题</td>
+</tr>
+</tbody>
+</table>
+<p>日志级别等级CRITICAL &gt; ERROR &gt; WARNING &gt; INFO &gt; DEBUG &gt; NOTSET</p>
 <p><br><font size="5"><strong>4. Handlers</strong></font></p>
 <p>Handler 决定如何处理logger 中的每条消息。它表示一个特定的日志行为。</p>
 <p>与logger 一样，handler 也有一个日志级别。如果消息的日志级别小于handler 的级别，handler 将忽略该消息。</p>
@@ -855,252 +728,47 @@ CRITICAL：表示出现一个致命的问题。
 </table>
 <p><br><font size="5"><strong>7. 配置日志</strong></font></p>
 <p>1). 在settings.py文件中配置LOGGING日志信息</p>
-<pre><code># 日志文件夹的路径
-LOG_PATH = os.path.join(BASE_DIR, &apos;logs&apos;)
-
-# 配置日志
-LOGGING = {
-    # 必须是1
-    &apos;version&apos;: 1,
-
-    # 默认为True，禁用日志
-    &apos;disable_existing_loggers&apos;: False,
-
-    # 定义loggers组件，用于接收日志信息
-    &apos;loggers&apos;:{
-        &apos;&apos;:{
-            # 将接收到的日志信息丢给handlers去处理
-            &apos;handlers&apos;: [&apos;console&apos;],
-            &apos;level&apos;: &apos;INFO&apos;
-        }
-    },
-    # 定义handlers组件，用户写入日志信息
-    &apos;handlers&apos;:{
-        &apos;console&apos;:{
-            &apos;level&apos;: &apos;INFO&apos;,
-            # 定义存储日志的文件
-            &apos;filename&apos;: &apos;%s/%s&apos; % (LOG_PATH, &apos;sys.log),
-            # 指定写入日志中信息的格式
-            &apos;formatter&apos;: &apos;default&apos;,
-            # 指定日志文件超过5M就自动做备份
-            &apos;class&apos;: &apos;logging.handlers.RotatingFileHandler&apos;,
-            &apos;maxBytes&apos;: 5 * 1024 * 1024,
-        }
-    },
-
-    # 定义formatters组件，定义存储日志中的格式
-    &apos;formatters&apos;:{
-        &apos;default&apos;: {
-            &apos;format&apos;: &apos;%(levelno)s %(name)s %(asctime)s&apos;
-        }
-    }
-}
-</code></pre><p>2). 定义日志处理的中间件，进行日志的打印处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 日志文件夹的路径</span></span><br><span class="line">LOG_PATH = os.path.join(BASE_DIR, <span class="string">'logs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置日志</span></span><br><span class="line">LOGGING = &#123;</span><br><span class="line">    <span class="comment"># 必须是1</span></span><br><span class="line">    <span class="string">'version'</span>: <span class="number">1</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 默认为True，禁用日志</span></span><br><span class="line">    <span class="string">'disable_existing_loggers'</span>: <span class="literal">False</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义loggers组件，用于接收日志信息</span></span><br><span class="line">    <span class="string">'loggers'</span>:&#123;</span><br><span class="line">        <span class="string">''</span>:&#123;</span><br><span class="line">			<span class="comment"># 将接收到的日志信息丢给handlers去处理</span></span><br><span class="line">            <span class="string">'handlers'</span>: [<span class="string">'console'</span>],</span><br><span class="line">            <span class="string">'level'</span>: <span class="string">'INFO'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment"># 定义handlers组件，用户写入日志信息</span></span><br><span class="line">    <span class="string">'handlers'</span>:&#123;</span><br><span class="line">        <span class="string">'console'</span>:&#123;</span><br><span class="line">            <span class="string">'level'</span>: <span class="string">'INFO'</span>,</span><br><span class="line">            <span class="comment"># 定义存储日志的文件</span></span><br><span class="line">            <span class="string">'filename'</span>: <span class="string">'%s/%s'</span> % (LOG_PATH, <span class="string">'sys.log),</span></span><br><span class="line"><span class="string">            # 指定写入日志中信息的格式</span></span><br><span class="line"><span class="string">            '</span>formatte<span class="string">r': '</span>default<span class="string">',</span></span><br><span class="line"><span class="string">            # 指定日志文件超过5M就自动做备份</span></span><br><span class="line"><span class="string">            '</span><span class="class"><span class="keyword">class</span>':</span> <span class="string">'logging.handlers.RotatingFileHandler'</span>,</span><br><span class="line">            <span class="string">'maxBytes'</span>: <span class="number">5</span> * <span class="number">1024</span> * <span class="number">1024</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义formatters组件，定义存储日志中的格式</span></span><br><span class="line">    <span class="string">'formatters'</span>:&#123;</span><br><span class="line">        <span class="string">'default'</span>: &#123;</span><br><span class="line">            <span class="string">'format'</span>: <span class="string">'%(levelno)s %(name)s %(asctime)s'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2). 定义日志处理的中间件，进行日志的打印处理</p>
 <p>定义并设置日志中间件logMiddleware.py文件</p>
-<pre><code>import logging
-import time
-
-try:
-    # needed to support Django &gt;= 1.10 MIDDLEWARE
-    from django.utils.deprecation import MiddlewareMixin
-except ImportError:
-    # needed to keep Django &lt;= 1.9 MIDDLEWARE_CLASSES
-    MiddlewareMixin = object
-
-# 获取logger
-logger = logging.getLogger(__name__)
-# logger接收日志信息的几个方法，如下:
-# logger.debug()
-# logger.info()
-# logger.warning()
-# logger.error()
-# logger.critical()
-
-class LogMiddle(MiddlewareMixin):
-
-    def process_request(self, request):
-        # url到服务器的时候，经过中间件最先执行的方法
-        request.init_time = time.time()
-        request.init_body = request.body
-
-    def process_response(self, request, response):
-        try:
-            # 经过中间件，最后执行的方法
-            # 计算请求到响应的时间
-            count_time = time.time() - request.init_time
-            # 请求路径
-            path = request.path
-            # 请求方式
-            method = request.method
-            # 获取响应的状态码
-            code = response.status_code
-            # 获取请求的内容
-            req_body = request.init_body
-            # 获取响应的内容
-            res_body = response.content
-
-            message = &apos;%s %s %s %s %s %s&apos; % (count_time, path, method, code, req_body, res_body)
-            # 写入日志信息
-            logger.info(message)
-        except Exception as e:
-            logger.critical(&apos;log error, Exception:%s&apos; % e)
-
-        return response
-</code></pre><p>3). 设置settings.py中的MIDDLEWARE的值</p>
-<pre><code>MIDDLEWARE = [
-    ...
-    &apos;utils.logMiddleware.LogMiddle&apos;,
-]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># needed to support Django &gt;= 1.10 MIDDLEWARE</span></span><br><span class="line">    <span class="keyword">from</span> django.utils.deprecation <span class="keyword">import</span> MiddlewareMixin</span><br><span class="line"><span class="keyword">except</span> ImportError:</span><br><span class="line">    <span class="comment"># needed to keep Django &lt;= 1.9 MIDDLEWARE_CLASSES</span></span><br><span class="line">    MiddlewareMixin = object</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取logger</span></span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line"><span class="comment"># logger接收日志信息的几个方法，如下:</span></span><br><span class="line"><span class="comment"># logger.debug()</span></span><br><span class="line"><span class="comment"># logger.info()</span></span><br><span class="line"><span class="comment"># logger.warning()</span></span><br><span class="line"><span class="comment"># logger.error()</span></span><br><span class="line"><span class="comment"># logger.critical()</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LogMiddle</span><span class="params">(MiddlewareMixin)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_request</span><span class="params">(self, request)</span>:</span></span><br><span class="line">        <span class="comment"># url到服务器的时候，经过中间件最先执行的方法</span></span><br><span class="line">        request.init_time = time.time()</span><br><span class="line">        request.init_body = request.body</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_response</span><span class="params">(self, request, response)</span>:</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># 经过中间件，最后执行的方法</span></span><br><span class="line">            <span class="comment"># 计算请求到响应的时间</span></span><br><span class="line">            count_time = time.time() - request.init_time</span><br><span class="line">			<span class="comment"># 请求路径</span></span><br><span class="line">			path = request.path</span><br><span class="line">			<span class="comment"># 请求方式</span></span><br><span class="line">			method = request.method</span><br><span class="line">            <span class="comment"># 获取响应的状态码</span></span><br><span class="line">            code = response.status_code</span><br><span class="line">            <span class="comment"># 获取请求的内容</span></span><br><span class="line">            req_body = request.init_body</span><br><span class="line">            <span class="comment"># 获取响应的内容</span></span><br><span class="line">            res_body = response.content</span><br><span class="line"></span><br><span class="line">            message = <span class="string">'%s %s %s %s %s %s'</span> % (count_time, path, method, code, req_body, res_body)</span><br><span class="line">            <span class="comment"># 写入日志信息</span></span><br><span class="line">            logger.info(message)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            logger.critical(<span class="string">'log error, Exception:%s'</span> % e)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> response</span><br></pre></td></tr></table></figure>
+<p>3). 设置settings.py中的MIDDLEWARE的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MIDDLEWARE = [</span><br><span class="line">	...</span><br><span class="line">    <span class="string">'utils.logMiddleware.LogMiddle'</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="十四、drf（API工具包）"><a href="#十四、drf（API工具包）" class="headerlink" title="十四、drf（API工具包）"></a>十四、drf（API工具包）</h1><font size="5"><strong>1. 安装与配置</strong></font>
 
 <p>1). 安装</p>
-<pre><code># 安装djangorestframework
-pip install djangorestframework
-# 安装过滤
-pip install django-filter
-</code></pre><p>2).配置settings.py文件</p>
-<pre><code>INSTALLED_APPS = [
-    ...
-    &apos;rest_framework&apos;,
-]
-</code></pre><p><br><font size="5"><strong>2. 路由</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 安装djangorestframework</span><br><span class="line">pip install djangorestframework</span><br><span class="line"><span class="meta">#</span> 安装过滤</span><br><span class="line">pip install django-filter</span><br></pre></td></tr></table></figure>
+<p>2).配置settings.py文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">	...</span><br><span class="line">    <span class="string">'rest_framework'</span>,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 路由</strong></font></p>
 <p>设置urls.py文件</p>
-<pre><code>from rest_framework.routers import SimpleRouter
-
-# 获取路由
-router = SimpleRouter()
-# 注册资源， /app/article/   /app/article/id/
-router.register(&apos;article&apos;, ArticleView)
-
-urlpatterns = [
-    ...
-]
-
-# 新增路由地址
-urlpatterns += router.urls
-</code></pre><p><br><font size="5"><strong>3. 视图</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework.routers <span class="keyword">import</span> SimpleRouter</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取路由</span></span><br><span class="line">router = SimpleRouter()</span><br><span class="line"><span class="comment"># 注册资源， /app/article/   /app/article/id/</span></span><br><span class="line">router.register(<span class="string">'article'</span>, ArticleView)</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">	...</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新增路由地址</span></span><br><span class="line">urlpatterns += router.urls</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 视图</strong></font></p>
 <p>设置views.py文件</p>
-<pre><code>from rest_framework import viewsets, mixins
-
-from app.models import Article
-from app.serializers import ArticleSerializer
-
-class ArticleView(viewsets.GenericViewSet,
-                  mixins.ListModelMixin,
-                  mixins.RetrieveModelMixin,
-                  mixins.DestroyModelMixin,
-                  mixins.CreateModelMixin,
-                  mixins.UpdateModelMixin):
-# 获取资源所对应的数据信息：（指明在查询数据时使用的查询集）
-queryset = Article.objects.all()
-# 序列化：（指明该视图在进行序列化或反序列化时使用的序列化器）
-serializer_class = ArticleSerializer
-# 过滤
-filter_class = ArticleFilter
-</code></pre><p><br><font size="5"><strong>4. 序列化</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework <span class="keyword">import</span> viewsets, mixins</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> app.models <span class="keyword">import</span> Article</span><br><span class="line"><span class="keyword">from</span> app.serializers <span class="keyword">import</span> ArticleSerializer</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArticleView</span><span class="params">(viewsets.GenericViewSet,</span></span></span><br><span class="line"><span class="class"><span class="params">                  mixins.ListModelMixin,</span></span></span><br><span class="line"><span class="class"><span class="params">                  mixins.RetrieveModelMixin,</span></span></span><br><span class="line"><span class="class"><span class="params">                  mixins.DestroyModelMixin,</span></span></span><br><span class="line"><span class="class"><span class="params">                  mixins.CreateModelMixin,</span></span></span><br><span class="line"><span class="class"><span class="params">                  mixins.UpdateModelMixin)</span>:</span></span><br><span class="line"><span class="comment"># 获取资源所对应的数据信息：（指明在查询数据时使用的查询集）</span></span><br><span class="line">queryset = Article.objects.all()</span><br><span class="line"><span class="comment"># 序列化：（指明该视图在进行序列化或反序列化时使用的序列化器）</span></span><br><span class="line">serializer_class = ArticleSerializer</span><br><span class="line"><span class="comment"># 过滤</span></span><br><span class="line">filter_class = ArticleFilter</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 序列化</strong></font></p>
 <p>应用包下定义并设置serializers.py文件</p>
-<pre><code>from rest_framework import serializers
-
-from app.models import Article
-
-
-class ArticleSerializer(serializers.ModelSerializer):
-    title = serializers.CharField(required=True,
-                                  max_length=10,
-                                  min_length=4,
-                                  error_messages={
-                                      &apos;required&apos;: &apos;描述必填&apos;,
-                                      &apos;max_length&apos;: &apos;不能超过10字符&apos;,
-                                      &apos;min_length&apos;: &apos;不能少于4字符&apos;
-                                  })
-    desc = serializers.CharField(min_length=5)
-
-    class Meta:
-        # 序列化模型：（指明该序列化器处理的数据字段从模型类Article参考生成）
-        model = Article
-        # 序列化后展示哪些字段：（指明该序列化器包含模型类中的哪些字段，&apos;all&apos;指明包含所有字段）
-        fields = [&apos;id&apos;, &apos;title&apos;, &apos;desc&apos;]
-</code></pre><p><br><font size="5"><strong>5. 条件过滤</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework <span class="keyword">import</span> serializers</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> app.models <span class="keyword">import</span> Article</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArticleSerializer</span><span class="params">(serializers.ModelSerializer)</span>:</span></span><br><span class="line">    title = serializers.CharField(required=<span class="literal">True</span>,</span><br><span class="line">                                  max_length=<span class="number">10</span>,</span><br><span class="line">                                  min_length=<span class="number">4</span>,</span><br><span class="line">                                  error_messages=&#123;</span><br><span class="line">                                      <span class="string">'required'</span>: <span class="string">'描述必填'</span>,</span><br><span class="line">                                      <span class="string">'max_length'</span>: <span class="string">'不能超过10字符'</span>,</span><br><span class="line">                                      <span class="string">'min_length'</span>: <span class="string">'不能少于4字符'</span></span><br><span class="line">                                  &#125;)</span><br><span class="line">    desc = serializers.CharField(min_length=<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        <span class="comment"># 序列化模型：（指明该序列化器处理的数据字段从模型类Article参考生成）</span></span><br><span class="line">        model = Article</span><br><span class="line">        <span class="comment"># 序列化后展示哪些字段：（指明该序列化器包含模型类中的哪些字段，'all'指明包含所有字段）</span></span><br><span class="line">        fields = [<span class="string">'id'</span>, <span class="string">'title'</span>, <span class="string">'desc'</span>]</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 条件过滤</strong></font></p>
 <p>应用包下定义并设置filters.py文件</p>
-<pre><code>import django_filters
-
-from article.models import Article
-</code></pre><p>​<br>    class ArticleFilter(django_filters.rest_framework.FilterSet):</p>
-<pre><code># 过滤字段
-q = django_filters.CharFilter(&apos;title&apos;, lookup_expr=&apos;contains&apos;)
-is_delete = django_filters.CharFilter(&apos;is_delete&apos;)
-id_min = django_filters.CharFilter(&apos;id&apos;, lookup_expr=&apos;gt&apos;)
-id_max = django_filters.CharFilter(&apos;id&apos;, lookup_expr=&apos;lt&apos;)
-
-class Meta:
-    # 过滤模型
-    model = Article
-    # 过滤字段
-    fields = [&apos;title&apos;, &apos;is_delete&apos;]
-</code></pre><p><br><font size="5"><strong>6. 分页</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> django_filters</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> article.models <span class="keyword">import</span> Article</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArticleFilter</span><span class="params">(django_filters.rest_framework.FilterSet)</span>:</span></span><br><span class="line">    <span class="comment"># 过滤字段</span></span><br><span class="line">    q = django_filters.CharFilter(<span class="string">'title'</span>, lookup_expr=<span class="string">'contains'</span>)</span><br><span class="line">    is_delete = django_filters.CharFilter(<span class="string">'is_delete'</span>)</span><br><span class="line">    id_min = django_filters.CharFilter(<span class="string">'id'</span>, lookup_expr=<span class="string">'gt'</span>)</span><br><span class="line">    id_max = django_filters.CharFilter(<span class="string">'id'</span>, lookup_expr=<span class="string">'lt'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        <span class="comment"># 过滤模型</span></span><br><span class="line">        model = Article</span><br><span class="line">        <span class="comment"># 过滤字段</span></span><br><span class="line">        fields = [<span class="string">'title'</span>, <span class="string">'is_delete'</span>]</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>6. 分页</strong></font></p>
 <p>配置settings.py文件</p>
-<pre><code># DRF配置
-REST_FRAMEWORK = {
-    # 配置分页类
-    &apos;DEFAULT_PAGINATION_CLASS&apos;: &apos;rest_framework.pagination.PageNumberPagination&apos;,
-    # 配置每一页数据的条数
-    &apos;PAGE_SIZE&apos;: 5,
-    # 过滤
-    &apos;DEFAULT_FILTER_BACKENDS&apos;: (
-        &apos;django_filters.rest_framework.DjangoFilterBackend&apos;,
-    ),
-    # 重构renderer
-    &apos;DEFAULT_RENDERER_CLASSES&apos;: (
-        &apos;utils.renderer.MyJsonRenderer&apos;,
-    ),
-}
-</code></pre><p><br><font size="5"><strong>7. 重构</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># DRF配置</span></span><br><span class="line">REST_FRAMEWORK = &#123;</span><br><span class="line">	<span class="comment"># 配置分页类</span></span><br><span class="line">	<span class="comment"># 配置每一页数据的条数</span></span><br><span class="line">    <span class="string">'PAGE_SIZE'</span>: <span class="number">5</span>,</span><br><span class="line">    <span class="comment"># 过滤</span></span><br><span class="line">    <span class="string">'DEFAULT_FILTER_BACKENDS'</span>: (</span><br><span class="line">        <span class="string">'django_filters.rest_framework.DjangoFilterBackend'</span>,</span><br><span class="line">    ),</span><br><span class="line">    <span class="comment"># 重构renderer</span></span><br><span class="line">    <span class="string">'DEFAULT_RENDERER_CLASSES'</span>: (</span><br><span class="line">        <span class="string">'utils.renderer.MyJsonRenderer'</span>,</span><br><span class="line">    ),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>7. 重构</strong></font></p>
 <p>utils包下定义并设置renderer.py文件</p>
-<pre><code>from rest_framework.renderers import JSONRenderer
-</code></pre><p>​<br>    class MyJsonRenderer(JSONRenderer):</p>
-<pre><code>def render(self, data, accepted_media_type=None, renderer_context=None):
-    &quot;&quot;&quot;
-        data转化为：
-        {
-            &apos;code&apos;: 200,
-            &apos;msg&apos;: &apos;请求成功&apos;,
-            &apos;data&apos;: data
-        }
-    &quot;&quot;&quot;
-    try:
-        code = data.pop(&apos;code&apos;)
-        msg = data.pop(&apos;msg&apos;)
-    except:
-        code = 200
-        msg = &apos;请求成功&apos;
-    res = {
-        &apos;code&apos;: code,
-        &apos;msg&apos;: msg,
-        &apos;data&apos;: data
-    }
-    return super().render(res)
-</code></pre><p><br><font size="5"><strong>8. Redis缓存</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework.renderers <span class="keyword">import</span> JSONRenderer</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyJsonRenderer</span><span class="params">(JSONRenderer)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">render</span><span class="params">(self, data, accepted_media_type=None, renderer_context=None)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">            data转化为：</span></span><br><span class="line"><span class="string">            &#123;</span></span><br><span class="line"><span class="string">                'code': 200,</span></span><br><span class="line"><span class="string">                'msg': '请求成功',</span></span><br><span class="line"><span class="string">                'data': data</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            code = data.pop(<span class="string">'code'</span>)</span><br><span class="line">            msg = data.pop(<span class="string">'msg'</span>)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            code = <span class="number">200</span></span><br><span class="line">            msg = <span class="string">'请求成功'</span></span><br><span class="line">        res = &#123;</span><br><span class="line">            <span class="string">'code'</span>: code,</span><br><span class="line">            <span class="string">'msg'</span>: msg,</span><br><span class="line">            <span class="string">'data'</span>: data</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> super().render(res)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>8. Redis缓存</strong></font></p>
 <p>1). 安装</p>
-<pre><code>pip3 install django-redis
-</code></pre><p>2). 配置settings.py</p>
-<pre><code>CACHES = {
-    &quot;default&quot;: {
-        &quot;BACKEND&quot;: &quot;django_redis.cache.RedisCache&quot;,
-        &quot;LOCATION&quot;: &quot;redis://127.0.0.1:6379&quot;,
-        &quot;OPTIONS&quot;: {
-            &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;
-        }
-    }
-}
-</code></pre><p>3). 引用</p>
-<pre><code>from django.core.cache import cache
-
-cache.set(&apos;&apos;, &apos;&apos;)
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install django-redis</span><br></pre></td></tr></table></figure>
+<p>2). 配置settings.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CACHES = &#123;</span><br><span class="line">    <span class="string">"default"</span>: &#123;</span><br><span class="line">        <span class="string">"BACKEND"</span>: <span class="string">"django_redis.cache.RedisCache"</span>,</span><br><span class="line">        <span class="string">"LOCATION"</span>: <span class="string">"redis://127.0.0.1:6379"</span>,</span><br><span class="line">        <span class="string">"OPTIONS"</span>: &#123;</span><br><span class="line">            <span class="string">"CLIENT_CLASS"</span>: <span class="string">"django_redis.client.DefaultClient"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3). 引用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.core.cache <span class="keyword">import</span> cache</span><br><span class="line"></span><br><span class="line">cache.set(<span class="string">''</span>, <span class="string">''</span>)</span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:34</p>
+        <p>最后更新： 2019年05月14日 18:58</p>
         <p>原始链接： <a class="post-url" href="/2015/11/30/python框架——django/" title="Python框架——django">http://yoursite.com/2015/11/30/python框架——django/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -1301,10 +969,10 @@ cache.set(&apos;&apos;, &apos;&apos;)
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -1337,7 +1005,7 @@ cache.set(&apos;&apos;, &apos;&apos;)
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

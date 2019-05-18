@@ -107,14 +107,14 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
-    <article id="post-python基础——生成器" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——运算符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——生成器/">python基础——生成器</a>
+      <a class="article-title" href="/2015/11/27/python基础——运算符/">python基础——运算符</a>
     </h1>
   
 
@@ -131,19 +131,102 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——生成器/">
+            <a href="/2015/11/27/python基础——运算符/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——生成器" title="python基础——生成器">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——运算符" title="python基础——运算符">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                生成器就是迭代器, 迭代器不一定是生成器
-调用一个带有yield关键字的函数就能得到一个生成器，调用的时候不会执行函数体，也不会获取返回值，而是产生一个生成器(函数调用表达式就是一个生成器)， 这个生成器中的元素就是yield关键字后面的值
-生成式：格式：
-生成器 = (表达式 for 变量 in 序列)
-生成器 = (表达式 for 变量 in 序列 if 条件语句)
+                一、数学运算符
+
+
+名称
+含义
+
+
+
+
++
+加
+
+
+-
+减
+
+
+*
+乘
+
+
+/
+除
+
+
+//
+取整
+
+
+%
+取余
+
+
+**
+求幂
+
+
+
+
+二、比较运算符
+
+
+名称
+含义
+
+
+
+
+&gt;
+大于
+
+
+&lt;
+小于
+
+
+==
+等于（值）
+
+
+!=
+不等
+
+
+&gt;=
+大于等于
+
+
+&lt;=
+小于等于
+
+
+
+
+身份运算符
+
+
+
+名称
+含义
+
+
+
+
+is
+等于（地址）
+
+
 ...
             </p>
         </div>
@@ -166,7 +249,7 @@
 
         </ul>
         
-            <a href="/2015/11/27/python基础——生成器/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——运算符/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -174,14 +257,14 @@
 
 
   
-    <article id="post-python基础——递归函数" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——继承衍生功能" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——递归函数/">python基础——递归函数</a>
+      <a class="article-title" href="/2015/11/27/python基础——继承衍生功能/">python基础——继承衍生功能</a>
     </h1>
   
 
@@ -198,21 +281,15 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——递归函数/">
+            <a href="/2015/11/27/python基础——继承衍生功能/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——递归函数" title="python基础——递归函数">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——继承衍生功能" title="python基础——继承衍生功能">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                第一步：确定临界值 - 循环结束的条件,在临界值的地方要让函数结束！第二步：找关系 - 找当次循环和上次循环的关系;找f(n)和f(n-1)的关系第三步: 假设函数f的功能已经实现，通过f(n-1)来实现f(n)的功能
-实现：1+2+3+…+ndef gx_sum(n):
-    # 1.找临界值
-    if n == 1:
-        return 1
-
-    ...
+                一、__slots__1._ _slots _ _的值继承后没有效果2.在类中给 _ _slots _ _赋值后，当前类的对象不能使用 _ _dict _ _ ；但是这个类的子类对象可以使用_ _dict _ _ ，只是_ _dict _ _中没有从父类继承下来的对象属性，只有在子类中添加的对象属性3.如果父类没有给 _ _slots _ _ 赋值，直接给子类的_ _sl...
             </p>
         </div>
       
@@ -234,7 +311,7 @@
 
         </ul>
         
-            <a href="/2015/11/27/python基础——递归函数/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——继承衍生功能/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -242,14 +319,14 @@
 
 
   
-    <article id="post-python基础——迭代器" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——list(列表)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——迭代器/">python基础——迭代器</a>
+      <a class="article-title" href="/2015/11/27/python基础——list(列表)/">python基础——list(列表)</a>
     </h1>
   
 
@@ -266,21 +343,39 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——迭代器/">
+            <a href="/2015/11/27/python基础——list(列表)/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——迭代器" title="python基础——迭代器">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_list.jpg?raw=true" alt="python基础——list(列表)" title="python基础——list(列表)">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                迭代器作为容器，里面的元素只能通过其他序列转换，或者通过生成器生成迭代器中的元素可以是任何类型的数据
-格式：
-iter(序列)
-获取元素：
-next(迭代器)  -&gt; 获取迭代器中最新的数据(最顶层)
-for 变量 in 迭代器:
+                一、创建列表1list1 = [1, 2, 3, 4, 5, "good", True]
+注：列表的数据项不需要具有相同的类型
 
+二、列表操作符
+
+
+表达式
+结果
+描述
+
+
+
+
+[1, 2, 3] + [4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+组合
+
+
+[“ab!”]*3
+[“ab!”, “ab!”, “ab!”]
+重复
+
+
+3 in [1, 2, 3]
+...
             </p>
         </div>
       
@@ -302,7 +397,75 @@ for 变量 in 迭代器:
 
         </ul>
         
-            <a href="/2015/11/27/python基础——迭代器/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——list(列表)/#more" class="article-more-link">more&gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article id="post-python基础——str(字符串)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/27/python基础——str(字符串)/">python基础——str(字符串)</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/Python/">Python</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2015/11/27/python基础——str(字符串)/">
+                
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——str(字符串)" title="python基础——str(字符串)">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。
+获取单个字符语法：字符串变量[下标]
+# 获取第一个字符
+print(var[0])
+12# 获取最后一个字符print(var[-1])
+字符串切片语法：字符串[头下标：尾下标：步长]
+注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2015-11-27</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Python/" class="color2">Python</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2015/11/27/python基础——str(字符串)/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -418,14 +581,14 @@ hex(十进制数)
 
 
   
-    <article id="post-python基础——tuple(元组)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——迭代器" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——tuple(元组)/">python基础——tuple(元组)</a>
+      <a class="article-title" href="/2015/11/27/python基础——迭代器/">python基础——迭代器</a>
     </h1>
   
 
@@ -442,22 +605,21 @@ hex(十进制数)
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——tuple(元组)/">
+            <a href="/2015/11/27/python基础——迭代器/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——tuple(元组)" title="python基础——tuple(元组)">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——迭代器" title="python基础——迭代器">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                特征：有序且不可变（元组就是不可变的列表）有序：每个元素对应一个下标不可变：不支持增删改，只支持查
-特殊：只有一个元素的元组
-tuple1 = (100,)       #(100,)
-不加小括号表示也是一个元组
-tuple2 = 1, 2, 3      #(1, 2, 3)
-特殊获取
-x, y = (100, 200)
-print(x, y)            #...
+                迭代器作为容器，里面的元素只能通过其他序列转换，或者通过生成器生成迭代器中的元素可以是任何类型的数据
+格式：
+iter(序列)
+获取元素：
+next(迭代器)  -&gt; 获取迭代器中最新的数据(最顶层)
+for 变量 in 迭代器:
+
             </p>
         </div>
       
@@ -479,7 +641,7 @@ print(x, y)            #...
 
         </ul>
         
-            <a href="/2015/11/27/python基础——tuple(元组)/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——迭代器/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -487,14 +649,14 @@ print(x, y)            #...
 
 
   
-    <article id="post-python基础——pymysql" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——set(集合)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——pymysql/">python基础——pymysql</a>
+      <a class="article-title" href="/2015/11/27/python基础——set(集合)/">python基础——set(集合)</a>
     </h1>
   
 
@@ -511,20 +673,48 @@ print(x, y)            #...
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——pymysql/">
+            <a href="/2015/11/27/python基础——set(集合)/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——pymysql" title="python基础——pymysql">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——set(集合)" title="python基础——set(集合)">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                一、建立连接import pymysql
+                特征：无序且可变元素是唯一且不可变（比如不能有list）自带去重
+一、增
 
-con_obj = pymysql.connect(host=&apos;localhost&apos;,
-                          user=&apos;root&apos;,
-                          password=&apos;yuting123456&apos;,
- ...
+
+语法
+功能
+
+
+
+
+set.add(element)
+在集合中添加指定元素
+
+
+set.update(seq)
+将序列中的元素添加到集合中
+
+
+
+二、删
+
+
+语法
+功能
+
+
+
+
+set.remove(element)
+删除集合中指定的元素
+
+
+
+三、查集合不能单独的获取单个元素，只能一个一个的遍...
             </p>
         </div>
       
@@ -546,7 +736,7 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 
         </ul>
         
-            <a href="/2015/11/27/python基础——pymysql/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——set(集合)/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -554,14 +744,14 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 
 
   
-    <article id="post-python基础——list(列表)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——pygame" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——list(列表)/">python基础——list(列表)</a>
+      <a class="article-title" href="/2015/11/27/python基础——pygame/">python基础——pygame</a>
     </h1>
   
 
@@ -578,38 +768,22 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——list(列表)/">
+            <a href="/2015/11/27/python基础——pygame/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_list.jpg?raw=true" alt="python基础——list(列表)" title="python基础——list(列表)">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/pygame.jpg?raw=true" alt="python基础——pygame" title="python基础——pygame">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                一、创建列表list1 = [1, 2, 3, 4, 5, &quot;good&quot;, True]
-注：列表的数据项不需要具有相同的类型
+                一、程序中导入pygame库1import pygame
 
-二、列表操作符
+二、初始化pygame1pygame.init()
 
+三、创建游戏窗口set_mode(窗口大小) ——&gt; 返回一个surface类型的对象窗口大小对应的值是一个元组，窗口大小 == ((宽, 高))
+window = pygame.display.set_mode((400, 600))
 
-表达式
-结果
-描述
-
-
-
-
-[1, 2, 3] + [4, 5, 6]
-[1, 2, 3, 4, 5, 6]
-组合
-
-
-[“ab!”]*3
-[“ab!”, “ab!”, “ab!”]
-重复
-
-
-3 in [...
+四、设置窗口标...
             </p>
         </div>
       
@@ -631,7 +805,7 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 
         </ul>
         
-            <a href="/2015/11/27/python基础——list(列表)/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——pygame/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -639,14 +813,14 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 
 
   
-    <article id="post-python基础——function(函数)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-python基础——requests" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——function(函数)/">python基础——function(函数)</a>
+      <a class="article-title" href="/2015/11/27/python基础——requests/">python基础——requests</a>
     </h1>
   
 
@@ -663,22 +837,30 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2015/11/27/python基础——function(函数)/">
+            <a href="/2015/11/27/python基础——requests/">
                 
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——function(函数)" title="python基础——function(函数)">
+                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——requests" title="python基础——requests">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
-                一、函数1.函数的概念函数是实现某一特定功能的代码段的封装
-2.函数的声明/定义def 函数名(形参列表):
-    函数体
-    return 语句
-形参: 可以看成是声明在函数中的变量; 作用是将函数外部的数据传递到函数内部函数体: 函数说明文档, 实现函数功能的代码段
-(重点!)声明函数的时候不会执行函数体
-3.函数的调用函数名(实参列表)  
-(重点!)函数调用...
+                一、安装File -&gt; Settings -&gt;Project -&gt; Project Interpreter -&gt; + (添加) -&gt; 搜索requests -&gt; Install Package
+二、方法
+
+
+get(url, params=None)
+get请求
+
+
+
+
+url
+字符串,需要获取的数据的接口地址
+
+
+params
+字典,...
             </p>
         </div>
       
@@ -700,7 +882,7 @@ con_obj = pymysql.connect(host=&apos;localhost&apos;,
 
         </ul>
         
-            <a href="/2015/11/27/python基础——function(函数)/#more" class="article-more-link">more&gt;&gt;</a>
+            <a href="/2015/11/27/python基础——requests/#more" class="article-more-link">more&gt;&gt;</a>
         
     </footer>
   </div>
@@ -809,101 +991,6 @@ Json...
 
 
   
-    <article id="post-python基础——set(集合)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/python基础——set(集合)/">python基础——set(集合)</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/Python/">Python</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2015/11/27/python基础——set(集合)/">
-                
-                <img src="https://github.com/devilGuoXu/picture_bed/blob/master/python_basics.jpg?raw=true" alt="python基础——set(集合)" title="python基础——set(集合)">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                特征：无序且可变元素是唯一且不可变（比如不能有list）自带去重
-一、增
-
-
-语法
-功能
-
-
-
-
-set.add(element)
-在集合中添加指定元素
-
-
-set.update(seq)
-将序列中的元素添加到集合中
-
-
-
-二、删
-
-
-语法
-功能
-
-
-
-
-set.remove(element)
-删除集合中指定的元素
-
-
-
-三、查集合不能单独的获取单个元素，只能一个一个的遍...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2015-11-27</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/Python/" class="color2">Python</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2015/11/27/python基础——set(集合)/#more" class="article-more-link">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -962,10 +1049,10 @@ set.remove(element)
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -998,7 +1085,7 @@ set.remove(element)
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

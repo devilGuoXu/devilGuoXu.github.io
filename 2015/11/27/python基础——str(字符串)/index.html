@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。 获取单个字符语法：字符串变量[下标] # 获取第一个字符 print(var[0])  # 获取最后一个字符 print(var[-1]) 字符串切片语法：字符串[头下标：尾下标：步长] 注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，为下标，步长都可随需省略3">
+  <meta name="description" content="一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。 获取单个字符语法：字符串变量[下标] # 获取第一个字符 print(var[0]) 12# 获取最后一个字符print(var[-1]) 字符串切片语法：字符串[头下标：尾下标：步长] 注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，为下标，步长都可随需省略3">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python基础——str(字符串)">
 <meta property="og:url" content="http://yoursite.com/2015/11/27/python基础——str(字符串)/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。 获取单个字符语法：字符串变量[下标] # 获取第一个字符 print(var[0])  # 获取最后一个字符 print(var[-1]) 字符串切片语法：字符串[头下标：尾下标：步长] 注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，为下标，步长都可随需省略3">
+<meta property="og:description" content="一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。 获取单个字符语法：字符串变量[下标] # 获取第一个字符 print(var[0]) 12# 获取最后一个字符print(var[-1]) 字符串切片语法：字符串[头下标：尾下标：步长] 注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，为下标，步长都可随需省略3">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:33:00.118Z">
+<meta property="og:updated_time" content="2019-05-11T06:40:53.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——str(字符串)">
-<meta name="twitter:description" content="一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。 获取单个字符语法：字符串变量[下标] # 获取第一个字符 print(var[0])  # 获取最后一个字符 print(var[-1]) 字符串切片语法：字符串[头下标：尾下标：步长] 注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，为下标，步长都可随需省略3">
+<meta name="twitter:description" content="一、访问字符串中的值Python中的字符串用单引号(‘)或双引号(“)括起来，同时使用反斜杠“\”转义特殊字符。 获取单个字符语法：字符串变量[下标] # 获取第一个字符 print(var[0]) 12# 获取最后一个字符print(var[-1]) 字符串切片语法：字符串[头下标：尾下标：步长] 注：1、从头下标开始，获取到尾下标前为止，每次下标值加上步长2、头下标，为下标，步长都可随需省略3">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -150,39 +150,15 @@
 <h5 id="获取单个字符语法："><a href="#获取单个字符语法：" class="headerlink" title="获取单个字符语法："></a>获取单个字符语法：</h5><p>字符串变量[下标]</p>
 <pre><code># 获取第一个字符
 print(var[0])
-
-# 获取最后一个字符
-print(var[-1])
-</code></pre><h5 id="字符串切片语法："><a href="#字符串切片语法：" class="headerlink" title="字符串切片语法："></a>字符串切片语法：</h5><p>字符串[头下标：尾下标：步长]</p>
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取最后一个字符</span></span><br><span class="line">print(var[<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<h5 id="字符串切片语法："><a href="#字符串切片语法：" class="headerlink" title="字符串切片语法："></a>字符串切片语法：</h5><p>字符串[头下标：尾下标：步长]</p>
 <p>注：<br>1、从头下标开始，获取到尾下标前为止，每次下标值加上步长<br>2、头下标，为下标，步长都可随需省略<br>3、下标都可越界</p>
 <p>示例：</p>
-<pre><code>str = &apos;hello python!&apos;
-print(&apos;结果1：&apos;, str[0:-1:2])         # 从前往后取
-print(&apos;结果2：&apos;, str[-1:0:-2])        # 从后往前取
-print(&apos;结果3：&apos;, str[100: -100: -1])  # 下标越界
-
-结果：
-结果1： hlopto
-结果2： !otpol
-结果3： !nohtyp olleh
-</code></pre><p><strong><em>省略头下标：</em></strong><br>字符串[：尾下标：步长]<br>当步长是正数,从字符串的第一个字符开始取到结束下标前为止;<br>当步长是负数，从字符串的最后一个字符开始取到结束下标前为止.<br><strong><em>省略尾下标：</em></strong><br>字符串[头下标：：步长]<br>当步长是正数,从开始下标开始取到字符串最后一个字符为止;<br>当步长是负数，从开始下标开始取到字符串的第一个字符为止.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'hello python!'</span></span><br><span class="line">print(<span class="string">'结果1：'</span>, str[<span class="number">0</span>:<span class="number">-1</span>:<span class="number">2</span>])         <span class="comment"># 从前往后取</span></span><br><span class="line">print(<span class="string">'结果2：'</span>, str[<span class="number">-1</span>:<span class="number">0</span>:<span class="number">-2</span>])        <span class="comment"># 从后往前取</span></span><br><span class="line">print(<span class="string">'结果3：'</span>, str[<span class="number">100</span>: <span class="number">-100</span>: <span class="number">-1</span>])  <span class="comment"># 下标越界</span></span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">结果<span class="number">1</span>： hlopto</span><br><span class="line">结果<span class="number">2</span>： !otpol</span><br><span class="line">结果<span class="number">3</span>： !nohtyp olleh</span><br></pre></td></tr></table></figure>
+<p><strong><em>省略头下标：</em></strong><br>字符串[：尾下标：步长]<br>当步长是正数,从字符串的第一个字符开始取到结束下标前为止;<br>当步长是负数，从字符串的最后一个字符开始取到结束下标前为止.<br><strong><em>省略尾下标：</em></strong><br>字符串[头下标：：步长]<br>当步长是正数,从开始下标开始取到字符串最后一个字符为止;<br>当步长是负数，从开始下标开始取到字符串的第一个字符为止.</p>
 <p>示例：</p>
-<pre><code>str = &apos;when i was young!&apos;
-print(&apos;结果4：&apos;, str[:6])      # 省略头下标
-print(&apos;结果5：&apos;, str[:6:-1])   # 省略头下标，步长为负
-print(&apos;结果6：&apos;, str[2:])      # 省略尾下标
-print(&apos;结果7：&apos;, str[2::-1])   # 省略尾下标，步长为负
-print(&apos;结果8：&apos;, str[:])       # 全部省略
-print(&apos;结果9：&apos;, str[::-1])    # 让字符串倒序
-
-结果：
-结果4： when i
-结果5： !gnuoy saw
-结果6： en i was young!
-结果7： ehw
-结果8： when i was young!
-结果9： !gnuoy saw i nehw
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'when i was young!'</span></span><br><span class="line">print(<span class="string">'结果4：'</span>, str[:<span class="number">6</span>])      <span class="comment"># 省略头下标</span></span><br><span class="line">print(<span class="string">'结果5：'</span>, str[:<span class="number">6</span>:<span class="number">-1</span>])   <span class="comment"># 省略头下标，步长为负</span></span><br><span class="line">print(<span class="string">'结果6：'</span>, str[<span class="number">2</span>:])      <span class="comment"># 省略尾下标</span></span><br><span class="line">print(<span class="string">'结果7：'</span>, str[<span class="number">2</span>::<span class="number">-1</span>])   <span class="comment"># 省略尾下标，步长为负</span></span><br><span class="line">print(<span class="string">'结果8：'</span>, str[:])       <span class="comment"># 全部省略</span></span><br><span class="line">print(<span class="string">'结果9：'</span>, str[::<span class="number">-1</span>])    <span class="comment"># 让字符串倒序</span></span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">结果<span class="number">4</span>： when i</span><br><span class="line">结果<span class="number">5</span>： !gnuoy saw</span><br><span class="line">结果<span class="number">6</span>： en i was young!</span><br><span class="line">结果<span class="number">7</span>： ehw</span><br><span class="line">结果<span class="number">8</span>： when i was young!</span><br><span class="line">结果<span class="number">9</span>： !gnuoy saw i nehw</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="二、格式字符串"><a href="#二、格式字符串" class="headerlink" title="二、格式字符串"></a>二、格式字符串</h1><p>语法：</p>
 <p>包含占位符的字符串 % （值1，值2，值3……）</p>
 <p>占位符：</p>
@@ -248,7 +224,7 @@ print(&apos;结果9：&apos;, str[::-1])    # 让字符串倒序
 <h1 id="三、字符串内建函数"><a href="#三、字符串内建函数" class="headerlink" title="三、字符串内建函数"></a>三、字符串内建函数</h1><table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -261,15 +237,11 @@ print(&apos;结果9：&apos;, str[::-1])    # 让字符串倒序
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.capitalize())
-
-结果：
-Goog is a good man!
-</code></pre><table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.capitalize())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Goog <span class="keyword">is</span> a good man!</span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -282,16 +254,12 @@ Goog is a good man!
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.title())
-
-结果：
-Goog Is A Good Man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.title())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Goog Is A Good Man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -304,16 +272,12 @@ Goog Is A Good Man!
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog IS a good man!&quot;
-print(str.upper())
-
-结果：
-GOOG IS A GOOD MAN!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog IS a good man!"</span></span><br><span class="line">print(str.upper())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">GOOG IS A GOOD MAN!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -326,16 +290,12 @@ GOOG IS A GOOD MAN!
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog IS a good MAN!&quot;
-print(str.lower())
-
-结果：
-goog is a good man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog IS a good MAN!"</span></span><br><span class="line">print(str.lower())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">goog <span class="keyword">is</span> a good man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -348,16 +308,12 @@ goog is a good man!
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog IS a good MAN!&quot;
-print(str.swapcase())
-
-结果：
-GOOG is A GOOD man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog IS a good MAN!"</span></span><br><span class="line">print(str.swapcase())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">GOOG <span class="keyword">is</span> A GOOD man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -370,16 +326,12 @@ GOOG is A GOOD man!
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(len(str))
-
-结果：
-19
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(len(str))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">19</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -392,16 +344,12 @@ print(len(str))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &apos;12+3&apos;
-print(eval(str))
-
-结果：
-15
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'12+3'</span></span><br><span class="line">print(eval(str))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -414,16 +362,12 @@ print(eval(str))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;man&quot;
-print(max(str))
-
-结果：
-n
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"man"</span></span><br><span class="line">print(max(str))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">n</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -436,16 +380,12 @@ n
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;man&quot;
-print(min(str))
-
-结果：
-a
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"man"</span></span><br><span class="line">print(min(str))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">a</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -458,16 +398,12 @@ a
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.center(30, &apos;*&apos;))
-
-结果：
-*****goog is a good man!******
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.center(<span class="number">30</span>, <span class="string">'*'</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">*****goog <span class="keyword">is</span> a good man!******</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -480,16 +416,12 @@ print(str.center(30, &apos;*&apos;))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.ljust(30, &apos;*&apos;))
-
-结果：
-goog is a good man!***********
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.ljust(<span class="number">30</span>, <span class="string">'*'</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">goog <span class="keyword">is</span> a good man!***********</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -502,16 +434,12 @@ goog is a good man!***********
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.rjust(30, &apos;*&apos;))
-
-结果：
-***********goog is a good man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.rjust(<span class="number">30</span>, <span class="string">'*'</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">***********goog <span class="keyword">is</span> a good man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -524,16 +452,12 @@ print(str.rjust(30, &apos;*&apos;))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.zfill(30))
-
-结果：
-00000000000goog is a good man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.zfill(<span class="number">30</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">00000000000</span>goog <span class="keyword">is</span> a good man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -546,18 +470,12 @@ print(str.zfill(30))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.count(&apos;g&apos;))
-print(str.count(&apos;g&apos;, 5, len(str)))
-
-结果：
-3
-1
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.count(<span class="string">'g'</span>))</span><br><span class="line">print(str.count(<span class="string">'g'</span>, <span class="number">5</span>, len(str)))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -570,16 +488,12 @@ print(str.count(&apos;g&apos;, 5, len(str)))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;******goog is a good man!**&quot;
-print(str.lstrip(&apos;*&apos;))
-
-结果：
-goog is a good man!**
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"******goog is a good man!**"</span></span><br><span class="line">print(str.lstrip(<span class="string">'*'</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">goog <span class="keyword">is</span> a good man!**</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -592,16 +506,12 @@ goog is a good man!**
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;******goog is a good man!**&quot;
-print(str.rstrip(&apos;*&apos;))
-
-结果：
-******goog is a good man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"******goog is a good man!**"</span></span><br><span class="line">print(str.rstrip(<span class="string">'*'</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">******goog <span class="keyword">is</span> a good man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -614,16 +524,12 @@ print(str.rstrip(&apos;*&apos;))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;******goog is a good man!**&quot;
-print(str.strip(&apos;*&apos;))
-
-结果：
-goog is a good man!
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"******goog is a good man!**"</span></span><br><span class="line">print(str.strip(<span class="string">'*'</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">goog <span class="keyword">is</span> a good man!</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -636,19 +542,12 @@ goog is a good man!
 </tr>
 </tbody>
 </table>
-<pre><code>str1 = &quot;goog is a good man!&quot;
-str2 = [&quot;goog&quot;, &quot;is&quot;, &quot;a&quot;, &quot;good&quot;, &quot;man&quot;]
-print(&apos;*&apos;.join(str1))
-print(&quot;-&quot;.join(str2))
-
-结果：
-g*o*o*g* *i*s* *a* *g*o*o*d* *m*a*n*!
-goog-is-a-good-man
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">"goog is a good man!"</span></span><br><span class="line">str2 = [<span class="string">"goog"</span>, <span class="string">"is"</span>, <span class="string">"a"</span>, <span class="string">"good"</span>, <span class="string">"man"</span>]</span><br><span class="line">print(<span class="string">'*'</span>.join(str1))</span><br><span class="line">print(<span class="string">"-"</span>.join(str2))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">g*o*o*g* *i*s* *a* *g*o*o*d* *m*a*n*!</span><br><span class="line">goog-<span class="keyword">is</span>-a-good-man</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -661,18 +560,12 @@ goog-is-a-good-man
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.find(&quot;goo&quot;))
-print(str.find(&quot;goo&quot;, 15, len(str)))
-
-结果：
-0
--1
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.find(<span class="string">"goo"</span>))</span><br><span class="line">print(str.find(<span class="string">"goo"</span>, <span class="number">15</span>, len(str)))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -685,18 +578,12 @@ print(str.find(&quot;goo&quot;, 15, len(str)))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.rfind(&quot;goo&quot;))
-print(str.rfind(&quot;goo&quot;, 15, len(str)))
-
-结果：
-10
--1
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.rfind(<span class="string">"goo"</span>))</span><br><span class="line">print(str.rfind(<span class="string">"goo"</span>, <span class="number">15</span>, len(str)))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -709,16 +596,12 @@ print(str.rfind(&quot;goo&quot;, 15, len(str)))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.index(&quot;goo&quot;, 3, len(str)))
-
-结果：
-10
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.index(<span class="string">"goo"</span>, <span class="number">3</span>, len(str)))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -731,16 +614,12 @@ print(str.index(&quot;goo&quot;, 3, len(str)))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man!&quot;
-print(str.rindex(&quot;goo&quot;, 3, len(str)))
-
-结果：
-10
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man!"</span></span><br><span class="line">print(str.rindex(<span class="string">"goo"</span>, <span class="number">3</span>, len(str)))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -753,18 +632,12 @@ print(str.rindex(&quot;goo&quot;, 3, len(str)))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog**is***a*good**man&quot;
-print(str.split(&quot;*&quot;))
-print(str.split(&quot;*&quot;, 2))
-
-结果：
-[&apos;goog&apos;, &apos;&apos;, &apos;is&apos;, &apos;&apos;, &apos;&apos;, &apos;a&apos;, &apos;good&apos;, &apos;&apos;, &apos;man&apos;]
-[&apos;goog&apos;, &apos;&apos;, &apos;is***a*good**man&apos;]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog**is***a*good**man"</span></span><br><span class="line">print(str.split(<span class="string">"*"</span>))</span><br><span class="line">print(str.split(<span class="string">"*"</span>, <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="string">'goog'</span>, <span class="string">''</span>, <span class="string">'is'</span>, <span class="string">''</span>, <span class="string">''</span>, <span class="string">'a'</span>, <span class="string">'good'</span>, <span class="string">''</span>, <span class="string">'man'</span>]</span><br><span class="line">[<span class="string">'goog'</span>, <span class="string">''</span>, <span class="string">'is***a*good**man'</span>]</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -777,21 +650,12 @@ print(str.split(&quot;*&quot;, 2))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &apos;&apos;&apos;goog is a good man
-goog is a nice man
-goog is a handsome man
-&apos;&apos;&apos;
-print(str.splitlines())
-print(str.splitlines(True))
-
-结果：
-[&apos;goog is a good man&apos;, &apos;goog is a nice man&apos;, &apos;goog is a handsome man&apos;]
-[&apos;goog is a good man\n&apos;, &apos;goog is a nice man\n&apos;, &apos;goog is a handsome man\n&apos;]
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'''goog is a good man</span></span><br><span class="line"><span class="string">goog is a nice man</span></span><br><span class="line"><span class="string">goog is a handsome man</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">print(str.splitlines())</span><br><span class="line">print(str.splitlines(<span class="literal">True</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">[<span class="string">'goog is a good man'</span>, <span class="string">'goog is a nice man'</span>, <span class="string">'goog is a handsome man'</span>]</span><br><span class="line">[<span class="string">'goog is a good man\n'</span>, <span class="string">'goog is a nice man\n'</span>, <span class="string">'goog is a handsome man\n'</span>]</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -804,18 +668,12 @@ print(str.splitlines(True))
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good good good man&quot;
-print(str.replace(&quot;good&quot;, &quot;nice&quot;))
-print(str.replace(&quot;good&quot;, &quot;nice&quot;, 2))
-
-结果：
-goog is a nice nice nice man
-goog is a nice nice good man
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good good good man"</span></span><br><span class="line">print(str.replace(<span class="string">"good"</span>, <span class="string">"nice"</span>))</span><br><span class="line">print(str.replace(<span class="string">"good"</span>, <span class="string">"nice"</span>, <span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">goog <span class="keyword">is</span> a nice nice nice man</span><br><span class="line">goog <span class="keyword">is</span> a nice nice good man</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -833,17 +691,12 @@ goog is a nice nice good man
 </tr>
 </tbody>
 </table>
-<pre><code>table = str.maketrans(&quot;gn&quot;, &quot;26&quot;)       #g——&gt;2   n——&gt;6
-str = &quot;goog is a  good good man&quot;.translate(table)
-print(str)
-
-结果：
-2oo2 is a  2ood 2ood ma6
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">table = str.maketrans(<span class="string">"gn"</span>, <span class="string">"26"</span>)       <span class="comment">#g——&gt;2   n——&gt;6</span></span><br><span class="line">str = <span class="string">"goog is a  good good man"</span>.translate(table)</span><br><span class="line">print(str)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="number">2</span>oo2 <span class="keyword">is</span> a  <span class="number">2</span>ood <span class="number">2</span>ood ma6</span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -856,18 +709,12 @@ print(str)
 </tr>
 </tbody>
 </table>
-<pre><code>str= &quot;goog is a good man&quot;
-print(str.startswith(&quot;goog&quot;))
-print(str.startswith(&quot;goog&quot;, 1, 16))
-
-结果：
-True
-False
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str= <span class="string">"goog is a good man"</span></span><br><span class="line">print(str.startswith(<span class="string">"goog"</span>))</span><br><span class="line">print(str.startswith(<span class="string">"goog"</span>, <span class="number">1</span>, <span class="number">16</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -880,18 +727,12 @@ False
 </tr>
 </tbody>
 </table>
-<pre><code>str = &quot;goog is a good man&quot;
-print(str.endswith(&quot;man&quot;))
-print(str.endswith(&quot;man&quot;, 2, 15))
-
-结果：
-True
-False
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"goog is a good man"</span></span><br><span class="line">print(str.endswith(<span class="string">"man"</span>))</span><br><span class="line">print(str.endswith(<span class="string">"man"</span>, <span class="number">2</span>, <span class="number">15</span>))</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -904,17 +745,12 @@ False
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;goog is a good man&quot;.isalpha())
-print(&quot;googisagoodman&quot;.isalpha())
-
-结果：
-False
-True
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"goog is a good man"</span>.isalpha())</span><br><span class="line">print(<span class="string">"googisagoodman"</span>.isalpha())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -927,17 +763,12 @@ True
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;123b&quot;.isalnum())
-print(&quot;123%&quot;.isalnum())
-
-结果：
-True
-False
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"123b"</span>.isalnum())</span><br><span class="line">print(<span class="string">"123%"</span>.isalnum())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -950,25 +781,12 @@ False
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;ABC&quot;.isupper())
-print(&quot;ABC1&quot;.isupper())
-print(&quot;ABC%$&quot;.isupper())
-print(&quot;ABC%$旭&quot;.isupper())
-print(&quot;ABC%$a&quot;.isupper())
-print(&quot;%$旭&quot;.isupper())
-
-结果：
-True
-True
-True
-True
-False
-False
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"ABC"</span>.isupper())</span><br><span class="line">print(<span class="string">"ABC1"</span>.isupper())</span><br><span class="line">print(<span class="string">"ABC%$"</span>.isupper())</span><br><span class="line">print(<span class="string">"ABC%$旭"</span>.isupper())</span><br><span class="line">print(<span class="string">"ABC%$a"</span>.isupper())</span><br><span class="line">print(<span class="string">"%$旭"</span>.isupper())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -981,15 +799,12 @@ False
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;abc1@旭&quot;.islower())
-
-结果：
-True
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"abc1@旭"</span>.islower())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -1002,17 +817,12 @@ True
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;123&quot;.isdigit())
-print(&quot;123一二&quot;.isdigit())
-
-结果：
-True
-False
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"123"</span>.isdigit())</span><br><span class="line">print(<span class="string">"123一二"</span>.isdigit())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -1025,15 +835,12 @@ False
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;1234一二&quot;.isnumeric())
-
-结果：
-True
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"1234一二"</span>.isnumeric())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -1046,17 +853,12 @@ True
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;123&quot;.isdecimal())
-print(&quot;123a&quot;.isdecimal())
-
-结果：
-True
-False
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"123"</span>.isdecimal())</span><br><span class="line">print(<span class="string">"123a"</span>.isdecimal())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -1069,17 +871,12 @@ False
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot; &quot;.isspace())
-print(&quot;\n&quot;.isspace())
-
-结果：
-True
-True
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">" "</span>.isspace())</span><br><span class="line">print(<span class="string">"\n"</span>.isspace())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<hr>
 <table>
 <thead>
 <tr>
-<th>序号</th>
+<th></th>
 <th>方法</th>
 <th>描述</th>
 </tr>
@@ -1092,16 +889,10 @@ True
 </tr>
 </tbody>
 </table>
-<pre><code>print(&quot;Goog Is&quot;.istitle())
-print(&quot;Goog is&quot;.istitle())
-
-结果：
-True
-False
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"Goog Is"</span>.istitle())</span><br><span class="line">print(<span class="string">"Goog is"</span>.istitle())</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:33</p>
+        <p>最后更新： 2019年05月11日 14:40</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——str(字符串)/" title="python基础——str(字符串)">http://yoursite.com/2015/11/27/python基础——str(字符串)/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -1226,19 +1017,19 @@ False
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——dict(字典)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——list(列表)/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——dict(字典)
+          python基础——list(列表)
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——ClassObject(类)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——ClassObject(类)</span>
+    <a href="/2015/11/27/python基础——进制转换/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——进制转换</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -1300,10 +1091,10 @@ False
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -1336,7 +1127,7 @@ False
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

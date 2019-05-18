@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
 <meta property="og:description" content="使用 Json 函数需要导入 json 库：import json 一、数据类型转化对照表Python 转 Json   Python Json     dict object   list, tuple array   str string   int, float number   True true   False false   None null    Json 转 Python   J">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:31:59.161Z">
+<meta property="og:updated_time" content="2019-05-11T05:57:39.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础——json">
 <meta name="twitter:description" content="使用 Json 函数需要导入 json 库：import json 一、数据类型转化对照表Python 转 Json   Python Json     dict object   list, tuple array   str string   int, float number   True true   False false   None null    Json 转 Python   J">
@@ -206,86 +206,74 @@
 <h1 id="二、函数"><a href="#二、函数" class="headerlink" title="二、函数"></a>二、函数</h1><table>
 <thead>
 <tr>
-<th>1</th>
-<th>json.dumps(对象)</th>
-<th>将 Python对象编码成 Json字符串</th>
+<th></th>
+<th>语法</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>1</td>
+<td>json.dumps(对象)</td>
+<td>将 Python对象编码成 Json字符串</td>
 </tr>
 </tbody>
 </table>
-<pre><code>result = json.dumps([10, &apos;abc&apos;, True, None])
-print(type(result), result)
-
-结果：
-&lt;class &apos;str&apos;&gt; [10, &quot;abc&quot;, true, null]        # &apos;[10, &quot;abc&quot;, true, null]&apos;
-</code></pre><table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">result = json.dumps([<span class="number">10</span>, <span class="string">'abc'</span>, <span class="literal">True</span>, <span class="literal">None</span>]，ensure_ascii=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># ensure_ascii=False 禁用ASCII编码</span></span><br><span class="line">print(type(result), result)</span><br><span class="line">  </span><br><span class="line">结果：</span><br><span class="line">&lt;class 'str'&gt; [10, "abc", true, null]        # '[10, "abc", true, null]'</span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
-<th>2</th>
-<th>json.loads(字符串[, encoding])</th>
-<th>将 Json字符串解码为 Python对象</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>2</td>
+<td>json.loads(字符串[, encoding])</td>
+<td>将 Json字符串解码为 Python对象</td>
 </tr>
 </tbody>
 </table>
-<pre><code>message = &apos;{&quot;name&quot;: &quot;张三&quot;, &quot;age&quot;: 18, &quot;sex&quot;: null, &quot;marry&quot;: true}&apos;
-content = json.loads(message, encoding=&apos;utf-8&apos;)
-print(type(content), content)
-
-结果：
-&lt;class &apos;dict&apos;&gt; {&apos;name&apos;: &apos;张三&apos;, &apos;age&apos;: 18, &apos;sex&apos;: None, &apos;marry&apos;: True}
-</code></pre><table>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">'&#123;"name": "张三", "age": 18, "sex": null, "marry": true&#125;'</span></span><br><span class="line">content = json.loads(message, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">print(type(content), content)</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">&lt;class 'dict'&gt; &#123;'name': '张三', 'age': 18, 'sex': None, 'marry': True&#125;</span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
-<th>3</th>
-<th>json.dump(对象,文件对象)</th>
-<th>将 Python对象编码成 Json字符串，写入指定文件对象中</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>3</td>
+<td>json.dump(对象,文件对象)</td>
+<td>将 Python对象编码成 Json字符串，写入指定文件对象中</td>
 </tr>
 </tbody>
 </table>
-<pre><code>all_student = [
-        {&apos;name&apos;: &apos;小明&apos;, &apos;age&apos;: 12, &apos;tel&apos;: &apos;1237736&apos;},
-        {&apos;name&apos;: &apos;yuting&apos;, &apos;age&apos;: 18, &apos;tel&apos;: &apos;23333&apos;}
-    ]
-with open(&apos;student.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) as f:
-    json.dump(all_student, f)    # 相当于 f.write(json.dumps(all_student))
-</code></pre><table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">all_student = [</span><br><span class="line">  &#123;<span class="string">'name'</span>: <span class="string">'小明'</span>, <span class="string">'age'</span>: <span class="number">12</span>, <span class="string">'tel'</span>: <span class="string">'1237736'</span>&#125;,</span><br><span class="line">  &#123;<span class="string">'name'</span>: <span class="string">'yuting'</span>, <span class="string">'age'</span>: <span class="number">18</span>, <span class="string">'tel'</span>: <span class="string">'23333'</span>&#125;</span><br><span class="line">]</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'student.json'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">  json.dump(all_student, f)    <span class="comment"># 相当于 f.write(json.dumps(all_student))</span></span><br></pre></td></tr></table></figure>
+<table>
 <thead>
 <tr>
-<th>4</th>
-<th>json.load(文件对象, encoding)</th>
-<th>将 Json文件中的 Json字符串读出，并解码为 Python对象</th>
+<th></th>
+<th>语法</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>4</td>
+<td>json.load(文件对象, encoding)</td>
+<td>将 Json文件中的 Json字符串读出，并解码为 Python对象</td>
 </tr>
 </tbody>
 </table>
-<pre><code>with open(&apos;data.json&apos;, encoding=&apos;utf-8&apos;) as f:
-    result = json.load(f)    # 相当于 result = json.loads(f.read())
-    print(type(result), result[&apos;msg&apos;])
-
-结果：
-&lt;class &apos;dict&apos;&gt; 成功!
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'data.json'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">  result = json.load(f)    <span class="comment"># 相当于 result = json.loads(f.read())</span></span><br><span class="line">  print(type(result), result[<span class="string">'msg'</span>])</span><br><span class="line">  </span><br><span class="line">结果：</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">dict</span>'&gt; 成功!</span></span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:31</p>
+        <p>最后更新： 2019年05月11日 13:57</p>
         <p>原始链接： <a class="post-url" href="/2015/11/27/python基础——json/" title="python基础——json">http://yoursite.com/2015/11/27/python基础——json/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -410,19 +398,19 @@ with open(&apos;student.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) a
 
 <nav id="article-nav">
   
-    <a href="/2015/11/27/python基础——function(函数)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/27/python基础——requests/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          python基础——function(函数)
+          python基础——requests
         
       </span>
     </a>
   
   
-    <a href="/2015/11/27/python基础——set(集合)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">python基础——set(集合)</span>
+    <a href="/2015/11/27/python基础——function(函数)/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python基础——function(函数)</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -484,10 +472,10 @@ with open(&apos;student.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) a
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -520,7 +508,7 @@ with open(&apos;student.json&apos;, &apos;w&apos;, encoding=&apos;utf-8&apos;) a
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>

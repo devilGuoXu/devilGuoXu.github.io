@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="GuoXu,GuoXu's Blog">
   
-  <meta name="description" content="一、安装1. 安装virtualenv pip install virtualenv 2. 创建虚拟环境 virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado 3. 激活环境 cd pytornado/Scripts activate 4. 退出环境 deactivat">
+  <meta name="description" content="一、安装1. 安装virtualenv 1pip install virtualenv 2. 创建虚拟环境 1virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado 3. 激活环境 12cd pytornado/Scriptsactivate 4. 退出环境 1deact">
 <meta name="keywords" content="Python,Python框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python框架——tornado">
 <meta property="og:url" content="http://yoursite.com/2015/11/30/python框架——tornado/index.html">
 <meta property="og:site_name" content="GuoXu&#39;s Blog">
-<meta property="og:description" content="一、安装1. 安装virtualenv pip install virtualenv 2. 创建虚拟环境 virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado 3. 激活环境 cd pytornado/Scripts activate 4. 退出环境 deactivat">
+<meta property="og:description" content="一、安装1. 安装virtualenv 1pip install virtualenv 2. 创建虚拟环境 1virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado 3. 激活环境 12cd pytornado/Scriptsactivate 4. 退出环境 1deact">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T11:34:22.772Z">
+<meta property="og:updated_time" content="2019-05-11T07:20:14.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python框架——tornado">
-<meta name="twitter:description" content="一、安装1. 安装virtualenv pip install virtualenv 2. 创建虚拟环境 virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado 3. 激活环境 cd pytornado/Scripts activate 4. 退出环境 deactivat">
+<meta name="twitter:description" content="一、安装1. 安装virtualenv 1pip install virtualenv 2. 创建虚拟环境 1virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado 3. 激活环境 12cd pytornado/Scriptsactivate 4. 退出环境 1deact">
   
   
     <link rel="icon" href="/images/logo.png">
@@ -147,55 +147,42 @@
       
             
             <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><p><strong>1. 安装virtualenv</strong></p>
-<pre><code>pip install virtualenv
-</code></pre><p><strong>2. 创建虚拟环境</strong></p>
-<pre><code>virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado
-</code></pre><p><strong>3. 激活环境</strong></p>
-<pre><code>cd pytornado/Scripts
-activate
-</code></pre><p><strong>4. 退出环境</strong></p>
-<pre><code>deactivate
-</code></pre><p><strong>5. tornado安装与使用</strong>（先激活环境，在执行）</p>
-<pre><code>pip install tornado
-</code></pre><hr>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
+<p><strong>2. 创建虚拟环境</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv --no-site-packages [-p D:\PythonEnvironment\python.exe] E:\interpreter\pytornado</span><br></pre></td></tr></table></figure>
+<p><strong>3. 激活环境</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd pytornado/Scripts</span><br><span class="line">activate</span><br></pre></td></tr></table></figure>
+<p><strong>4. 退出环境</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
+<p><strong>5. tornado安装与使用</strong>（先激活环境，在执行）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tornado</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="二、Tornado应用"><a href="#二、Tornado应用" class="headerlink" title="二、Tornado应用"></a>二、Tornado应用</h1><font size="5"><strong>1. 获取tornado.web.Application对象</strong></font>
 
-<pre><code>参数handlers=[(访问路由, 执行方法类),...]
-</code></pre><p><br><font size="5"><strong>2. 执行方法类</strong></font></p>
-<pre><code>import tornado.web
-
-继承tornado.web.RequestHandler
-</code></pre><p>定义对应的方法处理对应的请求（如：处理get请求，则定义def get(self)方法）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参数handlers=[(访问路由, 执行方法类),...]</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 执行方法类</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tornado.web</span><br><span class="line"></span><br><span class="line">继承tornado.web.RequestHandler</span><br></pre></td></tr></table></figure>
+<p>定义对应的方法处理对应的请求（如：处理get请求，则定义def get(self)方法）</p>
 <p><br><font size="5"><strong>3. 监听端口</strong></font></p>
-<pre><code>Application对象.listen(端口)
-</code></pre><p><br><font size="5"><strong>4. 启动</strong></font></p>
-<pre><code>import tornado.ioloop
-
-tornado.ioloop.IOLoop.current().start()
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application对象.listen(端口)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 启动</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tornado.ioloop</span><br><span class="line"></span><br><span class="line">tornado.ioloop.IOLoop.current().start()</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="三、命令行"><a href="#三、命令行" class="headerlink" title="三、命令行"></a>三、命令行</h1><font size="5"><strong>1. 定义默认的监听端口</strong></font>
 
-<pre><code>from tornado.options import define
-
-define(&apos;port&apos;, default=8080, type=int)
-</code></pre><p><br><font size="5"><strong>2. 解析命令行中参数</strong></font></p>
-<pre><code>from tornado.options import parse_command_line
-
-parse_command_line()
-</code></pre><p><br><font size="5"><strong>3. 获取命令行中的port参数(端口)</strong></font></p>
-<pre><code>from tornado.options import options
-
-options.port
-</code></pre><p><br><font size="5"><strong>4. 启动命令</strong></font></p>
-<pre><code>python xxx.py --port=端口值
-</code></pre><hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tornado.options <span class="keyword">import</span> define</span><br><span class="line"></span><br><span class="line">define(<span class="string">'port'</span>, default=<span class="number">8080</span>, type=int)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 解析命令行中参数</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tornado.options <span class="keyword">import</span> parse_command_line</span><br><span class="line"></span><br><span class="line">parse_command_line()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 获取命令行中的port参数(端口)</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tornado.options <span class="keyword">import</span> options</span><br><span class="line"></span><br><span class="line">options.port</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 启动命令</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python xxx.py --port=端口值</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="四、路由定义"><a href="#四、路由定义" class="headerlink" title="四、路由定义"></a>四、路由定义</h1><p>定义</p>
-<pre><code>tornado.web.Application(handlers=[(&apos;/days/(\d+)/(\d+)/&apos;), DasyHandler])
-或
-tornado.web.Application(handlers=[(&apos;/days/(?P&lt;month&gt;\d+)/(?P&lt;day&gt;\d+)/&apos;),])
-</code></pre><p>函数</p>
-<pre><code>def get(self, month, day)
-</code></pre><p>第一种参数需要依顺序决定，第二种不需要</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tornado.web.Application(handlers=[(<span class="string">'/days/(\d+)/(\d+)/'</span>), DasyHandler])</span><br><span class="line">或</span><br><span class="line">tornado.web.Application(handlers=[(<span class="string">'/days/(?P&lt;month&gt;\d+)/(?P&lt;day&gt;\d+)/'</span>),])</span><br></pre></td></tr></table></figure>
+<p>函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self, month, day)</span></span></span><br></pre></td></tr></table></figure>
+<p>第一种参数需要依顺序决定，第二种不需要</p>
 <hr>
 <h1 id="五、HTTP行为方法"><a href="#五、HTTP行为方法" class="headerlink" title="五、HTTP行为方法"></a>五、HTTP行为方法</h1><table>
 <thead>
@@ -253,14 +240,16 @@ tornado.web.Application(handlers=[(&apos;/days/(?P&lt;month&gt;\d+)/(?P&lt;day&g
 <hr>
 <h1 id="七、模板"><a href="#七、模板" class="headerlink" title="七、模板"></a>七、模板</h1><font size="5"><strong>1. 模板文件路径定义</strong></font>
 
-<pre><code>Application(handlers=[], template_path=&apos;指定templates文件夹的路径&apos;)
-</code></pre><p><br><font size="5"><strong>2. 获取templates路径</strong></font></p>
-<pre><code>template_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), &apos;templates&apos;)
-</code></pre><p><br><font size="5"><strong>3. 父模板</strong></font></p>
-<p>{ % block 名字 % }<br>{ % end % }<br><br><font size="5"><strong>4. 子模板</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application(handlers=[], template_path=<span class="string">'指定templates文件夹的路径'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 获取templates路径</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">template_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), <span class="string">'templates'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 父模板</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; % block 名字 % &#125;</span><br><span class="line">&#123; % end % &#125;</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 子模板</strong></font></p>
 <p>继承</p>
-<p>{ % extends ‘父模板’ % }<br><br><font size="5"><strong>5. 语法</strong></font></p>
-<p>解析标签: { % 标签名 % }  { % end % }</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; % extends '父模板' % &#125;</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 语法</strong></font></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解析标签: &#123; % 标签名 % &#125;  &#123; % end % &#125;</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -292,52 +281,39 @@ tornado.web.Application(handlers=[(&apos;/days/(?P&lt;month&gt;\d+)/(?P&lt;day&g
 </tbody>
 </table>
 <p><br></p>
-<pre><code>解析变量:  { { 变量名 } }
-</code></pre><p><br><font size="5"><strong>6. 静态文件配置与使用</strong></font></p>
-<pre><code>tornado.web.Application(handlers=[], template_path=&apos;&apos;, static_path=&apos;指定static文件夹的路径&apos;)
-</code></pre><p><br><font size="5"><strong>7. 获取static路径</strong></font></p>
-<pre><code>static_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), &apos;static&apos;)
-</code></pre><p><br><font size="5"><strong>8. 导入静态文件</strong></font></p>
-<pre><code>href=&apos;/static/css/xxx.css&apos;
-或
-{ { static_url(&apos;css/xxx.css&apos;) } }
-</code></pre><hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解析变量:  &#123; &#123; 变量名 &#125; &#125;</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>6. 静态文件配置与使用</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tornado.web.Application(handlers=[], template_path=<span class="string">''</span>, static_path=<span class="string">'指定static文件夹的路径'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>7. 获取static路径</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), <span class="string">'static'</span>)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>8. 导入静态文件</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">href=<span class="string">'/static/css/xxx.css'</span></span><br><span class="line">或</span><br><span class="line">&#123; &#123; static_url(<span class="string">'css/xxx.css'</span>) &#125; &#125;</span><br></pre></td></tr></table></figure>
+<hr>
 <h1 id="八、模型"><a href="#八、模型" class="headerlink" title="八、模型"></a>八、模型</h1><font size="5"><strong>1. 安装sqlalchemy库</strong></font>
 
-<pre><code>pip install sqlalchemy
-</code></pre><p><br><font size="5"><strong>2. 数据库连接配置</strong></font></p>
-<pre><code>db_url = mysql+pymysql://root:123456@localhost:3306/database
-</code></pre><p><br><font size="5"><strong>3. 创建连接、引擎</strong></font></p>
-<pre><code>from sqlalchemy import create_engine
-
-engine = create_engine(db_url)
-</code></pre><p><br><font size="5"><strong>4. 模型定义</strong></font></p>
-<pre><code># 必须继承于Base
-Base = declarative_base(bind=engine)
-</code></pre><p><br><font size="5"><strong>5. 创建会话对象</strong></font></p>
-<pre><code>from sqlalchemy.orm import sessionmaker
-
-DbSession = sessionmaker(bind=engine)
-session=DbSession()
-</code></pre><p><br><font size="5"><strong>6. 增删查改</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install sqlalchemy</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>2. 数据库连接配置</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db_url = mysql+pymysql://root:<span class="number">123456</span>@localhost:<span class="number">3306</span>/database</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>3. 创建连接、引擎</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line"></span><br><span class="line">engine = create_engine(db_url)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>4. 模型定义</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 必须继承于Base</span></span><br><span class="line">Base = declarative_base(bind=engine)</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>5. 创建会话对象</strong></font></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy.orm <span class="keyword">import</span> sessionmaker</span><br><span class="line"></span><br><span class="line">DbSession = sessionmaker(bind=engine)</span><br><span class="line">session=DbSession()</span><br></pre></td></tr></table></figure>
+<p><br><font size="5"><strong>6. 增删查改</strong></font></p>
 <p><strong>增</strong></p>
-<pre><code>session.add(对象)
-session.add_all([对象1, 对象2...])
-</code></pre><p><strong>删</strong></p>
-<pre><code>session.delete(对象)
-filter(条件).delete()
-</code></pre><p><strong>查</strong></p>
-<pre><code>filter(模型名.字段 == 值)
-filter_by(字段 == 值)
-</code></pre><p><strong>改</strong></p>
-<pre><code>同增的操作
-filter(条件).update({&apos;字段1&apos;:值, &apos;字段2&apos;:值.....})
-</code></pre><p><strong>需要提交事务</strong></p>
-<pre><code>session.commit()
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">session.add(对象)</span><br><span class="line">session.add_all([对象<span class="number">1</span>, 对象<span class="number">2.</span>..])</span><br></pre></td></tr></table></figure>
+<p><strong>删</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">session.delete(对象)</span><br><span class="line">filter(条件).delete()</span><br></pre></td></tr></table></figure>
+<p><strong>查</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">filter(模型名.字段 == 值)</span><br><span class="line">filter_by(字段 == 值)</span><br></pre></td></tr></table></figure>
+<p><strong>改</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">同增的操作</span><br><span class="line">filter(条件).update(&#123;<span class="string">'字段1'</span>:值, <span class="string">'字段2'</span>:值.....&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>需要提交事务</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.commit()</span><br></pre></td></tr></table></figure>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年04月24日 19:34</p>
+        <p>最后更新： 2019年05月11日 15:20</p>
         <p>原始链接： <a class="post-url" href="/2015/11/30/python框架——tornado/" title="Python框架——tornado">http://yoursite.com/2015/11/30/python框架——tornado/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -464,19 +440,19 @@ filter(条件).update({&apos;字段1&apos;:值, &apos;字段2&apos;:值.....})
 
 <nav id="article-nav">
   
-    <a href="/2015/11/30/python框架——使用centos部署django项目/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/11/30/python框架——flask/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          Python框架——使用centos部署django项目
+          Python框架——flask
         
       </span>
     </a>
   
   
-    <a href="/2015/11/30/python框架——flask/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Python框架——flask</span>
+    <a href="/2015/11/30/MySQL——语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">MySQL——语法</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -538,10 +514,10 @@ filter(条件).update({&apos;字段1&apos;:值, &apos;字段2&apos;:值.....})
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
+            <a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Mac/">Mac</a><a class="category-link" href="/categories/MySQL/">MySQL</a><a class="category-link" href="/categories/Pycharm/">Pycharm</a><a class="category-link" href="/categories/Python/">Python</a><a class="category-link" href="/categories/Python框架/">Python框架</a><a class="category-link" href="/categories/redis/">redis</a><a class="category-link" href="/categories/spider爬虫/">spider爬虫</a><a class="category-link" href="/categories/web前端/">web前端</a><a class="category-link" href="/categories/数据分析/">数据分析</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -574,7 +550,7 @@ filter(条件).update({&apos;字段1&apos;:值, &apos;字段2&apos;:值.....})
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 12.5px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12.5px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 15px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 12.5px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 15px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12.5px;">数据分析</a>
+            <a href="/tags/Linux/" style="font-size: 18px;">Linux</a> <a href="/tags/Mac/" style="font-size: 10px;">Mac</a> <a href="/tags/MySQL/" style="font-size: 12px;">MySQL</a> <a href="/tags/Pycharm/" style="font-size: 12px;">Pycharm</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Python框架/" style="font-size: 16px;">Python框架</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/spider爬虫/" style="font-size: 14px;">spider爬虫</a> <a href="/tags/web前端/" style="font-size: 16px;">web前端</a> <a href="/tags/数据分析/" style="font-size: 12px;">数据分析</a>
         </div>
     </div>
 </div>
